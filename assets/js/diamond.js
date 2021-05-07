@@ -1,5 +1,6 @@
 const startButton = document.getElementById("diamond-play-btn");
 const currentQuestion = document.getElementById('diamond-question');
+const answerDiv = document.getElementById('diamond-answer-buttons')
 
 let shuffledQuestions;
 let questionIndex = 0;
@@ -9,7 +10,6 @@ startButton.addEventListener('click', startGame);
 function startGame() {
     shuffledQuestions = shuffleQuestions(questions);
     setQuestion();
-    console.log(shuffledQuestions)
 }
 
 function setQuestion() {
@@ -36,6 +36,15 @@ function shuffleQuestions(array) { // Used code from --- https://stackoverflow.c
 
 function displayQuestion(question) {
     currentQuestion.innerText = question.question;
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn', 'diamond-btn')
+        if (answer.correctAnswer) {
+            button.dataset.correctAnswer = answer.correctAnswer;
+        }
+        answerDiv.appendChild(button)
+    })
 }
 
 const questions = [
