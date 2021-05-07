@@ -39,7 +39,12 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 50%;
+  max-width: 80%;
   margin: 0 auto;
   padding: 20px;
+}
+
+.cardsuit-image {
+    height: 25%;
+    width: 25%;
 }
