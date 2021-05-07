@@ -1,52 +1,213 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# [**Poker Quiz**]()
 
-Welcome USER_NAME,
+_Use CTRL+click or CMD+click to open links throughout the README in a new tab_
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+![-](-) - image
 
-## Gitpod Reminders
+## Overview
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI you can use:
-
-`heroku login -i`
-
-If you have Multi-Factor Authentication (MFA) enabled then use the API key that was generated for you at [Heroku](https://dashboard.heroku.com/account) as your password.
-This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+PokerQuiz - Have fun testing your poker knowledge.
 
 ---
 
-Happy coding!
+## Description
+
+A site aimed at providing quiz games based on the game of poker.
+
+---
+
+## UX
+
+### User Stories
+
+First Time Visitor Goals
+
+1. As a First Time Visitor, I want to - easily navigate the quiz games.
+2. As a First Time Visitor, I want to - test my knowledge on the game of poker.
+3. As a First Time Visitor, I want to - find out my score.
+
+Returning Visitor Goals
+
+1. As a Returning Visitor, I want to - test my score against my previous attempts.
+2. As a Returning Visitor, I want to - have different questions to my previous attempts.
+3. As a Returning Visitor, I want to - complete the quiz games faster than previous attempts.
+
+Frequent User Goals
+
+1. As a Frequent User, I want to - be able to contact the site.
+2. As a Frequent User, I want to - test myself over and over again.
+3. As a Frequent User, I want to -
+
+### **Strategy**
+
+#### External User's Goals
+
+- Test their poker knowledge on various topics.
+
+#### Site Owner's Goals
+
+- Provide entertaining quiz game content that users can enjoy and learn about the game of poker with.
+
+### **Scope**
+
+- Visually appealing, easy to navigate site.
+- Defines the quiz games easily.
+- Interactive games.
+
+### **Structure**
+
+- 4 quiz game site. Seperated into 4 containers. Diamond, Club, Heart and Spade.
+- Able to view scores.
+
+### **Skeleton**
+
+
+### **Surface**
+
+Colour scheme:
+
+- Black and red to match the colours of a deck of cards.
+
+Images:
+
+- Poker images of the 4 suits.
+- Images of poker chips, cards, tables.
+
+Typography:
+
+---
+
+## Features
+
+-
+
+## Technologies Used
+
+### Languages
+
+[HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+[CSS3](https://en.wikipedia.org/wiki/CSS)
+
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries and Programs Used
+
+[Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/) - for responsive design and grid layout
+
+[GitPod](https://www.gitpod.io/) - Online IDE
+
+[Git](https://git-scm.com/) - Version Control
+
+[Github](https://github.com/) - Where Git repositories are stored
+
+[Balsamiq](https://balsamiq.com/) - for wireframes
+
+[FontAwesome](https://fontawesome.com/) - for icons
+
+[Google Fonts](https://fonts.google.com/) - for fonts
+
+### Resources
+
+[Image Color](https://image-color.com/) - for color palette
+
+[CSS Tricks](https://css-tricks.com/) - for general help
+
+[Stack Overflow](https://stackoverflow.com/) - for support
+
+[W3Schools](https://www.w3schools.com/) - for general help
+
+[YouTube](https://youtube.com) - for general help
+
+[Responsinator](http://www.responsinator.com/) - helping to test responsiveness
+
+[TinyPNG](https://tinypng.com/) - for image compression
+
+[CompressJPEG](https://compressjpeg.com/) - for image compression
+
+[Am I Responsive](http://ami.responsivedesign.is/) - for responsive help and README image
+
+[Autoprefixer](https://autoprefixer.github.io/) - adds vendor prefixes to CSS
+
+Code Institute Course
+
+Code Institute Slack Community
+
+Chrome Dev Tools
+
+---
+
+## Testing
+
+First Time Visitor Goals
+
+Returning Visitor Goals
+
+Frequent User Goals
+
+Other Testing
+
+- Responsiveness
+
+- HTML Validity
+
+- CSS Validity
+
+- Contrast colours
+
+- Code cleaned up
+
+- Spelling
+
+- Image sizes
+
+- CSS autoprefixer
+
+### Project Barriers and Solutions
+
+### Feature To Improve
+
+### Code Validity
+
+---
+
+## Deployment
+
+Deployed on GitHub Pages through the following process:
+
+- Code written on GitPod.
+- Code then pushed to GitHub to be stored in the repository.
+- Under settings of the repository, scrolled to GitHub Pages section.
+- "Master Branch" was selected under the "Source" drop down.
+- The site's URL is then displayed.
+
+Cloning
+
+- Locate the GitHub Repository.
+- Click the "Code" button.
+- Highlight the "HTTPS" button to clone with HTTPS and copy the link.
+- Open Git Bash
+- Identify location in IDE where you want the cloned directory to be made.
+- Type git clone, and then paste the URL, which is the link that's been copied.
+- Your local clone will be made.
+
+Forking
+
+- To fork the respository, click the fork button that is situated to the right of the respository title.
+- There will now be your own copy in your account.
+
+---
+
+## Credits
+
+### Code Snippets
+
+### Images and videos
+
+### Written Content
+
+### Acknowledgments
+
+- Code Institute Software Development Course - for the education.
+- Code Institute Slack Community group - for the support.
+- My mentor [Antonio Rodriguez](https://github.com/AkaAnto) - for the guidance and support throughout.
