@@ -67,7 +67,7 @@ function displayQuestion(question) {
              setQuestion();
          }, 1000);
      } else {
-         return window.location.assign('index.html')
+         return window.location.assign('score.html')
      }
  }
 
