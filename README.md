@@ -61,6 +61,26 @@ Frequent User Goals
 
 ### **Skeleton**
 
+[Home Page Wireframe](assets/docs/homepage.png)
+
+[Quiz Info Page Wireframe](assets/docs/quizinfopage.png)
+
+[Quiz Page Wireframe](assets/docs/quizpage.png)
+
+[Score Page Wireframe](assets/docs/scorepage.png)
+
+[Contact Page Wireframe](assets/docs/contactpage.png)
+
+[Home Page Mobile Wireframe](assets/docs/homepagemobile.png)
+
+[Quiz Info Page Mobile Wireframe](assets/docs/quizinfopagemobile.png)
+
+[Quiz Page Mobile Wireframe](assets/docs/quizpagemobile.png)
+
+[Score Page Mobile Wireframe](assets/docs/scorepagemobile.png)
+
+[Contact Page Mobile Wireframe](assets/docs/contactpagemobile.png)
+
 
 ### **Surface**
 
