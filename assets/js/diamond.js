@@ -4,6 +4,7 @@ const answerDiv = document.getElementById('diamond-answer-buttons')
 
 let shuffledQuestions;
 let questionIndex = 0;
+let rightAnswers = 0;
 
 startButton.addEventListener('click', startGame);
 
@@ -13,6 +14,10 @@ function startGame() {
 }
 
 function setQuestion() {
+    startButton.classList.add('hide')
+     while (answerDiv.firstChild) {
+         answerDiv.removeChild(answerDiv.firstChild)
+     }
     displayQuestion(shuffledQuestions[questionIndex]);
 }
 
@@ -43,9 +48,28 @@ function displayQuestion(question) {
         if (answer.correctAnswer) {
             button.dataset.correctAnswer = answer.correctAnswer;
         }
+        button.addEventListener('click', answerInfo)
         answerDiv.appendChild(button)
+
     })
 }
+
+ function answerInfo(answer) {
+     const buttonSelect = answer.target
+     const correct = buttonSelect.dataset.correctAnswer;
+     if (buttonSelect.dataset = correct) {
+         rightAnswers++;
+     }
+     document.getElementById('diamond-right-answers').innerHTML = rightAnswers;
+     if (shuffledQuestions.length > questionIndex + 16) {
+         questionIndex++
+         setTimeout(() => {
+             setQuestion();
+         }, 1000);
+     } else {
+         return window.location.assign('index.html')
+     }
+ }
 
 const questions = [
   {
