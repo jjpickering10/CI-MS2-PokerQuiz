@@ -60,6 +60,7 @@ function displayQuestion(question) {
      if (buttonSelect.dataset = correct) {
          rightAnswers++;
      }
+     localStorage.setItem("latest-score", rightAnswers);
      document.getElementById('diamond-right-answers').innerHTML = rightAnswers;
      if (shuffledQuestions.length > questionIndex + 16) {
          questionIndex++
