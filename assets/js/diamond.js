@@ -2,13 +2,18 @@ const startButton = document.getElementById("diamond-play-btn");
 const currentQuestion = document.getElementById('diamond-question');
 
 let shuffledQuestions;
-let questionIndex;
+let questionIndex = 0;
 
 startButton.addEventListener('click', startGame);
 
 function startGame() {
     shuffledQuestions = shuffleQuestions(questions);
+    setQuestion();
     console.log(shuffledQuestions)
+}
+
+function setQuestion() {
+    displayQuestion(shuffledQuestions[questionIndex]);
 }
 
 function shuffleQuestions(array) { // Used code from --- https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -27,6 +32,10 @@ function shuffleQuestions(array) { // Used code from --- https://stackoverflow.c
     }
 
     return array;
+}
+
+function displayQuestion(question) {
+    currentQuestion.innerText = question.question;
 }
 
 const questions = [
