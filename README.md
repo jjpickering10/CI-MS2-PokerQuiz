@@ -57,6 +57,8 @@ Frequent User Goals
 ### **Structure**
 
 - 4 quiz game site. Seperated into 4 containers. Diamond, Club, Heart and Spade.
+- Game 1: multiple choice quiz for who won the main event
+- Game 2: Pick which hand ranking is higher
 - Able to view scores.
 
 ### **Skeleton**
