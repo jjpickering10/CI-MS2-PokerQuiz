@@ -48,6 +48,7 @@ function displayQuestion(question) {
         if (answer.correctAnswer) {
             button.dataset.correctAnswer = answer.correctAnswer;
         }
+        console.log(button)
         button.addEventListener('click', answerInfo)
         answerDiv.appendChild(button)
 
