@@ -10,6 +10,9 @@ startButton.addEventListener("click", startGame);
 
 
 function startGame (){
+    shuffledRankings = shuffleRankings(handRankings)
+    console.log(handRankings)
+    setRankings();
 }
 
 function shuffleRankings(array) {
@@ -34,8 +37,13 @@ function shuffleRankings(array) {
 }
 
 
-function setRankings (){
+function setRankings() {
+    displayRankings(shuffledRankings[rankingIndex], shuffledRankings[1])
+}
 
+function displayRankings (optionOne, optionTwo) {
+    firstOption.innerText = optionOne.text;
+    secondOption.innerText = optionTwo.text;
 }
 
 let handRankings = [
