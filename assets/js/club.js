@@ -1,41 +1,6 @@
 const question = document.getElementById('question')
 
 
-
-
-let questions = [
-  {
-    question: "true",
-    option1: "true",
-    option2: "false",
-    answer: 1
-  },
-  {
-    question: "false",
-    option1: "true",
-    option2: "false",
-    answer: 2
-  },
-  {
-    question: "true",
-    option1: "true",
-    option2: "false",
-    answer: 1
-  },
-  {
-    question: "false",
-    option1: "true",
-    option2: "false",
-    answer: 2
-  },
-  {
-    question: "true",
-    option1: "true",
-    option2: "false",
-    answer: 1
-  }
-];
-
 function startGame (){
 }
 
@@ -43,3 +8,26 @@ function startGame (){
 function setQuestion (){
 
 }
+
+let handRankings = [
+  {
+    text: "Royal Flush",
+    id: 1,
+  },
+  {
+    text: "Straight Flush",
+    id: 2,
+  },
+  {
+    text: "4 of a kind",
+    id: 3,
+  },
+  {
+    text: "Full House",
+    id: 4,
+  },
+  {
+    text: "Flush",
+    id: 5,
+  },
+];
