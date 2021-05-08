@@ -18,7 +18,7 @@ let handRankings = [
     id: 2,
   },
   {
-    text: "4 of a kind",
+    text: "Four of a kind",
     id: 3,
   },
   {
@@ -27,7 +27,27 @@ let handRankings = [
   },
   {
     text: "Flush",
-    id: 5,
+    id: 6,
+  },
+  {
+    text: "Straight",
+    id: 7,
+  },
+  {
+    text: "Three of a kind",
+    id: 8,
+  },
+  {
+    text: "Two pair",
+    id: 9,
+  },
+  {
+    text: "One pair",
+    id: 10,
+  },
+  {
+    text: "High Card",
+    id: 11,
   },
 ];
 
@@ -44,7 +64,7 @@ function startGame (){
     firstOption.classList.remove('wrong')
     secondOption.classList.remove('wrong')
     startButton.classList.add('hide')
-    shuffledRankings = shuffleRankings(handRankings)
+    //shuffledRankings = shuffleRankings(handRankings)
     setRankings();
 }
 
@@ -74,6 +94,8 @@ function shuffleRankings(array) {
 }
 
 function setRankings() {
+    shuffledRankings = shuffleRankings(handRankings)
+    console.log(shuffledRankings)
     startButton.classList.add('hide')
     firstOption.removeAttribute('data-correct', "true")
     secondOption.removeAttribute('data-correct', "true")
@@ -127,7 +149,8 @@ function rankingInfo(answer){
     }
 currentScore.innerHTML = rightAnswers;
 
-    if (shuffledRankings.length > rankingIndex + 1) {
+    if (shuffledRankings.length -1  > rankingIndex + 1) {
+    //questionCounter++
     rankingIndex++;
     setTimeout(() => {
       setRankings();
