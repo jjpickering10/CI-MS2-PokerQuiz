@@ -1,6 +1,9 @@
 const handOne = document.getElementById('hand-one')
 const handTwo = document.getElementById('hand-two')
 const startButton = document.getElementById('start')
+const score = document.getElementById('score')
+
+let scoreCounter = 0;
 
 // ---- Using API from https://deckofcardsapi.com/ -----
 startButton.addEventListener('click', function(){
@@ -15,6 +18,16 @@ handRequest.send();
 })
 
 function displayHands(data) {
-    handOne.innerText = data.cards[0].code //`${data.cards[0].value} ${data.cards[0].suit}`
-    handTwo.innerText = data.cards[1].code //`${data.cards[1].value} ${data.cards[1].suit}`
+    cardOne = data.cards[0].value
+    cardTwo = data.cards[1].value
+
+    handOne.innerText = `${cardOne} ${data.cards[0].suit}`
+    handTwo.innerText = `${cardTwo} ${data.cards[1].suit}`
+
+    console.log(cardOne === cardTwo)
+
+    if (cardOne === cardTwo) {
+        scoreCounter++
+        score.innerText = scoreCounter
+    }
 }
