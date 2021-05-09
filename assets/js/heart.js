@@ -56,7 +56,7 @@ function failure() {
 
 function nextShuffle(){
     questionCounter++
-    if (questionCounter < 5) {
+    if (questionCounter < 10) {
     setTimeout(() => {
         startGame()
     }, 1000);
