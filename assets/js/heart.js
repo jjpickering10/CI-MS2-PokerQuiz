@@ -2,6 +2,7 @@ const handOne = document.getElementById('hand-one')
 const handTwo = document.getElementById('hand-two')
 const startButton = document.getElementById('start')
 const score = document.getElementById('score')
+const message = document.getElementById('message')
 
 let scoreCounter = 0;
 
@@ -29,7 +30,20 @@ function displayHands(data) {
     if (cardOne === cardTwo) {
         scoreCounter++
         score.innerText = scoreCounter
+        success()
+    } else {
+        failure()
     }
+}
+
+function success() {
+    const successMessage = pairSuccess[Math.floor(Math.random() * pairSuccess.length)];
+    message.innerText = successMessage
+}
+
+function failure() {
+    const failureMessage = pairFailure[Math.floor(Math.random() * pairFailure.length)];
+    message.innerText = failureMessage
 }
 
 let pairFailure = [
