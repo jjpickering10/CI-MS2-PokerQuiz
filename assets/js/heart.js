@@ -31,3 +31,22 @@ function displayHands(data) {
         score.innerText = scoreCounter
     }
 }
+
+let pairFailure = [
+
+    "Please give me a pair",
+    "I never get a pair",
+    "Never a pair",
+    "Urgh, maybe next time",
+    "No pair for you"
+
+]
+
+let pairSuccess = [
+
+    "Woooooo!!!!",
+    "OMG yes!",
+    "Love a good pair",
+    "So easy",
+    ":)"
+]
