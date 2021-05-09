@@ -1,13 +1,19 @@
 const handOne = document.getElementById('hand-one')
 const handTwo = document.getElementById('hand-two')
 const startButton = document.getElementById('start')
+const nextButton = document.getElementById('next')
 const score = document.getElementById('score')
 const message = document.getElementById('message')
 
 let scoreCounter = 0;
+let questionCounter = 0;
 
-// ---- Using API from https://deckofcardsapi.com/ -----
-startButton.addEventListener('click', function(){
+startButton.addEventListener('click', startGame)
+
+function startGame() {
+    nextButton.classList.remove('hide')
+    startButton.classList.add('hide')
+    // ---- Using API from https://deckofcardsapi.com/ -----
     const handRequest = new XMLHttpRequest();
 handRequest.open('GET', 'https://deckofcardsapi.com/api/deck/new/draw/?count=2')
 handRequest.onload = function() {
@@ -16,7 +22,7 @@ handRequest.onload = function() {
     displayHands(handData)
 }
 handRequest.send();
-})
+}
 
 function displayHands(data) {
     cardOne = data.cards[0].value
@@ -34,7 +40,9 @@ function displayHands(data) {
     } else {
         failure()
     }
+    nextButton.addEventListener('click', nextShuffle)
 }
+
 
 function success() {
     const successMessage = pairSuccess[Math.floor(Math.random() * pairSuccess.length)];
@@ -44,6 +52,17 @@ function success() {
 function failure() {
     const failureMessage = pairFailure[Math.floor(Math.random() * pairFailure.length)];
     message.innerText = failureMessage
+}
+
+function nextShuffle(){
+    questionCounter++
+    if (questionCounter < 5) {
+    setTimeout(() => {
+        startGame()
+    }, 1000);
+} else {
+    window.location.assign('index.html')
+}
 }
 
 let pairFailure = [
