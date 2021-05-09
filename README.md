@@ -59,6 +59,7 @@ Frequent User Goals
 - 4 quiz game site. Seperated into 4 containers. Diamond, Club, Heart and Spade.
 - Game 1: multiple choice quiz for who won the main event
 - Game 2: Pick which hand ranking is higher
+- Game 3: A game using an API where you try to shuffle a pair.
 - Able to view scores.
 
 ### **Skeleton**
