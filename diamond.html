@@ -17,29 +17,22 @@
     <title>PokerQuiz</title>
   </head>
   <body>
-    <div class="container diamond-quiz-container">
-      <div id="diamond-question-container" class="row">
-        <div class="col-12 question-row">
-            <h1 id="diamond-question">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum accusantium sapiente eveniet doloremque ipsam cum sed corporis commodi nesciunt voluptatibus?</h1>
-        </div>
-      </div>
-      <div id="diamond-answers-container" class="row diamond-quiz-row">
-        <div id="diamond-answer-buttons" class="col-12 diamond-buttons-column">
-        </div>
-      </div>
-
-      <div class="container diamond-controls">
-        <div class="row">
-          <div class="col">
-            <button id="diamond-play-btn" class="diamond-play-btn">Play</button>
-          </div>
-        </div>
-      </div>
-      <div id="diamond-results">
-        <h3>You got <span id="diamond-right-answers"></span> correct</h3>
-      </div>
-    </div>
-
+    <div class="grid-container">
+  <div class="title-container">
+    <div class="nav-area"></div>
+    <div class="question-title"></div>
+  </div>
+  <div class="question-area">
+    <div id="diamond-question" class="diamond-question">Question</div>
+  </div>
+  <div class="answers-container">
+    <div id="diamond-answer-buttons" class="diamond-answers"></div>
+    <button id="diamond-play-btn">Play</button>
+  </div>
+  <div class="results-area">
+    <div id="diamond-right-answers"></div>
+  </div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
     <script src="assets/js/diamond.js"></script>

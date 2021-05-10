@@ -48,7 +48,7 @@ function displayQuestion(question) {
         if (answer.correctAnswer) {
             button.dataset.correctAnswer = answer.correctAnswer;
         }
-        console.log(button)
+        // console.log(button)
         button.addEventListener('click', answerInfo)
         answerDiv.appendChild(button)
 
@@ -62,7 +62,7 @@ function displayQuestion(question) {
          rightAnswers++;
      }
      localStorage.setItem("latest-score", rightAnswers);
-     document.getElementById('diamond-right-answers').innerHTML = rightAnswers;
+     document.getElementById('diamond-right-answers').innerText = rightAnswers;
      if (shuffledQuestions.length > questionIndex + 16) {
          questionIndex++
          setTimeout(() => {
