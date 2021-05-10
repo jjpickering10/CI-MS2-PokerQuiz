@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
 
 body {
-  background-color: rgb(187, 141, 141);
+  /* background-color: rgb(187, 141, 141); */
+  /* background: url(../images/deckofcards.jpg) no-repeat center center fixed; */
+  background: url(../images/playingpoker.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 * {
