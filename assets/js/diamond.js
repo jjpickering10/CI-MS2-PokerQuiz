@@ -44,7 +44,8 @@ function displayQuestion(question) {
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
-        button.classList.add('btn', 'diamond-btn')
+        answerDiv.classList.add('flex-container')
+        button.classList.add('flex-items')
         if (answer.correctAnswer) {
             button.dataset.correctAnswer = answer.correctAnswer;
         }
