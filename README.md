@@ -60,6 +60,7 @@ Frequent User Goals
 - Game 1: multiple choice quiz for who won the main event
 - Game 2: Pick which hand ranking is higher
 - Game 3: A game using an API where you try to shuffle a pair.
+- Game 4: Player is given 3 cards, and a card selection of 12 possible other cards and has to make the hand that is asked of them.
 - Able to view scores.
 
 ### **Skeleton**
