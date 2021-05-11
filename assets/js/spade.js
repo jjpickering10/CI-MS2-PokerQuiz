@@ -2,6 +2,11 @@
 const cardBoard = document.getElementById('card-board')
 const cardChoice = document.getElementById('card-choice')
 
+let correctChoices = 0
+const attempts = 2
+let attemptCounter = 0
+
+
 function getCardChoices() {
     let getDeck;
     let partialDeck;
@@ -48,11 +53,18 @@ function displayHands(data) {
 }
 
 function selectCard(e) {
+    attemptCounter++
     const selectedCard = e.target
-    // console.log(selectedCard.dataset.correct)
+    console.log(selectedCard.dataset)
     correctAnswer = selectedCard.dataset.correct
     console.log(correctAnswer)
+    if (correctAnswer === "correct") {
+        correctChoices++
+    }
     cardChoice.appendChild(selectedCard)
+    console.log(attemptCounter, 'attempts')
+    
+    console.log(correctChoices, 'correctchoices')
 }
 
 getCardChoices();
