@@ -1,5 +1,6 @@
     // ---- Using API from https://deckofcardsapi.com/ -----
 const cardBoard = document.getElementById('card-board')
+const cardChoice = document.getElementById('card-choice')
 
 function getCardChoices() {
     let getDeck;
@@ -41,7 +42,17 @@ function displayHands(data) {
         }
         card.setAttribute('src', e.image)
         console.log(card)
+        cardBoard.appendChild(card);
+        card.addEventListener('click', selectCard)
     })
+}
+
+function selectCard(e) {
+    const selectedCard = e.target
+    // console.log(selectedCard.dataset.correct)
+    correctAnswer = selectedCard.dataset.correct
+    console.log(correctAnswer)
+    cardChoice.appendChild(selectedCard)
 }
 
 getCardChoices();

@@ -37,10 +37,15 @@ body {
 .card-board-container {
     grid-area: 4 / 1 / 5 / 2;
     background-color: purple;
+    height: 100%;
 }
 
 .results-container {
     grid-area: 5 / 1 / 6 / 2;
     background-color: pink;
 }
+
+/* .card-board-container img {
+
+} */
 
