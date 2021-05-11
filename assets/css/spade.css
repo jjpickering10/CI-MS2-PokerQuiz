@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
+
+body {
+  background-color: rgb(167, 161, 161);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Crete Round", serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5fr 1fr 0.5fr 2fr 1fr;
+  gap: 0px 0px;
+  height: 100vh;
+}
+
+.title-container { 
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: blue;
+}
+
+.card-game-container {
+    grid-area: 2 / 1 / 3 / 2;
+   background-color: orange;
+}
+
+.question-container {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: red;
+}
+
+.card-board-container {
+    grid-area: 4 / 1 / 5 / 2;
+    background-color: purple;
+}
+
+.results-container {
+    grid-area: 5 / 1 / 6 / 2;
+    background-color: pink;
+}
+
