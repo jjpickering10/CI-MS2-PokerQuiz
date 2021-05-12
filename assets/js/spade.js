@@ -19,7 +19,7 @@ let questionIndex = 0
 startButton.addEventListener('click', startGame)
 
 function startGame(){ //----https://stackoverflow.com/questions/4908378/javascript-array-of-functions#4908388
-    resetDocument()
+    
     shuffledQuestions = shuffleQuestions(questions)
     console.log(shuffledQuestions)
     
@@ -27,14 +27,10 @@ function startGame(){ //----https://stackoverflow.com/questions/4908378/javascri
 }
 
 function setQuestion(){
-    while (cardBoard.firstChild) {
-         cardBoard.removeChild(cardBoard.firstChild)
-     }
-      while (cardChoice.firstChild) {
-         cardChoice.removeChild(cardChoice.firstChild)
-     }
+    resetDocument()
     
-    questions[questionIndex]()
+    
+    shuffledQuestions[questionIndex]()
 }
 
 function shuffleQuestions(array) { // Used code from --- https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -61,6 +57,13 @@ function resetDocument() {
     newObject = {}
     anotherObject = {}
     finalArray = []
+
+    while (cardBoard.firstChild) {
+         cardBoard.removeChild(cardBoard.firstChild)
+     }
+      while (cardChoice.firstChild) {
+         cardChoice.removeChild(cardChoice.firstChild)
+     }
      
     cardBoard.classList.remove('hide')
     cardChoice.classList.remove('hide')
@@ -108,7 +111,7 @@ function reviewAnswers() {
     if (shuffledQuestions.length > questionIndex + 1 ) {
          questionIndex++
          setTimeout(() => {
-             startGame();
+             setQuestion();
          }, 1000);
      } else {
          return window.location.assign('score.html')
