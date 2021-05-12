@@ -105,7 +105,7 @@ function reviewAnswers() {
     } else {
         results.innerText = "You got it wrong!"
     }
-    if (shuffledQuestions.length + 1 > questionIndex + 1 ) {
+    if (shuffledQuestions.length > questionIndex + 1 ) {
          questionIndex++
          setTimeout(() => {
              startGame();
@@ -168,11 +168,11 @@ let questions = [
     newObject = {...gameDeck.cards}
 
     for (index in newObject) {
-        if (newObject[index].value === "5") {
+        if (newObject[index].code === "5C") {
             anotherObject = {...newObject[index], ...{correct: "true"}}
             finalArray.push(anotherObject)
             
-        } else if (newObject[index].value === "8") {
+        } else if (newObject[index].code === "8C") {
             anotherObject = {...newObject[index], ...{correct: "true"}}
             finalArray.push(anotherObject)
         } else {
@@ -238,11 +238,11 @@ let questions = [
     newObject = {...gameDeck.cards}
 
     for (index in newObject) {
-        if (newObject[index].value === "5") {
+        if (newObject[index].code === "7H") {
             anotherObject = {...newObject[index], ...{correct: "true"}}
             finalArray.push(anotherObject)
             
-        } else if (newObject[index].value === "8") {
+        } else if (newObject[index].code === "KH") {
             anotherObject = {...newObject[index], ...{correct: "true"}}
             finalArray.push(anotherObject)
         } else {
@@ -255,216 +255,216 @@ let questions = [
     ourRequest.send();
 }
  }
-}},]
-//     function() { {
-//     var getBoard;
-//     var partialBoard;
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=4S,6H,7H");
-//     ourRequest.onload = function () {
-//     partialBoard = JSON.parse(ourRequest.responseText)
-//     getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
-//     drawBoard();
-//     }
-//     ourRequest.send();
+}},
+    function() { {
+    var getBoard;
+    var partialBoard;
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=JH,JC,QC");
+    ourRequest.onload = function () {
+    partialBoard = JSON.parse(ourRequest.responseText)
+    getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
+    drawBoard();
+    }
+    ourRequest.send();
 
-//     function drawBoard() {
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`)
-//     ourRequest.onload = function () {
-//     gameBoard = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
-//     gameBoard.cards.forEach(e => {
-//         const board = document.createElement('img')
-//         board.setAttribute('src', e.image)
-//         cardChoice.appendChild(board);
-//         })
+    function drawBoard() {
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`)
+    ourRequest.onload = function () {
+    gameBoard = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
+    gameBoard.cards.forEach(e => {
+        const board = document.createElement('img')
+        board.setAttribute('src', e.image)
+        cardChoice.appendChild(board);
+        })
      
-//     getOptions()
-//     }
-//     ourRequest.send();
-// }
-//     function getOptions() {
+    getOptions()
+    }
+    ourRequest.send();
+}
+    function getOptions() {
         
-//     var getDeck;
-//     var partialDeck;
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,QD,5C,8C,7S,JH,0D,9C");
-//     ourRequest.onload = function () {
-//     partialDeck = JSON.parse(ourRequest.responseText)
-//     getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
-//     drawDeck();
-//     }
-//     ourRequest.send();
+    var getDeck;
+    var partialDeck;
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AD,AS,4S,5H,5D,3D,9D,8C,7C,7D,JS,QS");
+    ourRequest.onload = function () {
+    partialDeck = JSON.parse(ourRequest.responseText)
+    getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
+    drawDeck();
+    }
+    ourRequest.send();
 
-//     function drawDeck() {
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`)
-//     ourRequest.onload = function () {
-//     gameDeck = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
-//     newObject = {...gameDeck.cards}
+    function drawDeck() {
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`)
+    ourRequest.onload = function () {
+    gameDeck = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
+    newObject = {...gameDeck.cards}
 
-//     for (index in newObject) {
-//         if (newObject[index].value === "5") {
-//             anotherObject = {...newObject[index], ...{correct: "true"}}
-//             finalArray.push(anotherObject)
+    for (index in newObject) {
+        if (newObject[index].code === "JS") {
+            anotherObject = {...newObject[index], ...{correct: "true"}}
+            finalArray.push(anotherObject)
             
-//         } else if (newObject[index].value === "8") {
-//             anotherObject = {...newObject[index], ...{correct: "true"}}
-//             finalArray.push(anotherObject)
-//         } else {
-//             anotherObject = {...newObject[index], ...{correct: "false"}}
-//             finalArray.push(anotherObject)
-//         }
-//     }
-//     displayHands(finalArray)
-//     }
-//     ourRequest.send();
-// }
-//  }
-// }},
-//     function() { {
-//     var getBoard;
-//     var partialBoard;
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=4S,6H,7H");
-//     ourRequest.onload = function () {
-//     partialBoard = JSON.parse(ourRequest.responseText)
-//     getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
-//     drawBoard();
-//     }
-//     ourRequest.send();
+        } else if (newObject[index].code === "QS") {
+            anotherObject = {...newObject[index], ...{correct: "true"}}
+            finalArray.push(anotherObject)
+        } else {
+            anotherObject = {...newObject[index], ...{correct: "false"}}
+            finalArray.push(anotherObject)
+        }
+    }
+    displayHands(finalArray)
+    }
+    ourRequest.send();
+}
+ }
+}},
+    function() { {
+    var getBoard;
+    var partialBoard;
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=4S,6S,8S");
+    ourRequest.onload = function () {
+    partialBoard = JSON.parse(ourRequest.responseText)
+    getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
+    drawBoard();
+    }
+    ourRequest.send();
 
-//     function drawBoard() {
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`)
-//     ourRequest.onload = function () {
-//     gameBoard = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
-//     gameBoard.cards.forEach(e => {
-//         const board = document.createElement('img')
-//         board.setAttribute('src', e.image)
-//         cardChoice.appendChild(board);
-//         })
+    function drawBoard() {
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`)
+    ourRequest.onload = function () {
+    gameBoard = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
+    gameBoard.cards.forEach(e => {
+        const board = document.createElement('img')
+        board.setAttribute('src', e.image)
+        cardChoice.appendChild(board);
+        })
      
-//     getOptions()
-//     }
-//     ourRequest.send();
-// }
-//     function getOptions() {
+    getOptions()
+    }
+    ourRequest.send();
+}
+    function getOptions() {
         
-//     var getDeck;
-//     var partialDeck;
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,QD,5C,8C,7S,JH,0D,9C");
-//     ourRequest.onload = function () {
-//     partialDeck = JSON.parse(ourRequest.responseText)
-//     getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
-//     drawDeck();
-//     }
-//     ourRequest.send();
+    var getDeck;
+    var partialDeck;
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=5S,7S,9D,JC,2S,9C,KD,KS,AS,QS,JS,3D");
+    ourRequest.onload = function () {
+    partialDeck = JSON.parse(ourRequest.responseText)
+    getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
+    drawDeck();
+    }
+    ourRequest.send();
 
-//     function drawDeck() {
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`)
-//     ourRequest.onload = function () {
-//     gameDeck = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
-//     newObject = {...gameDeck.cards}
+    function drawDeck() {
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`)
+    ourRequest.onload = function () {
+    gameDeck = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
+    newObject = {...gameDeck.cards}
 
-//     for (index in newObject) {
-//         if (newObject[index].value === "5") {
-//             anotherObject = {...newObject[index], ...{correct: "true"}}
-//             finalArray.push(anotherObject)
+    for (index in newObject) {
+        if (newObject[index].code === "5S") {
+            anotherObject = {...newObject[index], ...{correct: "true"}}
+            finalArray.push(anotherObject)
             
-//         } else if (newObject[index].value === "8") {
-//             anotherObject = {...newObject[index], ...{correct: "true"}}
-//             finalArray.push(anotherObject)
-//         } else {
-//             anotherObject = {...newObject[index], ...{correct: "false"}}
-//             finalArray.push(anotherObject)
-//         }
-//     }
-//     displayHands(finalArray)
-//     }
-//     ourRequest.send();
-// }
-//  }
-// }},
-//     function() { {
-//     var getBoard;
-//     var partialBoard;
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=4S,6H,7H");
-//     ourRequest.onload = function () {
-//     partialBoard = JSON.parse(ourRequest.responseText)
-//     getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
-//     drawBoard();
-//     }
-//     ourRequest.send();
+        } else if (newObject[index].code === "7S") {
+            anotherObject = {...newObject[index], ...{correct: "true"}}
+            finalArray.push(anotherObject)
+        } else {
+            anotherObject = {...newObject[index], ...{correct: "false"}}
+            finalArray.push(anotherObject)
+        }
+    }
+    displayHands(finalArray)
+    }
+    ourRequest.send();
+}
+ }
+}},
+    function() { {
+    var getBoard;
+    var partialBoard;
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AH,JH,0H");
+    ourRequest.onload = function () {
+    partialBoard = JSON.parse(ourRequest.responseText)
+    getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
+    drawBoard();
+    }
+    ourRequest.send();
 
-//     function drawBoard() {
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`)
-//     ourRequest.onload = function () {
-//     gameBoard = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
-//     gameBoard.cards.forEach(e => {
-//         const board = document.createElement('img')
-//         board.setAttribute('src', e.image)
-//         cardChoice.appendChild(board);
-//         })
+    function drawBoard() {
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`)
+    ourRequest.onload = function () {
+    gameBoard = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
+    gameBoard.cards.forEach(e => {
+        const board = document.createElement('img')
+        board.setAttribute('src', e.image)
+        cardChoice.appendChild(board);
+        })
      
-//     getOptions()
-//     }
-//     ourRequest.send();
-// }
-//     function getOptions() {
+    getOptions()
+    }
+    ourRequest.send();
+}
+    function getOptions() {
         
-//     var getDeck;
-//     var partialDeck;
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,QD,5C,8C,7S,JH,0D,9C");
-//     ourRequest.onload = function () {
-//     partialDeck = JSON.parse(ourRequest.responseText)
-//     getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
-//     drawDeck();
-//     }
-//     ourRequest.send();
+    var getDeck;
+    var partialDeck;
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=KH,QH,9H,8H,KS,QS,QD,QC,KC,KD,AD,AS");
+    ourRequest.onload = function () {
+    partialDeck = JSON.parse(ourRequest.responseText)
+    getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
+    drawDeck();
+    }
+    ourRequest.send();
 
-//     function drawDeck() {
-//     var ourRequest = new XMLHttpRequest();
-//     ourRequest.open("GET",
-//     `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`)
-//     ourRequest.onload = function () {
-//     gameDeck = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
-//     newObject = {...gameDeck.cards}
+    function drawDeck() {
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open("GET",
+    `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`)
+    ourRequest.onload = function () {
+    gameDeck = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
+    newObject = {...gameDeck.cards}
 
-//     for (index in newObject) {
-//         if (newObject[index].value === "5") {
-//             anotherObject = {...newObject[index], ...{correct: "true"}}
-//             finalArray.push(anotherObject)
+    for (index in newObject) {
+        if (newObject[index].code === "KH") {
+            anotherObject = {...newObject[index], ...{correct: "true"}}
+            finalArray.push(anotherObject)
             
-//         } else if (newObject[index].value === "8") {
-//             anotherObject = {...newObject[index], ...{correct: "true"}}
-//             finalArray.push(anotherObject)
-//         } else {
-//             anotherObject = {...newObject[index], ...{correct: "false"}}
-//             finalArray.push(anotherObject)
-//         }
-//     }
-//     displayHands(finalArray)
-//     }
-//     ourRequest.send();
-// }
-//  }
-// }},
+        } else if (newObject[index].code === "QH") {
+            anotherObject = {...newObject[index], ...{correct: "true"}}
+            finalArray.push(anotherObject)
+        } else {
+            anotherObject = {...newObject[index], ...{correct: "false"}}
+            finalArray.push(anotherObject)
+        }
+    }
+    displayHands(finalArray)
+    }
+    ourRequest.send();
+}
+ }
+}},
 
-// ]
+]
