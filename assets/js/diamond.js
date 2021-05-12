@@ -1,5 +1,5 @@
 const startButton = document.getElementById("diamond-play-btn");
-const currentQuestion = document.getElementById('diamond-question');
+const currentQuestion = document.getElementById('question-option');
 const answerDiv = document.getElementById('diamond-answer-buttons')
 
 let shuffledQuestions;
@@ -40,6 +40,7 @@ function shuffleQuestions(array) { // Used code from --- https://stackoverflow.c
 }
 
 function displayQuestion(question) {
+    currentQuestion.classList.add('current-question')
     currentQuestion.innerText = question.question;
     question.answers.forEach(answer => {
         const button = document.createElement('button');
@@ -77,7 +78,7 @@ function displayQuestion(question) {
 
 const questions = [
   {
-    question: "Who won the WSOP Main Event in 2000?",
+    question: "2000?",
     answers: [
       { text: "Chris Ferguson", correctAnswer: true },
       { text: "T.J. Cloutier", correctAnswer: false },
@@ -86,7 +87,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2001?",
+    question: "2001?",
     answers: [
       { text: "Carlos Mortensen", correctAnswer: true },
       { text: "Dewey Tomko", correctAnswer: false },
@@ -95,7 +96,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2002?",
+    question: "2002?",
     answers: [
       { text: "Robert Varkonyi", correctAnswer: true },
       { text: "Julian Gardner", correctAnswer: false },
@@ -104,7 +105,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2003?",
+    question: "2003?",
     answers: [
       { text: "Sammy Farha", correctAnswer: false },
       { text: "Chris Moneymaker", correctAnswer: true },
@@ -113,7 +114,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2004?",
+    question: "2004?",
     answers: [
       { text: "David Williams", correctAnswer: false },
       { text: "Josh Arieh", correctAnswer: false },
@@ -122,7 +123,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2005?",
+    question: "2005?",
     answers: [
       { text: "Steve Dannenmann", correctAnswer: false },
       { text: "Andy Black", correctAnswer: false },
@@ -131,7 +132,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2006?",
+    question: "2006?",
     answers: [
       { text: "Jamie Gold", correctAnswer: true },
       { text: "Allen Cunningham", correctAnswer: false },
@@ -140,7 +141,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2007?",
+    question: "2007?",
     answers: [
       { text: "Tuan Lam", correctAnswer: false },
       { text: "Raymond Rahme", correctAnswer: false },
@@ -149,7 +150,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2008?",
+    question: "2008?",
     answers: [
       { text: "Ivan Demidov", correctAnswer: false },
       { text: "Dennis Phillips", correctAnswer: false },
@@ -158,7 +159,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2009?",
+    question: "2009?",
     answers: [
       { text: "Darvin Moon", correctAnswer: false },
       { text: "Joe Cada", correctAnswer: true },
@@ -167,7 +168,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2010?",
+    question: "2010?",
     answers: [
       { text: "Jonathan Duhamel", correctAnswer: true },
       { text: "John Racener", correctAnswer: false },
@@ -176,7 +177,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2011?",
+    question: "2011?",
     answers: [
       { text: "Martin Staszko", correctAnswer: false },
       { text: "Pius Heinz", correctAnswer: true },
@@ -185,7 +186,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2012?",
+    question: "2012?",
     answers: [
       { text: "Jesse Sylvia", correctAnswer: false },
       { text: "Jacob Balsiger", correctAnswer: false },
@@ -194,7 +195,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2013?",
+    question: "2013?",
     answers: [
       { text: "Jay Farber", correctAnswer: false },
       { text: "Mark Newhouse", correctAnswer: false },
@@ -203,7 +204,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2014?",
+    question: "2014?",
     answers: [
       { text: "Martin Jacobson", correctAnswer: true },
       { text: "Felix Stephensen", correctAnswer: false },
@@ -212,7 +213,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2015?",
+    question: "2015?",
     answers: [
       { text: "Joshua Beckley", correctAnswer: false },
       { text: "Max Steinberg", correctAnswer: false },
@@ -221,7 +222,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2016?",
+    question: "2016?",
     answers: [
       { text: "Qui Nguyen", correctAnswer: true },
       { text: "Gordon Vayo", correctAnswer: false },
@@ -230,7 +231,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2017?",
+    question: "2017?",
     answers: [
       { text: "Dan Ott", correctAnswer: false },
       { text: "Scott Blumstein", correctAnswer: true },
@@ -239,7 +240,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2018?",
+    question: "2018?",
     answers: [
       { text: "John Cynn", correctAnswer: true },
       { text: "Tony Miles", correctAnswer: false },
@@ -248,7 +249,7 @@ const questions = [
     ],
   },
   {
-    question: "Who won the WSOP Main Event in 2019?",
+    question: "2019?",
     answers: [
       { text: "Garry Gates", correctAnswer: false },
       { text: "Alex Livingston", correctAnswer: false },
