@@ -8,6 +8,9 @@ const gameStart = document.getElementById('game-start')
 let correctChoices = 0
 const attempts = 2
 let attemptCounter = 0
+let newObject = {}
+let anotherObject = {}
+let finalArray = []
 
 startButton.addEventListener('click', getCardChoices)
 
@@ -33,7 +36,7 @@ function getCardChoices() {
     `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`)
     ourRequest.onload = function () {
     gameBoard = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
-    console.log(gameBoard)
+    // console.log(gameBoard)
     gameBoard.cards.forEach(e => {
         const board = document.createElement('img')
         board.setAttribute('src', e.image)
@@ -69,8 +72,27 @@ function getCardChoices() {
     `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`)
     ourRequest.onload = function () {
     gameDeck = JSON.parse(ourRequest.responseText) // --- Returns cards from deck ID above
-    // console.log(gameDeck)
-    displayHands(gameDeck)
+    console.log(gameDeck)
+    newObject = {...gameDeck.cards}
+    console.log(newObject)
+    
+    for (index in newObject) {
+        if (newObject[index].value === "5") {
+            anotherObject = {...newObject[index], ...{correct: "true"}}
+            console.log(anotherObject)
+            finalArray.push(anotherObject)
+            
+        } else if (newObject[index].value === "8") {
+            anotherObject = {...newObject[index], ...{correct: "true"}}
+            console.log(anotherObject)
+            finalArray.push(anotherObject)
+        } else {
+            anotherObject = {...newObject[index], ...{correct: "false"}}
+            finalArray.push(anotherObject)
+        }
+    }
+    console.log(finalArray)
+    // displayHands(gameDeck)
     }
     ourRequest.send();
 
@@ -85,51 +107,51 @@ function getCardChoices() {
 }
 
 
-function displayHands(data) {
-    startButton.classList.add('hide')
-    data.cards.forEach(e => {
-        const card = document.createElement('img')
-        if (e.value === "5") {
-            card.setAttribute('data-correct', "correct")
-        } else if (e.value === "8"){
-            card.setAttribute('data-correct', "correct")
-        } else {
-            card.setAttribute('data-correct', "incorrect")
-        }
-        card.setAttribute('src', e.image)
-        // console.log(card)
-        cardBoard.appendChild(card);
-        card.addEventListener('click', selectCard)
-    })
-}
+// function displayHands(data) {
+//     startButton.classList.add('hide')
+//     data.cards.forEach(e => {
+//         const card = document.createElement('img')
+//         if (e.value === "5") {
+//             card.setAttribute('data-correct', "correct")
+//         } else if (e.value === "8"){
+//             card.setAttribute('data-correct', "correct")
+//         } else {
+//             card.setAttribute('data-correct', "incorrect")
+//         }
+//         card.setAttribute('src', e.image)
+//         // console.log(card)
+//         cardBoard.appendChild(card);
+//         card.addEventListener('click', selectCard)
+//     })
+// }
 
-function selectCard(e) {
-    attemptCounter++
-    const selectedCard = e.target
-    // console.log(selectedCard.dataset)
-    correctAnswer = selectedCard.dataset.correct
-    // console.log(correctAnswer)
-    if (correctAnswer === "correct") {
-        correctChoices++
-    }
-    cardChoice.appendChild(selectedCard)
-    // console.log(attemptCounter, 'attempts')
+// function selectCard(e) {
+//     attemptCounter++
+//     const selectedCard = e.target
+//     // console.log(selectedCard.dataset)
+//     correctAnswer = selectedCard.dataset.correct
+//     // console.log(correctAnswer)
+//     if (correctAnswer === "correct") {
+//         correctChoices++
+//     }
+//     cardChoice.appendChild(selectedCard)
+//     // console.log(attemptCounter, 'attempts')
     
-    // console.log(correctChoices, 'correctchoices')
+//     // console.log(correctChoices, 'correctchoices')
 
-    if (attempts < attemptCounter + 1) {
-        cardBoard.classList.add('hide')
-        reviewAnswers()
-    }
-}
+//     if (attempts < attemptCounter + 1) {
+//         cardBoard.classList.add('hide')
+//         reviewAnswers()
+//     }
+// }
 
-function reviewAnswers() {
+// function reviewAnswers() {
     
-    if (correctChoices === 2) {
-        results.innerText = "You got it right!"
-    } else {
-        results.innerText = "You got it wrong!"
-    }
-}
+//     if (correctChoices === 2) {
+//         results.innerText = "You got it right!"
+//     } else {
+//         results.innerText = "You got it wrong!"
+//     }
+// }
 
 //------------------------------------------------------------------------
