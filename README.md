@@ -189,6 +189,8 @@ Other Testing
 
 ### Project Barriers and Solutions
 
+- Had to rewrite functions in spade.html to allow global functions to work for each question. Had to put each question, which was a function itself, into an array.
+
 ### Feature To Improve
 
 ### Code Validity
