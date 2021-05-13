@@ -19,14 +19,30 @@
   <body>
     
     <div class="grid-container">
-          <div class="opaque-overlay">&nbsp;</div>
   <div class="header-container">
     <div class="nav-area"></div>
     
-    <div class="title-area flex-title-container">
-        <h1 class="flex-items">PokerQuiz</h1>
-        <p class="flex-items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, laboriosam. Rem, quibusdam laborum eos ullam itaque quia dolor cupiditate voluptas voluptate at quam in vel.</p>
+    <div class="title-area">
+        <div class="flex-container">
+               <h1 class="flex-items" data-bs-toggle="modal" data-bs-target="#aboutModal">PokerQuiz</h1>
+       <!-- Modal -->
+       <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Diamond</p>
+        <a href="diamond.html"><p>clickhere</p></a>
+      </div>
     </div>
+  </div>
+</div>
+</div>
+    </div>
+    
   </div>
   <div class="suits-container">
     <div class="suits">
@@ -127,7 +143,6 @@
   </div>
         
         
-
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
