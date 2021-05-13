@@ -9,7 +9,6 @@
 
 body {
     background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
-  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed; */
   background-size: cover;
   animation: body-load 5s;
 }
@@ -81,71 +80,7 @@ body {
     }
 }
 
-/* .diamond-area {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-area: 1 / 1 / 2 / 2;
-  /* background-color: rgb(245, 239, 239);
-}
 
-/* .club-area { 
-    display: grid;
-    grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-    grid-area: 1 / 2 / 2 / 3; 
-    /* background-color: rgb(245, 239, 239);
-} */
-
-/* .heart-area {
-    display: grid;
-    grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-    grid-area: 2 / 1 / 3 / 2; */
-    /* background-color: rgb(245, 239, 239);
-}
-
-/* .spade-area {
-    grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-    display: grid;
-    grid-area: 2 / 2 / 3 / 3;
-    /* background-color: rgb(245, 239, 239);
-} */
-
-/* .flex-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.flex-title-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background: url(../images/playingpoker.jpg) no-repeat center center fixed;
-  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed;
-  background-size: cover;
-} */
-
-/* .flex-items:nth-child(1) {
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: center;
-  order: 0;
-} */
 
 .suit {
     font-size: 10rem;
