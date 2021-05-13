@@ -2,6 +2,8 @@
 
 body {
   background-color: rgb(63, 62, 62);
+  background: url(../images/backgroundheartgame.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 * {
@@ -17,8 +19,11 @@ h1 {
   margin-bottom: 50px;
 }
 
-p {
-  font-size: 40px;
+#message {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+
 }
 
 .pair-game-container {
@@ -50,8 +55,9 @@ p {
 
 
 .hide {
-    display: none;
+    display: none ;
 }
+
 
 .flex-container {
     display: flex;
@@ -73,11 +79,11 @@ p {
     }
 }
 
-#next, #start {
+.next-button, #start {
     border-radius: 10px;
     font-size: 2rem;
     border: none;
-    animation: next-button 5s;
+    animation: next-button 8s;
     
 }
 
@@ -91,13 +97,16 @@ p {
     0% {
         opacity: 0;
     }
+    50% {
+        opacity: 0;
+    }
     100% {
         opacity: 1;
     }
 }
 
 .img-one {
-    animation: img-load 5s;
+    animation: img-load 10s;
 }
 
 @keyframes img-load {
@@ -114,7 +123,7 @@ p {
     }
 }
 .img-two {
-    animation: imgtwo-load 5s;
+    animation: imgtwo-load 3s;
 }
 
 @keyframes imgtwo-load {
@@ -132,7 +141,7 @@ p {
 }
 
 .message-text {
-    animation: message-load 6s;
+    animation: message-load 5s;
 }
 
 @keyframes message-load {
@@ -141,6 +150,9 @@ p {
     }
     50% {
         opacity: 0;
+    }
+    75% {
+        transform: scale(2);
     }
     100% {
         opacity: 1;

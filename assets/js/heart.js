@@ -48,7 +48,6 @@ function displayHands(data) {
     } else {
         failure()
     }
-    nextButton.addEventListener('click', nextShuffle)
 }
 
 
@@ -60,7 +59,10 @@ function success() {
         message.classList.add('message-text')
         message.innerText = successMessage
         nextButton.classList.remove('hide')
+        nextButton.classList.add('next-button')
     }, 6000);
+
+        nextButton.addEventListener('click', nextShuffle)
 }
     
 
@@ -72,7 +74,10 @@ function failure() {
         message.classList.add('message-text')
         message.innerText = failureMessage
         nextButton.classList.remove('hide')
+        nextButton.classList.add('next-button')
     }, 6000);
+
+        nextButton.addEventListener('click', nextShuffle)
     
 }
 
