@@ -11,15 +11,26 @@ body {
     --red-colour: rgba(157, 35, 29, 1);
     --black-colour: rgba(41, 35, 38, 1);
     --white-colour: rgba(232, 230, 227, 1);
+    --button-background-colour: var(--white-colour);
     background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
+    background-color: var(--white-colour);
     background-size: cover;
     animation: body-load 5s;
+    color: var(--black-colour);
+    transition: 1s;
+
 }
 
 body.dark {
     background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed;
     background-size: cover;
-    /* animation: body-load 5s; */
+    background-color: var(--black-colour);
+    --button-background-colour: var(--black-colour);
+    --button-text-colour: var(--white-colour);
+    color: var(--white-colour);
+
+    
+    animation: body-load 5s;
 }
 
 .toggle-button {
@@ -33,17 +44,75 @@ body.dark {
     outline: none;
     font-size: 1.5rem;
     margin: 10px;
-    background-color: var(--white-colour);
+    background-color: var(--button-background-colour);
+    color: var(--button-text-colour);
     transition: 1s;
     transform: scale(1);
 }
 
 .toggle-button svg {
     padding: 5px;
+    fill: var(--button-text-colour);
 }
 
 .toggle-button:hover, .toggle-button:focus {
     transform: scale(1.05);
+}
+
+.suits.diamond-area, .suits.heart-area {
+    animation: suits-load 3s;
+}
+
+.suits .diamond-area, .suits .heart-area {
+    animation: suits-load-red 3s;
+}
+
+.title-container button {
+    animation: button-load 3s;
+}
+
+@keyframes button-load {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.title-container p {
+    animation: text-load 3s;
+}
+
+@keyframes text-load {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes suits-load-red {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.suits .club-area, .suits .spade-area {
+    animation: suits-load-black 3s;
+}
+
+@keyframes suits-load-black {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes body-load {
@@ -94,6 +163,10 @@ body.dark {
     align-items: center;
 }
 
+.title-container p {
+    padding: 5px;
+}
+
 .suits {
   display: flex;
   flex-direction: row;
@@ -101,19 +174,9 @@ body.dark {
   justify-content: center;
   align-items: center;
   gap: 30px 30px;
-  animation: suits-load 3s;
+  transform: scale(1);
+  
 }
-
-@keyframes suits-load {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
 
 .suit {
     font-size: 10rem;
@@ -131,11 +194,12 @@ body.dark {
     color: var(--black-colour)
 }
 
-.suit:hover{
+.suit:hover, .suit:focus {
     background-color: white;
     cursor: pointer;
     box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
     transition: 1s;
+    transform: scale(1.05);
 }
 
 a {
