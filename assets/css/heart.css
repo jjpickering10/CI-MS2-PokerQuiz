@@ -34,12 +34,6 @@ p {
 
 .hand-container {
   display: flex;
-  margin-bottom: 10px;
-  width: 100%;
-  border-radius: 4px;
-  background: rgb(185, 65, 65);
-  font-size: 3rem;
-  min-width: 50%;
 }
 
 .answer-text {
@@ -54,4 +48,80 @@ p {
 
 .hide {
     display: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#next {
+    border-radius: 10px;
+    font-size: 2rem;
+    border: none;
+    animation: next-button 6s;
+    
+}
+
+#next:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 5px white;
+    
+}
+
+@keyframes next-button {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.img-one {
+    animation: img-load 5s;
+}
+
+@keyframes img-load {
+    0% {
+        transform: translateX(-250%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.img-two {
+    animation: imgtwo-load 5s;
+}
+
+@keyframes imgtwo-load {
+    0% {
+        transform: translateX(250%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#message {
+    animation: message-load 6s;
+}
+
+@keyframes message-load {
+    0% {
+        transform: scaleZ(0);
+    }
+    100% {
+        transform: scaleZ(1);
+    }
 }

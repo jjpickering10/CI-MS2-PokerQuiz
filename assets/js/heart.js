@@ -13,6 +13,7 @@ startButton.addEventListener('click', startGame)
 function startGame() {
     nextButton.classList.remove('hide')
     startButton.classList.add('hide')
+    message.classList.add('hide')
     // ---- Using API from https://deckofcardsapi.com/ -----
     const handRequest = new XMLHttpRequest();
 handRequest.open('GET', 'https://deckofcardsapi.com/api/deck/new/draw/?count=2')
@@ -28,8 +29,13 @@ function displayHands(data) {
     cardOne = data.cards[0].value
     cardTwo = data.cards[1].value
 
-    handOne.innerText = `${cardOne} ${data.cards[0].suit}`
-    handTwo.innerText = `${cardTwo} ${data.cards[1].suit}`
+    // handOne.innerHTML = `${cardOne} ${data.cards[0].suit}`
+    // handTwo.innerHTML = `${cardTwo} ${data.cards[1].suit}`
+
+    handOne.innerHTML = `<img class="img-one" src="${data.cards[0].image}" alt="${cardOne}, ${data.cards[0].suit} playing card">`
+    handTwo.innerHTML = `<img class="img-two" src="${data.cards[1].image}" alt="${cardTwo}, ${data.cards[1].suit} playing card">`
+
+    
 
     console.log(cardOne === cardTwo)
 
@@ -45,13 +51,21 @@ function displayHands(data) {
 
 
 function success() {
+    message.classList.remove('hide')
     const successMessage = pairSuccess[Math.floor(Math.random() * pairSuccess.length)];
-    message.innerText = successMessage
+    setTimeout(() => {
+        message.innerText = successMessage
+    }, 6000);
 }
+    
 
 function failure() {
+    message.classList.remove('hide')
     const failureMessage = pairFailure[Math.floor(Math.random() * pairFailure.length)];
-    message.innerText = failureMessage
+    setTimeout(() => {
+        message.innerText = failureMessage
+    }, 6000);
+    
 }
 
 function nextShuffle(){
