@@ -4,6 +4,7 @@ const startButton = document.getElementById('start')
 const nextButton = document.getElementById('next')
 const score = document.getElementById('score')
 const message = document.getElementById('message')
+const question = document.getElementById('question')
 
 let scoreCounter = 0;
 let questionCounter = 0;
@@ -11,8 +12,9 @@ let questionCounter = 0;
 startButton.addEventListener('click', startGame)
 
 function startGame() {
-    nextButton.classList.remove('hide')
+    question.classList.add('hide')
     startButton.classList.add('hide')
+    nextButton.classList.add('hide')
     message.classList.add('hide')
     // ---- Using API from https://deckofcardsapi.com/ -----
     const handRequest = new XMLHttpRequest();
@@ -51,19 +53,25 @@ function displayHands(data) {
 
 
 function success() {
-    message.classList.remove('hide')
     const successMessage = pairSuccess[Math.floor(Math.random() * pairSuccess.length)];
     setTimeout(() => {
+        
+        message.classList.remove('hide')
+        message.classList.add('message-text')
         message.innerText = successMessage
+        nextButton.classList.remove('hide')
     }, 6000);
 }
     
 
 function failure() {
-    message.classList.remove('hide')
     const failureMessage = pairFailure[Math.floor(Math.random() * pairFailure.length)];
     setTimeout(() => {
+        
+        message.classList.remove('hide')
+        message.classList.add('message-text')
         message.innerText = failureMessage
+        nextButton.classList.remove('hide')
     }, 6000);
     
 }

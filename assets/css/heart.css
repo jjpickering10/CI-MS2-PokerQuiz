@@ -25,8 +25,11 @@ p {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   max-width: 80rem;
   margin: 0 auto;
   padding: 2rem;
@@ -55,11 +58,26 @@ p {
     justify-content: space-around;
 }
 
-#next {
+#question {
+    animation: question-load 5s;
+}
+
+@keyframes question-load {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#next, #start {
     border-radius: 10px;
     font-size: 2rem;
     border: none;
-    animation: next-button 6s;
+    animation: next-button 5s;
     
 }
 
@@ -84,7 +102,7 @@ p {
 
 @keyframes img-load {
     0% {
-        transform: translateX(-250%);
+        transform: translateX(-25%);
         opacity: 0;
     }
     50% {
@@ -101,7 +119,7 @@ p {
 
 @keyframes imgtwo-load {
     0% {
-        transform: translateX(250%);
+        transform: translateX(25%);
         opacity: 0;
     }
     50% {
@@ -113,15 +131,18 @@ p {
     }
 }
 
-#message {
+.message-text {
     animation: message-load 6s;
 }
 
 @keyframes message-load {
     0% {
-        transform: scaleZ(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
     }
     100% {
-        transform: scaleZ(1);
+        opacity: 1;
     }
 }
