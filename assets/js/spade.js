@@ -82,6 +82,7 @@ function displayHands(data) {
         const card = document.createElement('img')
         card.setAttribute('src', e.image)
         card.setAttribute('data-correct', e.correct)
+        // card.classList.add('card-options')
         cardBoard.appendChild(card);
         card.addEventListener('click', selectCard)
     })
@@ -90,11 +91,14 @@ function displayHands(data) {
 function selectCard(e) {
     attemptCounter++
     const selectedCard = e.target
+    // selectedCard.classList.remove('card-options')
+    // selectedCard.removeEventListener('click', selectCard)
     correctAnswer = selectedCard.dataset.correct
     if (correctAnswer === "true") {
         correctChoices++
     }
     cardChoice.appendChild(selectedCard)
+    // selectedCard.classList.remove('card-answer')
     if (attempts < attemptCounter + 1) {
         cardBoard.classList.add('hide')
         reviewAnswers()
@@ -112,7 +116,7 @@ function reviewAnswers() {
          questionIndex++
          setTimeout(() => {
              setQuestion();
-         }, 1000);
+         }, 5000);
      } else {
          return window.location.assign('score.html')
      }
