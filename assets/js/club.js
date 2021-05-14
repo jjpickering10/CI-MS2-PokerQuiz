@@ -79,13 +79,15 @@ startButton.addEventListener("click", startGame);
 
 
 function startGame (){
-    firstOption.removeAttribute('data-correct', "true")
-    secondOption.removeAttribute('data-correct', "true")
-    firstOption.classList.remove('correct')
-    secondOption.classList.remove('correct')
-    firstOption.classList.remove('wrong')
-    secondOption.classList.remove('wrong')
+    // firstOption.removeAttribute('data-correct', "true")
+    // secondOption.removeAttribute('data-correct', "true")
+    // firstOption.classList.remove('correct')
+    // secondOption.classList.remove('correct')
+    // firstOption.classList.remove('wrong')
+    // secondOption.classList.remove('wrong')
     startButton.classList.add('hide')
+    firstOption.classList.remove('hide')
+    secondOption.classList.remove('hide')
     //shuffledRankings = shuffleRankings(handRankings)
     setRankings();
 }
@@ -116,6 +118,12 @@ function shuffleRankings(array) {
 }
 
 function setRankings() {
+    while (firstOptionCards.firstChild) {
+         firstOptionCards.removeChild(firstOptionCards.firstChild)
+     }
+      while (secondOptionCards.firstChild) {
+         secondOptionCards.removeChild(secondOptionCards.firstChild)
+     }
     shuffledRankings = shuffleRankings(handRankings)
     console.log(shuffledRankings)
     startButton.classList.add('hide')
@@ -142,6 +150,7 @@ function displayRankings(optionOne, optionTwo) {
         const image = document.createElement('img')
         console.log(card)
         image.setAttribute('src', card)
+        image.classList.add('image-size')
         firstOptionCards.appendChild(image);
     }
 
@@ -150,6 +159,7 @@ function displayRankings(optionOne, optionTwo) {
         const card = optionTwo.images[i];
         console.log(card)
         image.setAttribute('src', card)
+        image.classList.add('image-size')
         secondOptionCards.appendChild(image);
     }
 
