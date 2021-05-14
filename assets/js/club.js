@@ -1,5 +1,7 @@
 let firstOption = document.getElementById("first-option");
 let secondOption = document.getElementById("second-option");
+let firstOptionCards = document.getElementById("first-option-cards");
+let secondOptionCards = document.getElementById("second-option-cards");
 const startButton = document.getElementById("start");
 const currentScore = document.getElementById('score')
 //const answerButton = document.getElementsByName('.answer-text')
@@ -12,42 +14,62 @@ let handRankings = [
   {
     text: "Royal Flush",
     id: 1,
+    images: ["assets/images/AS.png","assets/images/0S.png","assets/images/QS.png","assets/images/JS.png","assets/images/KS.png"
+    ]
   },
   {
     text: "Straight Flush",
     id: 2,
+    images: ["assets/images/5H.png","assets/images/6H.png","assets/images/9H.png","assets/images/7H.png","assets/images/8H.png"
+    ]
   },
   {
     text: "Four of a kind",
     id: 3,
+    images: ["assets/images/3S.png","assets/images/3D.png","assets/images/3C.png","assets/images/3H.png","assets/images/2H.png"
+    ]
   },
   {
     text: "Full House",
     id: 4,
+    images: ["assets/images/6C.png","assets/images/6D.png","assets/images/7C.png","assets/images/6S.png","assets/images/7S.png"
+    ]
   },
   {
     text: "Flush",
     id: 6,
+    images: ["assets/images/5D.png","assets/images/8D.png","assets/images/2D.png","assets/images/7D.png","assets/images/4D.png"
+    ]
   },
   {
     text: "Straight",
     id: 7,
+    images: ["assets/images/8S.png","assets/images/9C.png","assets/images/JC.png","assets/images/QC.png","assets/images/0H.png"
+    ]
   },
   {
     text: "Three of a kind",
     id: 8,
+    images: ["assets/images/4H.png","assets/images/8C.png","assets/images/4C.png","assets/images/4S.png","assets/images/JD.png"
+    ]
   },
   {
     text: "Two pair",
     id: 9,
+    images: ["assets/images/2S.png","assets/images/5S.png","assets/images/2C.png","assets/images/5C.png","assets/images/AH.png"
+    ]
   },
   {
     text: "One pair",
     id: 10,
+    images: ["assets/images/KC.png","assets/images/AC.png","assets/images/JH.png","assets/images/KD.png","assets/images/QH.png"
+    ]
   },
   {
     text: "High Card",
     id: 11,
+    images: ["assets/images/AD.png","assets/images/KH.png","assets/images/9S.png","assets/images/0D.png","assets/images/QD.png"
+    ]
   },
 ];
 
