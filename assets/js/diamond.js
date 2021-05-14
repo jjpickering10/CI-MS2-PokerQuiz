@@ -3,6 +3,7 @@ const currentQuestion = document.getElementById('question-option');
 const answerDiv = document.getElementById('diamond-answer-buttons')
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')
+const score = document.getElementById('score')
 
 let shuffledQuestions;
 let questionIndex = 0;
@@ -82,6 +83,7 @@ function displayQuestion(question) {
  function openModal(){
      modal.classList.add('active')
      overlay.classList.add('overlay')
+     score.innerText = rightAnswers
  }
 
 const questions = [
