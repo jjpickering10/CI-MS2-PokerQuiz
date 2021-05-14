@@ -6,10 +6,35 @@ const score = document.getElementById('score')
 const message = document.getElementById('message')
 const question = document.getElementById('question')
 
+const modal = document.getElementById('modal')
+const overlay = document.getElementById('overlay')
+
+const clubButton = document.getElementById('club')
+const heartButton = document.getElementById('heart')
+const spadeButton = document.getElementById('spade')
+const homeButton = document.getElementById('home-button')
+const playAgainButton = document.getElementById('play-again-button')
+
 let scoreCounter = 0;
 let questionCounter = 0;
 
 startButton.addEventListener('click', startGame)
+
+clubButton.addEventListener('click', () => {
+    window.location.assign('club.html')
+});
+heartButton.addEventListener('click', () => {
+    window.location.assign('heart.html')
+});
+spadeButton.addEventListener('click', () => {
+    window.location.assign('spade.html')
+} );
+homeButton.addEventListener('click', () => {
+    window.location.assign('index.html')
+} );
+playAgainButton.addEventListener('click', () => {
+    window.location.assign('diamond.html')
+} );
 
 function startGame() {
     question.classList.add('hide')
@@ -88,9 +113,16 @@ function nextShuffle(){
         startGame()
     }, 1000);
 } else {
-    window.location.assign('index.html')
+    openModal()
 }
 }
+
+function openModal(){
+     modal.classList.add('active')
+     overlay.classList.add('overlay')
+     score.innerText = `${scoreCounter} pair/s in 10 attempts`
+ }
+
 
 let pairFailure = [
 
