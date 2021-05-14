@@ -130,15 +130,15 @@ body {
     height: 100%;
 }
 
-.diamond-buttons {
-    font-size: 1.5rem;
+.diamond-buttons, .next-game-buttons {
+    font-size: 1.5vh;
     border: none;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 5px;
+    border-radius: 1vh;
+    padding: 2vh;
+    margin: 1vh 1vw;
 }
 
-.diamond-buttons:hover{
+.diamond-buttons:hover, .diamond-buttons:focus, .next-game-buttons:hover, .next-game-buttons:focus {
     cursor: pointer;
     box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
     transform: scale(1.05);
@@ -158,12 +158,17 @@ body {
 
 .modal {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     transform: scale(0);
     background-color: white;
-    top: 25%;
-    left: 25%;
-    right: 25%;
-    bottom: 25%;
+    top: 15vh;
+    left: 15vw;
+    right: 15vw;
+    bottom: 15vw;
     border: 2px solid black;
     border-radius: 10px;
     z-index: 10000;
@@ -171,26 +176,37 @@ body {
 
 .modal-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 2vh;
     border-bottom: 2px solid black;
-    border-radius: 10px;
+    border-radius: 1vh;
 }
 
 .modal-title {
-    font-size: 2rem;
+    font-size: 2vh;
 }
 
-.close {
+/* .close {
     font-size: 4rem;
     background: none;
     border: none;
     cursor: pointer;
-}
+} */
 
 .modal-body {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 2vh;
+}
+
+.modal-body h1 {
+    font-size: 3vh;
+    text-align: center;
+    padding: 1vh;
 }
 
 .active {
@@ -206,4 +222,14 @@ body {
     left: 0;
     background-color: rgba(0, 0, 0, 0.95);
     pointer-events: none;
+}
+
+#score {
+    font-size: 5vh;
+    text-align: center;
+}
+
+#next-games, #go-home {
+    display: flex;
+    padding: 1vh;
 }

@@ -4,12 +4,32 @@ const answerDiv = document.getElementById('diamond-answer-buttons')
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')
 const score = document.getElementById('score')
+const clubButton = document.getElementById('club')
+const heartButton = document.getElementById('heart')
+const spadeButton = document.getElementById('spade')
+const homeButton = document.getElementById('home-button')
+const playAgainButton = document.getElementById('play-again-button')
 
 let shuffledQuestions;
 let questionIndex = 0;
 let rightAnswers = 0;
 
 startButton.addEventListener('click', startGame);
+clubButton.addEventListener('click', () => {
+    window.location.assign('club.html')
+});
+heartButton.addEventListener('click', () => {
+    window.location.assign('heart.html')
+});
+spadeButton.addEventListener('click', () => {
+    window.location.assign('spade.html')
+} );
+homeButton.addEventListener('click', () => {
+    window.location.assign('index.html')
+} );
+playAgainButton.addEventListener('click', () => {
+    window.location.assign('diamond.html')
+} );
 
 function startGame() {
     shuffledQuestions = shuffleQuestions(questions);
@@ -83,7 +103,7 @@ function displayQuestion(question) {
  function openModal(){
      modal.classList.add('active')
      overlay.classList.add('overlay')
-     score.innerText = rightAnswers
+     score.innerText = `${rightAnswers} out of 5`
  }
 
 const questions = [
