@@ -163,8 +163,8 @@ function displayRankings(optionOne, optionTwo) {
         secondOptionCards.appendChild(image);
     }
 
-    firstOption.innerText = optionOne.text
-    secondOption.innerText = optionTwo.text
+    // firstOption.innerText = optionOne.text
+    // secondOption.innerText = optionTwo.text
     
     if (optionOne.id <= optionTwo.id) {
         firstOption.dataset.correct = true;

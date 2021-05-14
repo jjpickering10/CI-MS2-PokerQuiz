@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
 
 body {
-  background-color: rgb(63, 62, 62);
+    background-color: rgb(63, 62, 62);
+    background: url(../images/fouracesbackground.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
 * {
@@ -15,6 +17,7 @@ h1 {
   font-size: 50px;
   color: white;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 p {
@@ -108,8 +111,8 @@ p {
 }
 
 .correct {
-    color:green;
+    background-color:green;
 }
 .wrong {
-    color: red;
+    background-color: red;
 }
