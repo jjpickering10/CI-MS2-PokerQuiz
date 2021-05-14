@@ -175,7 +175,7 @@ function displayRankings(optionOne, optionTwo) {
     // if (optionOne.text === optionTwo.text){
     //     getRankings();
     // }
-document.querySelectorAll('.answer-text').forEach(item => {
+document.querySelectorAll('.start').forEach(item => {
     item.addEventListener('click', rankingInfo)
 })
 }
