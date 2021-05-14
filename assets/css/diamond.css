@@ -148,10 +148,23 @@ body {
 }
 
 .diamond-right-answers {
-    
+
 }
 
 
 .hide {
     display: none;
+}
+
+.modal {
+    position: fixed;
+    background-color: white;
+    top: 25%;
+    left: 25%;
+    right: 25%;
+    bottom: 25%;
+    border: 2px solid black;
+    z-index: 10000;
+    
+
 }
