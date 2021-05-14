@@ -4,6 +4,33 @@ let firstOptionCards = document.getElementById("first-option-cards");
 let secondOptionCards = document.getElementById("second-option-cards");
 const startButton = document.getElementById("start");
 const currentScore = document.getElementById('score')
+
+const modal = document.getElementById('modal')
+const overlay = document.getElementById('overlay')
+
+const clubButton = document.getElementById('club')
+const heartButton = document.getElementById('heart')
+const spadeButton = document.getElementById('spade')
+const homeButton = document.getElementById('home-button')
+const playAgainButton = document.getElementById('play-again-button')
+
+
+startButton.addEventListener('click', startGame);
+clubButton.addEventListener('click', () => {
+    window.location.assign('club.html')
+});
+heartButton.addEventListener('click', () => {
+    window.location.assign('heart.html')
+});
+spadeButton.addEventListener('click', () => {
+    window.location.assign('spade.html')
+} );
+homeButton.addEventListener('click', () => {
+    window.location.assign('index.html')
+} );
+playAgainButton.addEventListener('click', () => {
+    window.location.assign('diamond.html')
+} );
 //const answerButton = document.getElementsByName('.answer-text')
 
 let shuffledRankings;
@@ -205,6 +232,12 @@ currentScore.innerHTML = rightAnswers;
       setRankings();
     }, 1000);
   } else {
-      return window.location.assign('index.html')
+      openModal()
   }
 }
+
+function openModal(){
+     modal.classList.add('active')
+     overlay.classList.add('overlay')
+     currentScore.innerText = `${rightAnswers} out of 10`
+ }
