@@ -158,13 +158,52 @@ body {
 
 .modal {
     position: fixed;
+    transform: scale(0);
     background-color: white;
     top: 25%;
     left: 25%;
     right: 25%;
     bottom: 25%;
     border: 2px solid black;
+    border-radius: 10px;
     z-index: 10000;
-    
+}
 
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+}
+
+.modal-title {
+    font-size: 2rem;
+}
+
+.close {
+    font-size: 4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.active {
+    transform: scale(1);
+}
+
+.overlay {
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    pointer-events: none;
 }

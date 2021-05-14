@@ -1,6 +1,8 @@
 const startButton = document.getElementById("diamond-play-btn");
 const currentQuestion = document.getElementById('question-option');
 const answerDiv = document.getElementById('diamond-answer-buttons')
+const modal = document.getElementById('modal')
+const overlay = document.getElementById('overlay')
 
 let shuffledQuestions;
 let questionIndex = 0;
@@ -72,8 +74,14 @@ function displayQuestion(question) {
              setQuestion();
          }, 1000);
      } else {
-         return window.location.assign('score.html')
+        //  return window.location.assign('score.html')
+        openModal();
      }
+ }
+
+ function openModal(){
+     modal.classList.add('active')
+     overlay.classList.add('overlay')
  }
 
 const questions = [
