@@ -136,6 +136,23 @@ function displayRankings(optionOne, optionTwo) {
     // if (optionOne.id === optionTwo.id) {
     // return window.location.assign('index.html')
     // }
+
+    for (let i = 0; i < optionOne.images.length; i++) {
+        const card = optionOne.images[i];
+        const image = document.createElement('img')
+        console.log(card)
+        image.setAttribute('src', card)
+        firstOptionCards.appendChild(image);
+    }
+
+    for (let i = 0; i < optionTwo.images.length; i++) {
+        const image = document.createElement('img')
+        const card = optionTwo.images[i];
+        console.log(card)
+        image.setAttribute('src', card)
+        secondOptionCards.appendChild(image);
+    }
+
     firstOption.innerText = optionOne.text
     secondOption.innerText = optionTwo.text
     
