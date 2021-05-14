@@ -5,6 +5,7 @@ const results = document.getElementById('results')
 const startButton = document.getElementById('start')
 const gameStart = document.getElementById('game-start')
 const img = document.getElementsByTagName('img')
+const question = document.getElementById('question')
 
 const attempts = 2
 let correctChoices = 0
@@ -187,6 +188,10 @@ let questions = [
             finalArray.push(anotherObject)
         }
     }
+    setTimeout(() => {
+        question.innerText = "Make a straight"
+    }, 500);
+
     displayHands(finalArray)
     }
     ourRequest.send();
@@ -257,6 +262,9 @@ let questions = [
             finalArray.push(anotherObject)
         }
     }
+    setTimeout(() => {
+        question.innerText = "Make a flush"
+    }, 500);
     displayHands(finalArray)
     }
     ourRequest.send();
@@ -327,6 +335,9 @@ let questions = [
             finalArray.push(anotherObject)
         }
     }
+    setTimeout(() => {
+        question.innerText = "Make a full house"
+    }, 500);
     displayHands(finalArray)
     }
     ourRequest.send();
@@ -397,6 +408,9 @@ let questions = [
             finalArray.push(anotherObject)
         }
     }
+    setTimeout(() => {
+        question.innerText = "Make a straight flush"
+    }, 500);
     displayHands(finalArray)
     }
     ourRequest.send();
@@ -467,6 +481,9 @@ let questions = [
             finalArray.push(anotherObject)
         }
     }
+    setTimeout(() => {
+        question.innerText = "Make a royal flush"
+    }, 500);
     displayHands(finalArray)
     }
     ourRequest.send();
