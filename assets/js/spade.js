@@ -20,7 +20,7 @@ let questionIndex = 0
 startButton.addEventListener('click', startGame)
 
 function startGame(){ //----https://stackoverflow.com/questions/4908378/javascript-array-of-functions#4908388
-    
+    startButton.classList.add('hide')
     shuffledQuestions = shuffleQuestions(questions)
     console.log(shuffledQuestions)
     
