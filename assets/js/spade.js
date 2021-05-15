@@ -99,7 +99,10 @@ function resetDocument() {
      
     cardBoard.classList.remove('hide')
     cardChoice.classList.remove('hide')
-    gameStart.classList.remove('hide')
+    
+    
+    results.classList.add('hide')
+    
     
 
 }
@@ -111,7 +114,9 @@ function resetDocument() {
 
 
 function displayHands(data) {
-    startButton.classList.add('hide')
+    // gameStart.classList.remove('hide')
+    
+    // startButton.classList.add('hide')
     data.forEach(e => {
         const card = document.createElement('img')
         card.setAttribute('src', e.image)
@@ -120,6 +125,10 @@ function displayHands(data) {
         cardBoard.appendChild(card);
         card.addEventListener('click', selectCard)
     })
+    setTimeout(() => {
+        question.classList.remove('hide')
+    }, 1000);
+    
 }
 
 function selectCard(e) {
@@ -135,12 +144,13 @@ function selectCard(e) {
     // selectedCard.classList.remove('card-answer')
     if (attempts < attemptCounter + 1) {
         cardBoard.classList.add('hide')
-        gameStart.classList.add('hide')
+        question.classList.add('hide')
         reviewAnswers()
     }
 }
 
 function reviewAnswers() {
+    results.classList.remove('hide')
     
     if (correctChoices === 2) {
         rightAnswers++
