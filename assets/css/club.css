@@ -1,9 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
 
+
 body {
-    background-color: rgb(63, 62, 62);
-    background: url(../images/fouracesbackground.jpg) no-repeat center center fixed;
-    background-size: cover;
+    --black-colour: rgba(41, 35, 38, 1);
+    --white-colour: rgba(232, 230, 227, 1);
+    --button-background-colour: var(--white-colour);
+    color: var(--black-colour);
+    background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
+    /* background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed; */
+  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed; */
+  background-size: cover;
+}
+
+body.dark {
+    --black-colour: rgba(41, 35, 38, 1);
+    --white-colour: rgba(232, 230, 227, 1);
+    --button-background-colour: rgba(110,110,110,1);
+    color: var(--white-colour);
+    /* background: url(../images/frontpagepoker.jpg) no-repeat center center fixed; */
+    background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed;
+  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed; */
+  background-size: cover;
 }
 
 * {
@@ -15,7 +32,7 @@ body {
 
 .club-column h1 {
   font-size: 50px;
-  color: white;
+  /* color: white; */
   margin-bottom: 50px;
   text-align: center;
 }
@@ -45,7 +62,7 @@ body {
 }
 
 .answer-icon {
-  color: white;
+  /* color: white; */
 }
 
 .answer-text {
@@ -84,10 +101,10 @@ body {
     font-size: 1.5rem;
     width: 40%;
     margin: 10px;
-    /* background-color: var(--button-background-colour);
-    color: var(--button-text-colour); */
-    background-color: white;
-    color: black;
+    /* background-color: var(--button-background-colour);*/
+    color: currentColor;
+    background-color: var(--button-background-colour);
+    /* color: black; */
     transition: 1s;
     transform: scale(1);
 }
@@ -95,7 +112,7 @@ body {
 .start svg {
     margin: 0.2rem;
     padding: 0.2rem;
-    fill: black;
+    fill: var(--white-colour);
 }
 
 .start:hover, .start:focus {

@@ -3,10 +3,9 @@ const closeModals = document.querySelectorAll('[data-close]')
 const overlay = document.getElementById('modal-overlay')
 const pageContainer = document.getElementById('page-container')
 
-document.querySelector('.toggle-button').addEventListener('click', () => {
-    document.body.classList.toggle('dark')
-})
 
+
+// ----------------- Modals
 
 openModals.forEach(e => {
     e.addEventListener('click', () => {

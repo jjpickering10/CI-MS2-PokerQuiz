@@ -1,8 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
 
+
 body {
-  background-color: rgb(63, 62, 62);
-  background: url(../images/backgroundheartgame.jpg) no-repeat center center fixed;
+    --black-colour: rgba(41, 35, 38, 1);
+    --white-colour: rgba(232, 230, 227, 1);
+    --button-background-colour: var(--white-colour);
+    color: var(--black-colour);
+    background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
+    /* background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed; */
+  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed; */
+  background-size: cover;
+}
+
+body.dark {
+    --black-colour: rgba(41, 35, 38, 1);
+    --white-colour: rgba(232, 230, 227, 1);
+    --button-background-colour: rgba(110,110,110,1);
+    color: var(--white-colour);
+    /* background: url(../images/frontpagepoker.jpg) no-repeat center center fixed; */
+    background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed;
+  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed; */
   background-size: cover;
 }
 
@@ -15,14 +32,14 @@ body {
 
 .heart-column h1 {
   font-size: 50px;
-  color: white;
+  /* color: white; */
   margin-bottom: 50px;
 }
 
 #message {
   font-size: 2rem;
   text-align: center;
-  color: white;
+  /* color: white; */
 
 }
 
@@ -84,12 +101,15 @@ body {
     font-size: 2rem;
     border: none;
     animation: next-button 5s;
+    color: currentColor;
+    cursor: pointer;
+    background-color: var(--button-background-colour);
     
 }
 
-#next:hover {
+.next-button:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 5px 5px white;
+    /* box-shadow: 0px 0px 5px 5px white; */
     
 }
 
@@ -165,6 +185,8 @@ body {
     border-radius: 1vh;
     padding: 2vh;
     margin: 1vh 1vw;
+    color: currentColor;
+    background-color: var(--button-background-colour);
 }
 
 .next-game-buttons:hover, .next-game-buttons:focus {
@@ -172,8 +194,8 @@ body {
     box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
     transform: scale(1.05);
     transition: 1s;
-    color: white;
-    background-color: rgba(110, 110, 110, 1);
+    color: currentColor;
+    background-color: var(--button-background-colour);
 }
 
 .modal {

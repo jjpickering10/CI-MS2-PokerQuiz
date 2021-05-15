@@ -1,7 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
 
 body {
-  background: url(../images/playingpoker.jpg) no-repeat center center fixed;
+    --black-colour: rgba(41, 35, 38, 1);
+    --white-colour: rgba(232, 230, 227, 1);
+    --button-background-colour: var(--white-colour);
+    color: var(--black-colour);
+    background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
+    /* background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed; */
+  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed; */
+  background-size: cover;
+}
+
+body.dark {
+    --black-colour: rgba(41, 35, 38, 1);
+    --white-colour: rgba(232, 230, 227, 1);
+    --button-background-colour: rgba(110,110,110,1);
+    color: var(--white-colour);
+    /* background: url(../images/frontpagepoker.jpg) no-repeat center center fixed; */
+    background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed;
+  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed; */
   background-size: cover;
 }
 
@@ -64,13 +81,13 @@ body {
 }
 
 .question-title h1 {
-    color: white;
+    /* color: white; */
     font-size: 3rem;
     text-align: center;
 }
 
 .current-question {
-    color: white;
+    /* color: white; */
     font-size: 2.5rem;
 }
 
@@ -136,6 +153,8 @@ body {
     border-radius: 1vh;
     padding: 2vh;
     margin: 1vh 1vw;
+    color: currentColor;
+    background-color: var(--button-background-colour);
 }
 
 .diamond-buttons:hover, .diamond-buttons:focus, .next-game-buttons:hover, .next-game-buttons:focus {

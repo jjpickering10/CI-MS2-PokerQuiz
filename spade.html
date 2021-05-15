@@ -16,15 +16,17 @@
     <link rel="stylesheet" href="assets/css/spade.css" />
     <title>PokerQuiz</title>
   </head>
-  <body>
+  <body class="dark">
     <div class="flex-container">
-  <div id="card-choice" class="card-game-container hide"></div>
-  <div id="game-start" class="question-container">
+        <div id="game-start" class="question-container">
+            <h1>Pick two cards from the board, to make the hand in question!</h1>
       <p id="question" class="hide question-fade"></p>
       <button id="start" class="start">Start<svg style="width:24px;height:24px" viewBox="0 0 24 24">
     <path d="M12,2C9,7 4,9 4,14C4,16 6,18 8,18C9,18 10,18 11,17C11,17 11.32,19 9,22H15C13,19 13,17 13,17C14,18 15,18 16,18C18,18 20,16 20,14C20,9 15,7 12,2Z" />
 </svg></button>
   </div>
+  <div id="card-choice" class="card-game-container hide"></div>
+  
   <div id="card-board" class="card-board-container hide"></div>
   <div id="results" class="results-container card-answer hide"></div>
 </div>
