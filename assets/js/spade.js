@@ -85,6 +85,7 @@ function resetDocument() {
     newObject = {}
     anotherObject = {}
     finalArray = []
+    question.innerText = ""
 
     while (cardBoard.firstChild) {
          cardBoard.removeChild(cardBoard.firstChild)
@@ -92,9 +93,14 @@ function resetDocument() {
       while (cardChoice.firstChild) {
          cardChoice.removeChild(cardChoice.firstChild)
      }
+    //  while (gameStart.firstChild) {
+    //      gameStart.removeChild(gameStart.firstChild)
+    //  }
      
     cardBoard.classList.remove('hide')
     cardChoice.classList.remove('hide')
+    gameStart.classList.remove('hide')
+    
 
 }
 
@@ -129,6 +135,7 @@ function selectCard(e) {
     // selectedCard.classList.remove('card-answer')
     if (attempts < attemptCounter + 1) {
         cardBoard.classList.add('hide')
+        gameStart.classList.add('hide')
         reviewAnswers()
     }
 }
