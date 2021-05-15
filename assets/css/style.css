@@ -189,7 +189,7 @@ body.dark .suit:hover, body.dark .suit:focus {
 }
 
 .suit:hover, .suit:focus {
-    background-color: pink;
+    background-color: rgba(157, 35, 29, 0.2);
     cursor: pointer;
     box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
     transition: 1s;
@@ -205,8 +205,8 @@ a {
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    /* justify-content: center; */
     transform: scale(0);
     background-color: white;
     top: 15vh;
@@ -218,9 +218,13 @@ a {
     z-index: 10000;
 }
 
+body.dark .modal {
+    background-color: rgba(128, 128, 128, 0.85);
+}
+
 .modal-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 2vh;
     border-bottom: 2px solid black;
@@ -228,15 +232,17 @@ a {
 }
 
 .modal-title {
+    display: flex;
     font-size: 2vh;
+    gap: 0.5vh;
 }
 
-/* .close {
-    font-size: 4rem;
+.close {
+    font-size: 2vh;
     background: none;
     border: none;
     cursor: pointer;
-} */
+}
 
 .modal-body {
     display: flex;
@@ -245,15 +251,87 @@ a {
     justify-content: center;
     align-content: center;
     padding: 2vh;
+    gap: 3vh;
 }
 
-.modal-body h1 {
+.modal-body ul {
+    font-size: 1.5vh;
+    padding: 1vh;
+    margin: 1vh;
+}
+
+.modal-body.black {
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+body.dark .modal-body.black {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark .modal-body.black a, body.dark .modal-body.black svg  {
+    color: white;
+    fill: white;
+}
+body.dark .modal-body.red a, body.dark .modal-body.red svg  {
+    color: white;
+    fill: white;
+}
+
+.modal-body.red {
+    background-color: rgba(157, 35, 29, 0.2);
+}
+
+body.dark .modal-body.red {
+    background-color: rgba(157, 35, 29, 0.7);
+}
+
+.modal-body p {
     font-size: 3vh;
     text-align: center;
     padding: 1vh;
 }
 
+.modal-body li {
+    padding: 1vh;
+}
 
+.modal-body a {
+    display: flex;
+    align-content: center;
+    text-decoration: none;
+    align-items: center;
+    color: black;
+    font-size: 2vh;
+    gap: 1vh;
+}
+
+.modal-body svg {
+    fill: black;
+}
+
+.modal-body button {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-size: 1.5vh;
+    border: none;
+    border-radius: 1vh;
+    padding: 0.8vh;
+    margin: 1vh 1vw;
+    background-color: rgba(110, 110, 110, 0.8);
+    width: 15vh;
+}
+
+.modal-body button:hover, .modal-body button:focus {
+    cursor: pointer;
+    /* box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1); */
+    transform: scale(1.05);
+    transition: 1s;
+    color: white;
+    background-color: rgba(110, 110, 110, 1);
+}
 
 .overlay {
     position: fixed;
