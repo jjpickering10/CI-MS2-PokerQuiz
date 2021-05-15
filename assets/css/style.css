@@ -18,6 +18,7 @@ body {
     animation: body-load 5s;
     color: var(--black-colour);
     transition: 1s;
+    height: 100vh;
 
 }
 
@@ -42,6 +43,23 @@ body.dark .suit:hover, body.dark .suit:focus {
     background-color: white;
 }
 
+.header-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* cursor: pointer; */
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    margin: 10px;
+    background-color: var(--button-background-colour);
+    color: var(--button-text-colour);
+    transition: 1s;
+    /* transform: scale(1); */
+}
+
 .toggle-button {
     display: flex;
     justify-content: center;
@@ -51,7 +69,8 @@ body.dark .suit:hover, body.dark .suit:focus {
     border-radius: 10px;
     border: none;
     outline: none;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: 75%;
     margin: 10px;
     background-color: var(--button-background-colour);
     color: var(--button-text-colour);
@@ -68,6 +87,7 @@ body.dark .suit:hover, body.dark .suit:focus {
     transform: scale(1.05);
 }
 
+
 .suits.diamond-area, .suits.heart-area {
     animation: suits-load 3s;
 }
@@ -76,8 +96,17 @@ body.dark .suit:hover, body.dark .suit:focus {
     animation: suits-load-red 3s;
 }
 
-.title-container button {
+.title-container .header-button {
     animation: button-load 3s;
+}
+
+.header-button svg {
+    padding: 5px;
+    fill: var(--button-text-colour);
+}
+
+.toggle-button:hover, .toggle-button:focus {
+    transform: scale(1.05);
 }
 
 @keyframes button-load {
@@ -142,9 +171,10 @@ body.dark .suit:hover, body.dark .suit:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   align-content: center;
-  height: 100vh;
+  /* height: 100vh; */
+  min-height: 100%;
   
 }
 
@@ -154,6 +184,7 @@ body.dark .suit:hover, body.dark .suit:focus {
     align-content: center;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 .title-container p {
@@ -168,7 +199,8 @@ body.dark .suit:hover, body.dark .suit:focus {
   align-items: center;
   gap: 30px 30px;
   transform: scale(1);
-  
+  flex-grow: 5;
+  flex-shrink: 0;
 }
 
 .suit {
@@ -368,3 +400,29 @@ body.dark .modal-body.red {
 .modal-backdrop.show {
     
 } */
+
+footer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.social-links {
+    padding: 1vh;
+}
+
+.social-links i {
+    color: var(--black-colour);
+}
+
+body.dark .social-links i {
+    color: var(--white-colour)
+}
