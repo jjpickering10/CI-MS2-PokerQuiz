@@ -8,7 +8,7 @@ const currentScore = document.getElementById('score')
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')
 
-const clubButton = document.getElementById('club')
+const diamondButton = document.getElementById('diamond')
 const heartButton = document.getElementById('heart')
 const spadeButton = document.getElementById('spade')
 const homeButton = document.getElementById('home-button')
@@ -16,8 +16,8 @@ const playAgainButton = document.getElementById('play-again-button')
 
 
 startButton.addEventListener('click', startGame);
-clubButton.addEventListener('click', () => {
-    window.location.assign('club.html')
+diamondButton.addEventListener('click', () => {
+    window.location.assign('diamond.html')
 });
 heartButton.addEventListener('click', () => {
     window.location.assign('heart.html')
@@ -29,7 +29,7 @@ homeButton.addEventListener('click', () => {
     window.location.assign('index.html')
 } );
 playAgainButton.addEventListener('click', () => {
-    window.location.assign('diamond.html')
+    window.location.assign('club.html')
 } );
 //const answerButton = document.getElementsByName('.answer-text')
 

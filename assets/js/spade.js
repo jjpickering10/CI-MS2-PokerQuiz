@@ -13,7 +13,7 @@ const overlay = document.getElementById('overlay')
 
 const clubButton = document.getElementById('club')
 const heartButton = document.getElementById('heart')
-const spadeButton = document.getElementById('spade')
+const diamondButton = document.getElementById('diamond')
 const homeButton = document.getElementById('home-button')
 const playAgainButton = document.getElementById('play-again-button')
 
@@ -23,14 +23,14 @@ clubButton.addEventListener('click', () => {
 heartButton.addEventListener('click', () => {
     window.location.assign('heart.html')
 });
-spadeButton.addEventListener('click', () => {
-    window.location.assign('spade.html')
+diamondButton.addEventListener('click', () => {
+    window.location.assign('diamond.html')
 } );
 homeButton.addEventListener('click', () => {
     window.location.assign('index.html')
 } );
 playAgainButton.addEventListener('click', () => {
-    window.location.assign('diamond.html')
+    window.location.assign('spade.html')
 } );
 
 const attempts = 2
