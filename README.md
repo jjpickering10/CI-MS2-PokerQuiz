@@ -91,6 +91,7 @@ Frequent User Goals
 Colour scheme:
 
 - Black and red to match the colours of a deck of cards.
+- Light and dark theme 
 
 Images:
 
@@ -190,6 +191,10 @@ Other Testing
 ### Project Barriers and Solutions
 
 - Had to rewrite functions in spade.html to allow global functions to work for each question. Had to put each question, which was a function itself, into an array.
+- Started with CSS grid, switched entirely to flexbox midway through.
+- Trouble with API not loading sometimes.
+- Didn't like original homepage layout.
+
 
 ### Feature To Improve
 
