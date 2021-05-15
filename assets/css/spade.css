@@ -31,8 +31,7 @@ body {
 }
 
 .card-game-container img {
-    width: 15%;
-    cursor: pointer;
+    width: 15vh;
 }
 
 .question-container {
@@ -57,7 +56,9 @@ body {
 }
 
 .card-board-container img {
-    width: 15%;
+    width: 15vh;
+    cursor: pointer;
+    /* transition: 1s; */
 }
 
 .results-container {
@@ -117,21 +118,48 @@ body {
 }
 
 .card-options {
-    animation: card-load 5s;
-    cursor: pointer;
+    animation: card-options 3s ease-in;
+    /* cursor: pointer; */
 }
 
-.card-anwer {
-    animation: picked-card 2s;
-}
-
-@keyframes picked-card {
+@keyframes card-options {
     0% {
-        transform: translateX(-25%);
+        /* transform: translateY(100%); */
         opacity: 0;
     }
-    50% {
+
+    100% {
+        /* transform: translateY(0); */
+        opacity: 1;
+    }
+}
+
+.card-board-fade {
+    animation: card-board-fade 2s ease-in;
+    /* transition-delay: 2s; */
+    /* cursor: pointer; */
+}
+
+@keyframes card-board-fade {
+    0% {
+        transform: translateY(-100%);
         opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card-picked {
+    animation: card-picked 1s;
+}
+
+@keyframes card-picked {
+    0% {
+        transform: translateX(-25%);
+        opacity: 0.5;
     }
     100% {
         transform: translateX(0);
@@ -139,12 +167,29 @@ body {
     }
 }
 
-@keyframes card-load {
+.card-answer {
+    animation: picked-card 4s;
+    transform: scale(0);
+}
+
+@keyframes picked-card {
     0% {
-        transform: translateX(-25%);
-        opacity: 0;
+        transform: scale(0);
+        opacity: 1;
     }
-    50% {
+    100% {
+        transform: scale(2);
+        opacity: 1;
+    }
+}
+
+.question-fade {
+    animation: question-fade 2s;
+}
+
+@keyframes question-fade {
+    0% {
+        transform: translateX(-100%);
         opacity: 0;
     }
     100% {
@@ -155,6 +200,7 @@ body {
 
 .hide {
     display: none;
+    /* transform: scale(0); */
 }
 
 .next-game-buttons {
