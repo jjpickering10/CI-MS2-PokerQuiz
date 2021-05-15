@@ -33,6 +33,15 @@ body.dark {
     animation: body-load 5s;
 }
 
+body.dark .suit {
+    transition: 1s;
+    background-color: pink;
+}
+body.dark .suit:hover, body.dark .suit:focus {
+    transition: 1s;
+    background-color: white;
+}
+
 .toggle-button {
     display: flex;
     justify-content: center;
@@ -163,11 +172,12 @@ body.dark {
 }
 
 .suit {
+    transition: 1s;
     font-size: 10rem;
     margin: 0;
     border-radius: 10px;
     text-align: center;
-    background-color: pink;
+    background-color: white;
 }
 
 .suit-diamond, .suit-heart {
@@ -179,7 +189,7 @@ body.dark {
 }
 
 .suit:hover, .suit:focus {
-    background-color: white;
+    background-color: pink;
     cursor: pointer;
     box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
     transition: 1s;

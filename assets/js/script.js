@@ -3,6 +3,11 @@ const closeModals = document.querySelectorAll('[data-close]')
 const overlay = document.getElementById('modal-overlay')
 const pageContainer = document.getElementById('page-container')
 
+document.querySelector('.toggle-button').addEventListener('click', () => {
+    document.body.classList.toggle('dark')
+})
+
+
 openModals.forEach(e => {
     e.addEventListener('click', () => {
         const modal = document.querySelector(e.dataset.modalTarget)
@@ -39,11 +44,3 @@ function closeModal(modal) {
     overlay.classList.remove('active')
     pageContainer.classList.remove('not-active')
 }
-
-
-
-
-document.querySelector('.toggle-button').addEventListener('click', () => {
-    document.body.classList.toggle('dark')
-})
-
