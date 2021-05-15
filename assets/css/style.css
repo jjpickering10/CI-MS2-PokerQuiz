@@ -197,7 +197,7 @@ a {
     align-content: center;
     align-items: center;
     justify-content: center;
-    transform: scale(1);
+    transform: scale(0);
     background-color: white;
     top: 15vh;
     left: 15vw;
@@ -243,13 +243,10 @@ a {
     padding: 1vh;
 }
 
-.active {
-    transform: scale(1);
-}
+
 
 .overlay {
     position: fixed;
-    opacity: 1;
     top: 0;
     bottom: 0;
     right: 0;
@@ -259,11 +256,15 @@ a {
     background: url(../images/deckofcards.jpg) no-repeat center center fixed;
     background-size: cover;
     opacity: 0.05;
+    transform: scale(0);
 }
 
 .fade {
     transition: 1s;
     transition-timing-function: cubic-bezier(1, 0.18, 0.9, 0.99);
+}
+.active {
+    transform: scale(1);
 }
 
 /* .modal-backdrop {
