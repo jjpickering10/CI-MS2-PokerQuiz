@@ -6,8 +6,35 @@ const startButton = document.getElementById('start')
 const gameStart = document.getElementById('game-start')
 const img = document.getElementsByTagName('img')
 const question = document.getElementById('question')
+const score = document.getElementById('score')
+
+const modal = document.getElementById('modal')
+const overlay = document.getElementById('overlay')
+
+const clubButton = document.getElementById('club')
+const heartButton = document.getElementById('heart')
+const spadeButton = document.getElementById('spade')
+const homeButton = document.getElementById('home-button')
+const playAgainButton = document.getElementById('play-again-button')
+
+clubButton.addEventListener('click', () => {
+    window.location.assign('club.html')
+});
+heartButton.addEventListener('click', () => {
+    window.location.assign('heart.html')
+});
+spadeButton.addEventListener('click', () => {
+    window.location.assign('spade.html')
+} );
+homeButton.addEventListener('click', () => {
+    window.location.assign('index.html')
+} );
+playAgainButton.addEventListener('click', () => {
+    window.location.assign('diamond.html')
+} );
 
 const attempts = 2
+let rightAnswers = 0
 let correctChoices = 0
 let attemptCounter = 0
 let newObject = {}
@@ -109,6 +136,7 @@ function selectCard(e) {
 function reviewAnswers() {
     
     if (correctChoices === 2) {
+        rightAnswers++
         results.innerText = "You got it right!"
     } else {
         results.innerText = "You got it wrong!"
@@ -119,9 +147,15 @@ function reviewAnswers() {
              setQuestion();
          }, 5000);
      } else {
-         return window.location.assign('score.html')
+         openModal()
      }
 }
+
+function openModal(){
+     modal.classList.add('active')
+     overlay.classList.add('overlay')
+     score.innerText = `${rightAnswers} out of 5`
+ }
 
 let questions = [
     function() { {
