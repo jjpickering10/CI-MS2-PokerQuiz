@@ -6,13 +6,15 @@ const startButton = document.getElementById("start");
 const currentScore = document.getElementById('score')
 
 const modal = document.getElementById('modal')
-const overlay = document.getElementById('overlay')
+const overlay = document.getElementById('modal-overlay')
 
 const diamondButton = document.getElementById('diamond')
 const heartButton = document.getElementById('heart')
 const spadeButton = document.getElementById('spade')
 const homeButton = document.getElementById('home-button')
 const playAgainButton = document.getElementById('play-again-button')
+const pageContainer = document.getElementById('club-container')
+
 
 
 startButton.addEventListener('click', startGame);
@@ -214,6 +216,7 @@ currentScore.innerHTML = rightAnswers;
 
 function openModal(){
      modal.classList.add('active')
-     overlay.classList.add('overlay')
+     overlay.classList.add('active')
+     pageContainer.classList.add('not-active')
      currentScore.innerText = `${rightAnswers} out of 10`
  }

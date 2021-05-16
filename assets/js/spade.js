@@ -9,13 +9,14 @@ const question = document.getElementById('question')
 const score = document.getElementById('score')
 
 const modal = document.getElementById('modal')
-const overlay = document.getElementById('overlay')
+const overlay = document.getElementById('modal-overlay')
 
 const clubButton = document.getElementById('club')
 const heartButton = document.getElementById('heart')
 const diamondButton = document.getElementById('diamond')
 const homeButton = document.getElementById('home-button')
 const playAgainButton = document.getElementById('play-again-button')
+const pageContainer = document.getElementById('spade-container')
 
 clubButton.addEventListener('click', () => {
     window.location.assign('club.html')
@@ -166,7 +167,9 @@ function reviewAnswers() {
 
 function openModal(){
      modal.classList.add('active')
-     overlay.classList.add('overlay')
+     overlay.classList.add('active')
+          pageContainer.classList.add('not-active')
+
      score.innerText = `${rightAnswers} out of 5`
  }
 
