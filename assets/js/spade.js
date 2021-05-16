@@ -93,9 +93,6 @@ function resetDocument() {
       while (cardChoice.firstChild) {
          cardChoice.removeChild(cardChoice.firstChild)
      }
-    //  while (gameStart.firstChild) {
-    //      gameStart.removeChild(gameStart.firstChild)
-    //  }
      
     cardBoard.classList.remove('hide')
     cardChoice.classList.remove('hide')
@@ -114,9 +111,6 @@ function resetDocument() {
 
 
 function displayHands(data) {
-    // gameStart.classList.remove('hide')
-    
-    // startButton.classList.add('hide')
     data.forEach(e => {
         const card = document.createElement('img')
         card.setAttribute('src', e.image)
@@ -144,7 +138,6 @@ function selectCard(e) {
     }
     cardChoice.appendChild(selectedCard)
     selectedCard.removeEventListener('click', selectCard)
-    // selectedCard.classList.remove('card-answer')
     if (attempts < attemptCounter + 1) {
         cardBoard.classList.add('hide')
         question.classList.add('hide')

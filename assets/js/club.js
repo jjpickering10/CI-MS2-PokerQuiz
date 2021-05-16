@@ -31,7 +31,6 @@ homeButton.addEventListener('click', () => {
 playAgainButton.addEventListener('click', () => {
     window.location.assign('club.html')
 } );
-//const answerButton = document.getElementsByName('.answer-text')
 
 let shuffledRankings;
 let rankingIndex = 0
@@ -100,28 +99,17 @@ let handRankings = [
   },
 ];
 
-// console.log(firstOption)
 startButton.addEventListener("click", startGame);
 
 
 
 function startGame (){
-    // firstOption.removeAttribute('data-correct', "true")
-    // secondOption.removeAttribute('data-correct', "true")
-    // firstOption.classList.remove('correct')
-    // secondOption.classList.remove('correct')
-    // firstOption.classList.remove('wrong')
-    // secondOption.classList.remove('wrong')
     startButton.classList.add('hide')
     firstOption.classList.remove('hide')
     secondOption.classList.remove('hide')
-    //shuffledRankings = shuffleRankings(handRankings)
     setRankings();
 }
 
-// function setRankings() {
-//     displayRankings(shuffledRankings[rankingIndex], shuffledRankings[rankingIndex + 1])
-// }
 
 function shuffleRankings(array) {
   // Used code from --- https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -152,7 +140,6 @@ function setRankings() {
          secondOptionCards.removeChild(secondOptionCards.firstChild)
      }
     shuffledRankings = shuffleRankings(handRankings)
-    console.log(shuffledRankings)
     startButton.classList.add('hide')
     firstOption.removeAttribute('data-correct', "true")
     secondOption.removeAttribute('data-correct', "true")
@@ -168,14 +155,10 @@ function setRankings() {
 
     
 function displayRankings(optionOne, optionTwo) {
-    // if (optionOne.id === optionTwo.id) {
-    // return window.location.assign('index.html')
-    // }
 
     for (let i = 0; i < optionOne.images.length; i++) {
         const card = optionOne.images[i];
         const image = document.createElement('img')
-        console.log(card)
         image.setAttribute('src', card)
         image.classList.add('image-size')
         firstOptionCards.appendChild(image);
@@ -184,14 +167,11 @@ function displayRankings(optionOne, optionTwo) {
     for (let i = 0; i < optionTwo.images.length; i++) {
         const image = document.createElement('img')
         const card = optionTwo.images[i];
-        console.log(card)
         image.setAttribute('src', card)
         image.classList.add('image-size')
         secondOptionCards.appendChild(image);
     }
 
-    // firstOption.innerText = optionOne.text
-    // secondOption.innerText = optionTwo.text
     
     if (optionOne.id <= optionTwo.id) {
         firstOption.dataset.correct = true;
@@ -199,9 +179,6 @@ function displayRankings(optionOne, optionTwo) {
     if (optionTwo.id <= optionOne.id) {
         secondOption.dataset.correct = true; 
     }
-    // if (optionOne.text === optionTwo.text){
-    //     getRankings();
-    // }
 document.querySelectorAll('.start').forEach(item => {
     item.addEventListener('click', rankingInfo)
 })
@@ -226,7 +203,6 @@ function rankingInfo(answer){
 currentScore.innerHTML = rightAnswers;
 
     if (shuffledRankings.length -1  > rankingIndex + 1) {
-    //questionCounter++
     rankingIndex++;
     setTimeout(() => {
       setRankings();

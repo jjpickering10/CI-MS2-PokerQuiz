@@ -56,15 +56,12 @@ function displayHands(data) {
     cardOne = data.cards[0].value
     cardTwo = data.cards[1].value
 
-    // handOne.innerHTML = `${cardOne} ${data.cards[0].suit}`
-    // handTwo.innerHTML = `${cardTwo} ${data.cards[1].suit}`
 
     handOne.innerHTML = `<img class="img-one" src="${data.cards[0].image}" alt="${cardOne}, ${data.cards[0].suit} playing card">`
     handTwo.innerHTML = `<img class="img-two" src="${data.cards[1].image}" alt="${cardTwo}, ${data.cards[1].suit} playing card">`
 
     
 
-    console.log(cardOne === cardTwo)
 
     if (cardOne === cardTwo) {
         scoreCounter++

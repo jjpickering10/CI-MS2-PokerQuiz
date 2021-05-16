@@ -48,16 +48,13 @@ body.dark .suit:hover, body.dark .suit:focus {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    /* cursor: pointer; */
     border-radius: 10px;
     border: none;
     outline: none;
     font-size: 1.5rem;
-    margin: 10px;
     background-color: var(--button-background-colour);
     color: var(--button-text-colour);
     transition: 1s;
-    /* transform: scale(1); */
 }
 
 .toggle-button {
@@ -69,7 +66,6 @@ body.dark .suit:hover, body.dark .suit:focus {
     border-radius: 10px;
     border: none;
     outline: none;
-    /* font-size: 1.5rem; */
     font-size: 75%;
     margin: 10px;
     background-color: var(--button-background-colour);
@@ -120,6 +116,7 @@ body.dark .suit:hover, body.dark .suit:focus {
 
 .title-container p {
     animation: text-load 3s;
+    margin: 10px;
 }
 
 @keyframes text-load {
@@ -182,13 +179,9 @@ body.dark .suit:hover, body.dark .suit:focus {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
-}
-
-.title-container p {
-    padding: 5px;
 }
 
 .suits {
@@ -199,8 +192,6 @@ body.dark .suit:hover, body.dark .suit:focus {
   align-items: center;
   gap: 30px 30px;
   transform: scale(1);
-  flex-grow: 5;
-  flex-shrink: 0;
 }
 
 .suit {
@@ -238,7 +229,6 @@ a {
     flex-direction: column;
     align-content: center;
     align-items: stretch;
-    /* justify-content: center; */
     transform: scale(0);
     background-color: white;
     top: 15vh;
@@ -358,7 +348,6 @@ body.dark .modal-body.red {
 
 .modal-body button:hover, .modal-body button:focus {
     cursor: pointer;
-    /* box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1); */
     transform: scale(1.05);
     transition: 1s;
     color: white;
@@ -393,13 +382,6 @@ body.dark .modal-body.red {
     transform: scale(0);
 }
 
-/* .modal-backdrop {
-    
-}
-
-.modal-backdrop.show {
-    
-} */
 
 footer {
     display: flex;

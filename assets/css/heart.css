@@ -7,10 +7,12 @@ body {
     --button-background-colour: var(--white-colour);
     color: var(--black-colour);
     background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
-    /* background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed; */
-  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed; */
   background-size: cover;
   height: 100vh;
+    transition: 1s;
+
+    animation: body-load 3s;
+
 }
 
 body.dark {
@@ -18,10 +20,19 @@ body.dark {
     --white-colour: rgba(232, 230, 227, 1);
     --button-background-colour: rgba(110,110,110,1);
     color: var(--white-colour);
-    /* background: url(../images/frontpagepoker.jpg) no-repeat center center fixed; */
     background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed;
-  /* background: url(../images/playingpoker.jpg) no-repeat center center fixed; */
   background-size: cover;
+}
+
+@keyframes body-load {
+    0% {
+        opacity: 0;
+        transform: scaleZ(0);
+    }
+    100% {
+        transform: scaleZ(2);
+        opacity: 1;
+    }
 }
 
 * {
@@ -33,7 +44,6 @@ body.dark {
 
 .heart-column h1 {
   font-size: 50px;
-  /* color: white; */
   margin-bottom: 50px;
 }
 
@@ -41,28 +51,18 @@ body.dark {
   font-size: 5vh;
   text-align: center;
   padding: 5vh;
-  /* color: white; */
 
 }
 
 .pair-game-container {
-  /* width: 100vw;
-  height: 100vh; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  /* align-items: stretch; */
   min-height: 100%;
-  /* max-width: 80rem;
-  margin: 0 auto;
-  padding: 2rem; */
 }
 
-/* .hand-container {
-  display: flex;
-} */
 
 #hand-one {
     display: flex;
@@ -83,6 +83,7 @@ body.dark {
   flex-direction: column;
   flex: 1;
   justify-content: flex-end;
+  align-items: center;
 }
 
 
@@ -121,12 +122,13 @@ body.dark {
     color: currentColor;
     cursor: pointer;
     background-color: var(--button-background-colour);
+    margin-left: 25%;
+    margin-right: 25%;
     
 }
 
 .next-button:hover {
     transform: scale(1.05);
-    /* box-shadow: 0px 0px 5px 5px white; */
     
 }
 
@@ -248,12 +250,6 @@ body.dark {
     font-size: 2vh;
 }
 
-/* .close {
-    font-size: 4rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-} */
 
 .modal-body {
     display: flex;
@@ -304,7 +300,6 @@ body.dark {
     border-radius: 10px;
     border: none;
     outline: none;
-    /* font-size: 1.5rem; */
     font-size: 75%;
     margin: 10px;
     background-color: var(--button-background-colour);
@@ -327,6 +322,7 @@ footer {
     flex-grow: 1;
     justify-content: space-between;
     align-items: flex-end;
+    width: 100%;
 }
 
 .social {

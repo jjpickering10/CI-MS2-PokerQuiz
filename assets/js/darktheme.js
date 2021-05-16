@@ -30,11 +30,3 @@ darkToggle.addEventListener('click', () => {
     disableDarkMode();
 }
 })
-
-
-
-
-
-// document.querySelector('.toggle-button').addEventListener('click', () => {
-//     document.body.classList.toggle('dark')
-// })

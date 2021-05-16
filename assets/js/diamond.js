@@ -69,12 +69,10 @@ function displayQuestion(question) {
         const button = document.createElement('button');
         button.innerText = answer.text;
         answerDiv.classList.add('flex-container')
-        // button.classList.add('flex-items')
         button.classList.add('diamond-buttons')
         if (answer.correctAnswer) {
             button.dataset.correctAnswer = answer.correctAnswer;
         }
-        // console.log(button)
         button.addEventListener('click', answerInfo)
         answerDiv.appendChild(button)
 
@@ -95,7 +93,6 @@ function displayQuestion(question) {
              setQuestion();
          }, 1000);
      } else {
-        //  return window.location.assign('score.html')
         openModal();
      }
  }
