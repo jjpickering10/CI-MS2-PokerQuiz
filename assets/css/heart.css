@@ -292,3 +292,56 @@ body.dark {
     display: flex;
     padding: 1vh;
 }
+
+.toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    /* font-size: 1.5rem; */
+    font-size: 75%;
+    margin: 10px;
+    background-color: var(--button-background-colour);
+    color: var(--button-text-colour);
+    transition: 1s;
+    transform: scale(1);
+}
+
+.toggle-button svg {
+    padding: 5px;
+    fill: var(--button-text-colour);
+}
+
+.toggle-button:hover, .toggle-button:focus {
+    transform: scale(1.05);
+}
+
+footer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.social-links {
+    padding: 1vh;
+}
+
+.social-links i {
+    color: var(--black-colour);
+}
+
+body.dark .social-links i {
+    color: var(--white-colour)
+}

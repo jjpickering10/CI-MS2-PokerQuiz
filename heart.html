@@ -8,15 +8,15 @@
     <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    /> -->
+    /> 
     <link rel="stylesheet" href="assets/css/heart.css" />
     <title>PokerQuiz</title>
   </head>
-  <body class="dark">
+  <body>
       <div class="pair-game-container">
           <div class="row heart-column">
               <h1 id="question">Can you make a pair?</h1>
@@ -35,6 +35,15 @@
           <p id="message"></p>
           <button id="start" class="next-button">Start</button>
             <button id="next" class="next-button hide">Next Attempt</button>
+            <footer>
+        <div><button class="toggle-button">Toggle theme</button></div>
+        <div class="social">
+            <div class="social-links"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+            <div class="social-links"><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></div>
+            <div class="social-links"><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+
+    </footer>
       </div>
       <div class="modal" id="modal">
     <div class="modal-header">
@@ -62,6 +71,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+        <script src="assets/js/darktheme.js"></script>
+
     <script src="assets/js/heart.js"></script>
   </body>
 </html>

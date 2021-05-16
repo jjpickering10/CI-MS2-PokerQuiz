@@ -1,5 +1,11 @@
 let darkTheme = localStorage.getItem('darkTheme')
 
+if (darkTheme === 'on') {
+    darkMode();
+} else if (darkTheme === null) {
+        disableDarkMode();
+}
+
 
 const darkToggle = document.querySelector('.toggle-button')
 
@@ -13,9 +19,7 @@ function disableDarkMode() {
     localStorage.setItem('darkTheme', null)
 }
 
-if (darkTheme === 'on') {
-    darkMode();
-}
+
 
 darkToggle.addEventListener('click', () => {
     darkTheme = localStorage.getItem('darkTheme')
