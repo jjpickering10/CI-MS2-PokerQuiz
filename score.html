@@ -7,10 +7,6 @@
     <meta name="Description" content="Enter your description here" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <link rel="stylesheet" href="assets/css/score.css" />
@@ -18,26 +14,62 @@
   </head>
   <body>
     <div class="score-container">
+        <div class="title-container"></div>
+        <div class="flex-container-scores">
         <div id="diamond-scores" class="latest-scores">
-            <h1>Diamond Scores</h1>
+            <h1>&diamondsuit;</h1>
+            <p>"Who Won the Main Event?"</p>
+            <p>The latest score is</p>
             <p id="latest-diamond-score"></p>
         </div>
         <div id="club-scores" class="latest-scores">
-            <h1>Club Scores</h1>
+            <h1>&clubsuit;</h1>
+            <p>"Which is the winning hand?"</p>
+            <p>The latest score is</p>
             <p id="latest-club-score"></p>
         </div>
         <div id="heart-scores" class="latest-scores">
-            <h1>Heart Scores</h1>
+            <h1>&heartsuit;</h1>
+            <p>Can you make a pair?</p>
+            <p>Well, the latest got</p>
             <p id="latest-heart-score"></p>
         </div>
         <div id="spade-scores" class="latest-scores">
-            <h1>Spade Scores</h1>
+            <h1>&spadesuit;</h1>
+            <p>Make this hand...</p>
+            <p>The latest managed to make</p>
             <p id="latest-spade-score"></p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
         </div>
+        </div>
+        <footer>
+        <div><button class="toggle-button">Toggle theme</button></div>
+        <div class="social">
+            <div class="social-links"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+            <div class="social-links"><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></div>
+            <div class="social-links"><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+
+    </footer>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
     <script src="assets/js/score.js"></script>
+        <script src="assets/js/darktheme.js"></script>
+
   </body>
 </html>

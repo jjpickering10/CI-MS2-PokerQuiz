@@ -11,7 +11,7 @@ const finalSpadeScore = document.getElementById("latest-spade-score");
 
 
 
-finalDiamondScore.innerText = latestDiamondScore;
-finalClubScore.innerText = latestClubScore;
-finalHeartScore.innerText = latestHeartScore;
-finalSpadeScore.innerText = latestSpadeScore;
+finalDiamondScore.innerHTML = `<p>${latestDiamondScore} out of 5</p>`
+finalClubScore.innerHTML = `<p>${latestClubScore} out of 10</p>`
+finalHeartScore.innerHTML = `<p>${latestHeartScore} pair/s in 10 attempts</p>`
+finalSpadeScore.innerHTML = `<p>${latestSpadeScore} out of 5</p>`
