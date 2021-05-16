@@ -2,13 +2,14 @@ const startButton = document.getElementById("diamond-play-btn");
 const currentQuestion = document.getElementById('question-option');
 const answerDiv = document.getElementById('diamond-answer-buttons')
 const modal = document.getElementById('modal')
-const overlay = document.getElementById('overlay')
+const overlay = document.getElementById('modal-overlay')
 const score = document.getElementById('score')
 const clubButton = document.getElementById('club')
 const heartButton = document.getElementById('heart')
 const spadeButton = document.getElementById('spade')
 const homeButton = document.getElementById('home-button')
 const playAgainButton = document.getElementById('play-again-button')
+const pageContainer = document.getElementById('whole-page')
 
 let shuffledQuestions;
 let questionIndex = 0;
@@ -99,7 +100,8 @@ function displayQuestion(question) {
 
  function openModal(){
      modal.classList.add('active')
-     overlay.classList.add('overlay')
+     overlay.classList.add('active')
+     pageContainer.classList.add('not-active')
      score.innerText = `${rightAnswers} out of 5`
  }
 

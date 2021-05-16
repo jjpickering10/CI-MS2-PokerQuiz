@@ -7,13 +7,14 @@ const message = document.getElementById('message')
 const question = document.getElementById('question')
 
 const modal = document.getElementById('modal')
-const overlay = document.getElementById('overlay')
+const overlay = document.getElementById('modal-overlay')
 
 const clubButton = document.getElementById('club')
 const diamondButton = document.getElementById('diamond')
 const spadeButton = document.getElementById('spade')
 const homeButton = document.getElementById('home-button')
 const playAgainButton = document.getElementById('play-again-button')
+const pageContainer = document.getElementById('pair-container')
 
 let scoreCounter = 0;
 let questionCounter = 0;
@@ -116,7 +117,8 @@ function nextShuffle(){
 
 function openModal(){
      modal.classList.add('active')
-     overlay.classList.add('overlay')
+     overlay.classList.add('active')
+     pageContainer.classList.add('not-active')
      score.innerText = `${scoreCounter} pair/s in 10 attempts`
  }
 
