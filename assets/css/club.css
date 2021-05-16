@@ -31,6 +31,9 @@ body.dark {
 }
 
 .club-column h1 {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
   font-size: 50px;
   /* color: white; */
   margin-bottom: 50px;
