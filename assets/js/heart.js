@@ -105,6 +105,8 @@ function failure() {
 }
 
 function nextShuffle(){
+    localStorage.setItem("latest-heart-score", scoreCounter);
+
     questionCounter++
     if (questionCounter < 10) {
     setTimeout(() => {

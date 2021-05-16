@@ -203,6 +203,8 @@ function rankingInfo(answer){
         buttonSelect.classList.add('wrong')
     }
 currentScore.innerHTML = rightAnswers;
+     localStorage.setItem("latest-club-score", rightAnswers);
+
 
     if (shuffledRankings.length -1  > rankingIndex + 1) {
     rankingIndex++;

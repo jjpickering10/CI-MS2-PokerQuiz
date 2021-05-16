@@ -155,6 +155,8 @@ function reviewAnswers() {
     } else {
         results.innerText = "You got it wrong!"
     }
+    localStorage.setItem("latest-spade-score", rightAnswers);
+
     if (shuffledQuestions.length > questionIndex + 1 ) {
          questionIndex++
          setTimeout(() => {

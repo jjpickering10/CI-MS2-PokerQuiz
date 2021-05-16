@@ -86,7 +86,7 @@ function displayQuestion(question) {
      if (buttonSelect.dataset = correct) {
          rightAnswers++;
      }
-     localStorage.setItem("latest-score", rightAnswers);
+     localStorage.setItem("latest-diamond-score", rightAnswers);
      document.getElementById('diamond-right-answers').innerText = rightAnswers;
      if (shuffledQuestions.length > questionIndex + 16) {
          questionIndex++
