@@ -54,6 +54,38 @@ body.dark {
     gap: 2vh;
 }
 
+.navbar {
+    padding: 2vh;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+
+.nav-links ul li {
+    list-style: none;
+    padding: 2vh;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 0.5vh;
+    background-color: var(--button-background-colour);
+}
+
+.nav-links ul a {
+    text-decoration: none;
+    color: currentColor;
+    margin: 0.5vh;
+    width: 25vh;
+}
+
+.nav-links ul a:hover {
+    transform: scale(1.02);
+}
+
 #game-start h1 {
     text-align: center;
     padding: 3vh;
