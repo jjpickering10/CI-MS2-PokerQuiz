@@ -9,6 +9,8 @@ const heartButton = document.getElementById('heart')
 const spadeButton = document.getElementById('spade')
 const homeButton = document.getElementById('home-button')
 const playAgainButton = document.getElementById('play-again-button')
+const scoresButton = document.getElementById('scores-button')
+
 const pageContainer = document.getElementById('whole-page')
 
 let shuffledQuestions;
@@ -30,6 +32,9 @@ homeButton.addEventListener('click', () => {
 } );
 playAgainButton.addEventListener('click', () => {
     window.location.assign('diamond.html')
+} );
+scoresButton.addEventListener('click', () => {
+    window.location.assign('score.html')
 } );
 
 function startGame() {

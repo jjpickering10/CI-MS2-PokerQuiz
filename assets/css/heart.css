@@ -212,6 +212,7 @@ body.dark {
     padding: 2vh;
     margin: 1vh 1vw;
     color: currentColor;
+    min-width: 30%;
     background-color: var(--button-background-colour);
 }
 
@@ -265,6 +266,8 @@ body.dark {
     align-content: center;
     padding: 2vh;
     width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: var(--modal-background-colour);
 }
 
@@ -313,6 +316,7 @@ body.dark {
 #next-games, #go-home {
     display: flex;
     padding: 1vh;
+    justify-content: center;
 }
 
 .toggle-button {

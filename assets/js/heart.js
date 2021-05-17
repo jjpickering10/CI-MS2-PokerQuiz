@@ -14,6 +14,8 @@ const diamondButton = document.getElementById('diamond')
 const spadeButton = document.getElementById('spade')
 const homeButton = document.getElementById('home-button')
 const playAgainButton = document.getElementById('play-again-button')
+const scoresButton = document.getElementById('scores-button')
+
 const pageContainer = document.getElementById('pair-container')
 
 let scoreCounter = 0;
@@ -35,6 +37,9 @@ homeButton.addEventListener('click', () => {
 } );
 playAgainButton.addEventListener('click', () => {
     window.location.assign('heart.html')
+} );
+scoresButton.addEventListener('click', () => {
+    window.location.assign('score.html')
 } );
 
 function startGame() {
