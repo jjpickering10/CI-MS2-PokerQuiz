@@ -310,6 +310,18 @@ body.dark {
     padding: 1vh;
 }
 
+.save-scores {
+    display: flex;
+    flex-direction: column;
+}
+
+.save-scores input {
+    border: none;
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+}
+
 .overlay {
     position: fixed;
     opacity: 0.5;
