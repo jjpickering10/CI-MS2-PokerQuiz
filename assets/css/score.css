@@ -51,6 +51,32 @@ body.dark {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+    justify-content: flex-end;
+}
+
+.header-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    background-color: var(--background-colour);
+    color: var(--button-text-colour);
+    transition: 1s;
+}
+
+.header-button svg {
+    padding: 5px;
+    fill: var(--button-text-colour);
+}
+
+.title-container p {
+    animation: text-load 3s;
+    margin: 10px;
+    text-align: center;
 }
 
 .flex-container-scores {

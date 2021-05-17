@@ -43,7 +43,7 @@ body.dark .suit:hover, body.dark .suit:focus {
     background-color: white;
 }
 
-.header-button {
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,6 +55,31 @@ body.dark .suit:hover, body.dark .suit:focus {
     background-color: var(--button-background-colour);
     color: var(--button-text-colour);
     transition: 1s;
+}
+
+.navbar {
+    padding: 2vh;
+}
+
+.nav-links {
+    width: 50vh;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+
+.nav-links ul li {
+    list-style: none;
+    padding: 2vh;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 0.5vh;
+    background-color: var(--button-background-colour);
 }
 
 .toggle-button {
@@ -92,11 +117,11 @@ body.dark .suit:hover, body.dark .suit:focus {
     animation: suits-load-red 3s;
 }
 
-.title-container .header-button {
+.title-container .header {
     animation: button-load 3s;
 }
 
-.header-button svg {
+.header svg {
     padding: 5px;
     fill: var(--button-text-colour);
 }
@@ -114,9 +139,10 @@ body.dark .suit:hover, body.dark .suit:focus {
     }
 }
 
-.title-container p {
+header p {
     animation: text-load 3s;
     margin: 10px;
+    text-align: center;
 }
 
 @keyframes text-load {
@@ -179,9 +205,9 @@ body.dark .suit:hover, body.dark .suit:focus {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .suits {
@@ -385,7 +411,7 @@ body.dark .modal-body.red {
 
 footer {
     display: flex;
-    flex-grow: 1;
+    flex: 2;
     justify-content: space-between;
     align-items: flex-end;
 }
