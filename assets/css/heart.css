@@ -186,18 +186,19 @@ body.dark {
 }
 
 .message-text {
+    transform: scale(1);
+    margin-left: 25%;
+    margin-right: 25%;
     animation: message-load 3s;
 }
 
 @keyframes message-load {
     0% {
-        opacity: 0;
-    }
-    50% {
+        transform: scale(0);
         opacity: 0;
     }
     75% {
-        transform: scale(2);
+        transform: scale(1.5);
     }
     100% {
         opacity: 1;
