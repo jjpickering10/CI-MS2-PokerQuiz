@@ -82,6 +82,10 @@ body.dark .suit:hover, body.dark .suit:focus {
     background-color: var(--button-background-colour);
 }
 
+.nav-links ul li:hover {
+    transform: scale(1.02);
+}
+
 .toggle-button {
     display: flex;
     justify-content: center;
