@@ -1,17 +1,45 @@
-const latestDiamondScore = localStorage.getItem("latest-diamond-score");
-const latestClubScore = localStorage.getItem("latest-club-score");
-const latestHeartScore = localStorage.getItem("latest-heart-score");
-const latestSpadeScore = localStorage.getItem("latest-spade-score");
+const latestDiamondScore = localStorage.getItem("diamondScores");
+const latestClubScore = localStorage.getItem("clubScores");
+const latestHeartScore = localStorage.getItem("heartScores");
+const latestSpadeScore = localStorage.getItem("spadeScores");
 
-const finalDiamondScore = document.getElementById("latest-diamond-score");
-const finalClubScore = document.getElementById("latest-club-score");
-const finalHeartScore = document.getElementById("latest-heart-score");
-const finalSpadeScore = document.getElementById("latest-spade-score");
-
-
+const finalDiamondScore = document.getElementById("diamond-scores");
+const finalClubScore = document.getElementById("club-scores");
+const finalHeartScore = document.getElementById("heart-scores");
+const finalSpadeScore = document.getElementById("spade-scores");
 
 
-finalDiamondScore.innerHTML = `<p>${latestDiamondScore} out of 5</p>`
-finalClubScore.innerHTML = `<p>${latestClubScore} out of 10</p>`
-finalHeartScore.innerHTML = `<p>${latestHeartScore} pair/s in 10 attempts</p>`
-finalSpadeScore.innerHTML = `<p>${latestSpadeScore} out of 5</p>`
+const diamondScores =JSON.parse(latestDiamondScore)
+const clubScores =JSON.parse(latestClubScore)
+const heartScores =JSON.parse(latestHeartScore)
+const spadeScores =JSON.parse(latestSpadeScore)
+// console.log(diamondScores)
+
+diamondScores.forEach(e => {
+    const score = document.createElement('p')
+    score.innerText = `${e.name}: ${e.score} out of 5`
+    finalDiamondScore.appendChild(score)
+})
+clubScores.forEach(e => {
+    const score = document.createElement('p')
+    score.innerText = `${e.name}: ${e.score} out of 10`
+    finalClubScore.appendChild(score)
+})
+heartScores.forEach(e => {
+    const score = document.createElement('p')
+    score.innerText = `${e.name}: ${e.score} pair/s out of 10`
+    finalHeartScore.appendChild(score)
+})
+spadeScores.forEach(e => {
+    const score = document.createElement('p')
+    score.innerText = `${e.name}: ${e.score} out of 5`
+    finalSpadeScore.appendChild(score)
+})
+
+
+
+// finalClubScore.innerHTML = `<p>${latestClubScore} out of 10</p>`
+
+// finalHeartScore.innerHTML = `<p>${latestHeartScore} pair/s in 10 attempts</p>`
+
+// finalSpadeScore.innerHTML = `<p>${latestSpadeScore} out of 5</p>`
