@@ -9,77 +9,107 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    /> 
+    />
     <link rel="stylesheet" href="assets/css/diamond.css" />
     <title>Diamond</title>
   </head>
   <body>
     <div id="whole-page" class="grid-container">
-                  <nav class="navbar">
-              <div class="nav-links">
-                  <ul>
-                      <a href="index.html"><li>Other Games</li></a>
-                      <a href="score.html"><li>View Scores</li></a>
-                  </ul>
-              </div>
-          </nav>
-    <div class="question-title">
-    <h1 class="diamond-question">Who won the Main Event in...</h1>
-    </div>
-  <div class="question-area">
-              <h2 id="question-option"></h2>
-  </div>
-  <div class="answers-container">
-    <div id="diamond-answer-buttons" class="diamond-answers">
-    <button id="diamond-play-btn" class="diamond-buttons">Play</button>
-    </div>
-  </div>
-  <div class="results-area">
-      <div class="diamond-results">
-              <div id="diamond-right-answers"></div>
-    </div>
-    </div>
-
-    <footer>
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="nav-links">
+          <ul>
+            <a href="index.html"><li>Other Games</li></a>
+            <a href="score.html"><li>View Scores</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Quiz game title -->
+      <div class="question-title">
+        <h1 class="diamond-question">Who won the Main Event in...</h1>
+      </div>
+      <!-- Where each new question is placed -->
+      <div class="question-area">
+        <h2 id="question-option"></h2>
+      </div>
+      <!-- Area of possible answers for users -->
+      <div class="answers-container">
+        <div id="diamond-answer-buttons" class="diamond-answers">
+          <button id="diamond-play-btn" class="diamond-buttons">Play</button>
+        </div>
+      </div>
+      <!-- Area showing updated results -->
+      <div class="results-area">
+        <div class="diamond-results">
+          <div id="diamond-right-answers"></div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer>
         <div><button class="toggle-button">Toggle theme</button></div>
         <div class="social">
-            <div class="social-links"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
-            <div class="social-links"><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></div>
-            <div class="social-links"><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a></div>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.github.com" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
         </div>
-
-    </footer>
-</div>
-<div class="modal fade" id="modal">
-    <div class="modal-header">
-        <div class="modal-title">
-            Game Over
-        </div>
+      </footer>
     </div>
-    <div class="modal-body">
+    <!-- End game modal showing score, navigation buttons and form to save score -->
+    <div class="modal fade" id="modal">
+      <div class="modal-header">
+        <div class="modal-title">Game Over</div>
+      </div>
+      <div class="modal-body">
         <h1>You scored</h1>
         <p id="score"></p>
         <div>
-            <form class="save-scores">
-                <input type="text" name="name" id="username" placeholder="Enter name">
-                <button class="next-game-buttons" id="save-score" type="button" onclick="saveScores()">Save Score</button>
-            </form>
+          <form class="save-scores">
+            <input
+              type="text"
+              name="name"
+              id="username"
+              placeholder="Enter name"
+            />
+            <button
+              class="next-game-buttons"
+              id="save-score"
+              type="button"
+              onclick="saveScores()"
+            >
+              Save Score
+            </button>
+          </form>
         </div>
         <div id="next-games">
-        <button id="heart" class="next-game-buttons">Play Heart</button>
-        <button id="club" class="next-game-buttons">Play Club</button>
-        <button id="spade" class="next-game-buttons">Play Spade</button>
+          <button id="heart" class="next-game-buttons">Play Heart</button>
+          <button id="club" class="next-game-buttons">Play Club</button>
+          <button id="spade" class="next-game-buttons">Play Spade</button>
         </div>
         <div id="go-home">
-            <button id="home-button" class="next-game-buttons">Go Home</button>
-            <button id="play-again-button" class="next-game-buttons">Play Again</button>
-            <button id="scores-button" class="next-game-buttons">View Scores</button>
-
+          <button id="home-button" class="next-game-buttons">Go Home</button>
+          <button id="play-again-button" class="next-game-buttons">
+            Play Again
+          </button>
+          <button id="scores-button" class="next-game-buttons">
+            View Scores
+          </button>
         </div>
+      </div>
     </div>
-</div>
-<div id="modal-overlay" class="overlay"></div>
-        <script src="assets/js/darktheme.js"></script>
+    <div id="modal-overlay" class="overlay"></div>
+    <script src="assets/js/darktheme.js"></script>
 
     <script src="assets/js/diamond.js"></script>
   </body>

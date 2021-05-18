@@ -8,225 +8,225 @@
 }
 
 body {
-    --red-colour: rgba(157, 35, 29, 1);
-    --black-colour: rgba(41, 35, 38, 1);
-    --white-colour: rgba(232, 230, 227, 1);
-    --button-background-colour: var(--white-colour);
-    background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
-    background-color: var(--white-colour);
-    background-size: cover;
-    animation: body-load 5s;
-    color: var(--black-colour);
-    transition: 1s;
-    height: 100vh;
-
+  --red-colour: rgba(157, 35, 29, 1);
+  --black-colour: rgba(41, 35, 38, 1);
+  --white-colour: rgba(232, 230, 227, 1);
+  --button-background-colour: var(--white-colour);
+  background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
+  background-color: var(--white-colour);
+  background-size: cover;
+  animation: body-load 5s;
+  color: var(--black-colour);
+  transition: 1s;
+  height: 100vh;
 }
 
 body.dark {
-    background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed;
-    background-size: cover;
-    background-color: var(--black-colour);
-    --button-background-colour: var(--black-colour);
-    --button-text-colour: var(--white-colour);
-    color: var(--white-colour);
+  background: url(../images/darkpokerbackground.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
+  background-color: var(--black-colour);
+  --button-background-colour: var(--black-colour);
+  --button-text-colour: var(--white-colour);
+  color: var(--white-colour);
 
-    
-    animation: body-load 5s;
+  animation: body-load 5s;
 }
 
 body.dark .suit {
-    transition: 1s;
-    background-color: pink;
+  transition: 1s;
+  background-color: pink;
 }
-body.dark .suit:hover, body.dark .suit:focus {
-    transition: 1s;
-    background-color: white;
+body.dark .suit:hover,
+body.dark .suit:focus {
+  transition: 1s;
+  background-color: white;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size: 1.5rem;
-    background-color: var(--button-background-colour);
-    color: var(--button-text-colour);
-    transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  background-color: var(--button-background-colour);
+  color: var(--button-text-colour);
+  transition: 1s;
 }
 
 .navbar {
-    padding: 2vh;
+  padding: 2vh;
 }
 
 .nav-links {
-    width: 50vh;
+  width: 50vh;
 }
 
 .nav-links ul {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh;
 }
 
 .nav-links ul li {
-    list-style: none;
-    padding: 2vh;
-    border: 1px solid currentColor;
-    border-radius: 10px;
-    width: 100%;
-    text-align: center;
-    margin: 0.5vh;
-    background-color: var(--button-background-colour);
+  list-style: none;
+  padding: 2vh;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  margin: 0.5vh;
+  background-color: var(--button-background-colour);
 }
 
 .nav-links ul li:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
-#about-button, #contact-button {
-    cursor: pointer;
+#about-button,
+#contact-button {
+  cursor: pointer;
 }
 
 .nav-links ul li a {
-    color: currentColor;
+  color: currentColor;
 }
 
 fieldset {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    border: none;
-
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 label {
-    padding: 0.2vh;
-    font-size: 1.5vh;
+  padding: 0.2vh;
+  font-size: 1.5vh;
 }
 
 input {
-    font-size: 1vh;
+  font-size: 1vh;
 }
 
 textarea {
-    overflow: scroll;
-    max-height: 15vh;
-    min-width: 35vh;
-    font-size: 1.5vh;
+  overflow: scroll;
+  max-height: 15vh;
+  min-width: 35vh;
+  font-size: 1.5vh;
 }
 
-
 .toggle-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size: 75%;
-    margin: 10px;
-    background-color: var(--button-background-colour);
-    color: var(--button-text-colour);
-    transition: 1s;
-    transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 75%;
+  margin: 10px;
+  background-color: var(--button-background-colour);
+  color: var(--button-text-colour);
+  transition: 1s;
+  transform: scale(1);
 }
 
 .toggle-button svg {
-    padding: 5px;
-    fill: var(--button-text-colour);
+  padding: 5px;
+  fill: var(--button-text-colour);
 }
 
-.toggle-button:hover, .toggle-button:focus {
-    transform: scale(1.05);
+.toggle-button:hover,
+.toggle-button:focus {
+  transform: scale(1.05);
 }
 
-
-.suits.diamond-area, .suits.heart-area {
-    animation: suits-load 3s;
+.suits.diamond-area,
+.suits.heart-area {
+  animation: suits-load 3s;
 }
 
-.suits .diamond-area, .suits .heart-area {
-    animation: suits-load-red 3s;
+.suits .diamond-area,
+.suits .heart-area {
+  animation: suits-load-red 3s;
 }
 
 .title-container .header {
-    animation: button-load 3s;
+  animation: button-load 3s;
 }
 
 .header svg {
-    padding: 5px;
-    fill: var(--button-text-colour);
+  padding: 5px;
+  fill: var(--button-text-colour);
 }
 
-.toggle-button:hover, .toggle-button:focus {
-    transform: scale(1.05);
+.toggle-button:hover,
+.toggle-button:focus {
+  transform: scale(1.05);
 }
 
 @keyframes button-load {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 header p {
-    animation: text-load 3s;
-    margin: 10px;
-    text-align: center;
+  animation: text-load 3s;
+  margin: 10px;
+  text-align: center;
 }
 
 @keyframes text-load {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes suits-load-red {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.suits .club-area, .suits .spade-area {
-    animation: suits-load-black 3s;
+.suits .club-area,
+.suits .spade-area {
+  animation: suits-load-black 3s;
 }
 
 @keyframes suits-load-black {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes body-load {
-    0% {
-        opacity: 0;
-        transform: scaleZ(0);
-    }
-    100% {
-        transform: scaleZ(2);
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+    transform: scaleZ(0);
+  }
+  100% {
+    transform: scaleZ(2);
+    opacity: 1;
+  }
 }
-
-
-
 
 .suits-container {
   display: flex;
@@ -234,18 +234,16 @@ header p {
   justify-content: center;
   align-items: stretch;
   align-content: center;
-  /* height: 100vh; */
   min-height: 100%;
-  
 }
 
 .title-container {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
 }
 
 .suits {
@@ -259,218 +257,219 @@ header p {
 }
 
 .suit {
-    transition: 1s;
-    font-size: 10rem;
-    margin: 0;
-    border-radius: 10px;
-    text-align: center;
-    background-color: white;
+  transition: 1s;
+  font-size: 10rem;
+  margin: 0;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
 }
 
-.suit-diamond, .suit-heart {
-    color: var(--red-colour)
+.suit-diamond,
+.suit-heart {
+  color: var(--red-colour);
 }
 
-.suit-club, .suit-spade {
-    color: var(--black-colour)
+.suit-club,
+.suit-spade {
+  color: var(--black-colour);
 }
 
-.suit:hover, .suit:focus {
-    background-color: rgba(157, 35, 29, 0.2);
-    cursor: pointer;
-    box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
-    transition: 1s;
-    transform: scale(1.05);
+.suit:hover,
+.suit:focus {
+  background-color: rgba(157, 35, 29, 0.2);
+  cursor: pointer;
+  box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
+  transition: 1s;
+  transform: scale(1.05);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .modal {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: stretch;
-    transform: scale(0);
-    background-color: white;
-    top: 15vh;
-    left: 15vw;
-    right: 15vw;
-    bottom: 15vw;
-    border: 2px solid black;
-    border-radius: 10px;
-    z-index: 10000;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: stretch;
+  transform: scale(0);
+  background-color: white;
+  top: 15vh;
+  left: 15vw;
+  right: 15vw;
+  bottom: 15vw;
+  border: 2px solid black;
+  border-radius: 10px;
+  z-index: 10000;
 }
 
 body.dark .modal {
-    background-color: rgba(128, 128, 128, 0.85);
+  background-color: rgba(128, 128, 128, 0.85);
 }
 
 .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2vh;
-    border-bottom: 2px solid black;
-    border-radius: 1vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh;
+  border-bottom: 2px solid black;
+  border-radius: 1vh;
 }
 
 .modal-title {
-    display: flex;
-    font-size: 2vh;
-    gap: 0.5vh;
+  display: flex;
+  font-size: 2vh;
+  gap: 0.5vh;
 }
 
 .close {
-    font-size: 2vh;
-    background: none;
-    border: none;
-    cursor: pointer;
+  font-size: 2vh;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .modal-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    padding: 2vh;
-    gap: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 2vh;
+  gap: 3vh;
 }
 
 .modal-body ul {
-    font-size: 1.5vh;
-    padding: 1vh;
-    margin: 1vh;
+  font-size: 1.5vh;
+  padding: 1vh;
+  margin: 1vh;
 }
 
 .modal-body.black {
-    background-color: rgba(0, 0, 0, 0.2);
-
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 body.dark .modal-body.black {
-    background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-body.dark .modal-body.black a, body.dark .modal-body.black svg  {
-    color: white;
-    fill: white;
+body.dark .modal-body.black a,
+body.dark .modal-body.black svg {
+  color: white;
+  fill: white;
 }
-body.dark .modal-body.red a, body.dark .modal-body.red svg  {
-    color: white;
-    fill: white;
+body.dark .modal-body.red a,
+body.dark .modal-body.red svg {
+  color: white;
+  fill: white;
 }
 
 .modal-body.red {
-    background-color: rgba(157, 35, 29, 0.2);
+  background-color: rgba(157, 35, 29, 0.2);
 }
 
 body.dark .modal-body.red {
-    background-color: rgba(157, 35, 29, 0.7);
+  background-color: rgba(157, 35, 29, 0.7);
 }
 
 .modal-body p {
-    font-size: 3vh;
-    text-align: center;
-    padding: 1vh;
+  font-size: 3vh;
+  text-align: center;
+  padding: 1vh;
 }
 
 .modal-body li {
-    padding: 1vh;
+  padding: 1vh;
 }
 
 .modal-body a {
-    display: flex;
-    align-content: center;
-    text-decoration: none;
-    align-items: center;
-    color: black;
-    font-size: 2vh;
-    gap: 1vh;
+  display: flex;
+  align-content: center;
+  text-decoration: none;
+  align-items: center;
+  color: black;
+  font-size: 2vh;
+  gap: 1vh;
 }
 
 .modal-body svg {
-    fill: black;
+  fill: black;
 }
 
 .modal-body button {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    font-size: 1.5vh;
-    border: none;
-    border-radius: 1vh;
-    padding: 0.8vh;
-    margin: 1vh 1vw;
-    background-color: rgba(110, 110, 110, 0.8);
-    width: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  font-size: 1.5vh;
+  border: none;
+  border-radius: 1vh;
+  padding: 0.8vh;
+  margin: 1vh 1vw;
+  background-color: rgba(110, 110, 110, 0.8);
+  width: 15vh;
 }
 
-.modal-body button:hover, .modal-body button:focus {
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: 1s;
-    color: white;
-    background-color: rgba(110, 110, 110, 1);
+.modal-body button:hover,
+.modal-body button:focus {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 1s;
+  color: white;
+  background-color: rgba(110, 110, 110, 1);
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    background: url(../images/deckofcards.jpg) no-repeat center center fixed;
-    background-size: cover;
-    opacity: 0.1;
-    transform: scale(0);
-    pointer-events: all;
-
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  background: url(../images/deckofcards.jpg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.1;
+  transform: scale(0);
+  pointer-events: all;
 }
 
 .fade {
-    transition: 1s;
-    transition-timing-function: cubic-bezier(1, 0.18, 0.9, 0.99);
+  transition: 1s;
+  transition-timing-function: cubic-bezier(1, 0.18, 0.9, 0.99);
 }
 .active {
-    transition: 2s;
-    transform: scale(1);
+  transition: 2s;
+  transform: scale(1);
 }
 .not-active {
-    transition: 2s;
-    transform: scale(0);
+  transition: 2s;
+  transform: scale(0);
 }
 
-
 footer {
-    display: flex;
-    flex: 2;
-    justify-content: space-between;
-    align-items: flex-end;
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .social-links {
-    padding: 1vh;
+  padding: 1vh;
 }
 
 .social-links i {
-    color: var(--black-colour);
+  color: var(--black-colour);
 }
 
 body.dark .social-links i {
-    color: var(--white-colour)
+  color: var(--white-colour);
 }
-
-

@@ -1,32 +1,29 @@
-let darkTheme = localStorage.getItem('darkTheme')
+let darkTheme = localStorage.getItem("darkTheme");
 
-if (darkTheme === 'on') {
-    darkMode();
+if (darkTheme === "on") {
+  darkMode();
 } else if (darkTheme === null) {
-        disableDarkMode();
+  disableDarkMode();
 }
 
-
-const darkToggle = document.querySelector('.toggle-button')
+const darkToggle = document.querySelector(".toggle-button");
 
 function darkMode() {
-    document.body.classList.add('dark')
-    localStorage.setItem('darkTheme', 'on')
+  document.body.classList.add("dark");
+  localStorage.setItem("darkTheme", "on");
 }
 
 function disableDarkMode() {
-    document.body.classList.remove('dark')
-    localStorage.setItem('darkTheme', null)
+  document.body.classList.remove("dark");
+  localStorage.setItem("darkTheme", null);
 }
 
+darkToggle.addEventListener("click", () => {
+  darkTheme = localStorage.getItem("darkTheme");
 
-
-darkToggle.addEventListener('click', () => {
-    darkTheme = localStorage.getItem('darkTheme')
-    
-    if (darkTheme !== 'on'){
-    darkMode()
-} else {
+  if (darkTheme !== "on") {
+    darkMode();
+  } else {
     disableDarkMode();
-}
-})
+  }
+});

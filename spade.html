@@ -9,71 +9,103 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    /> 
+    />
     <link rel="stylesheet" href="assets/css/spade.css" />
     <title>Spade</title>
   </head>
   <body>
     <div id="spade-container" class="flex-container">
-                  <nav class="navbar">
-              <div class="nav-links">
-                  <ul>
-                      <a href="index.html"><li>Other Games</li></a>
-                      <a href="score.html"><li>View Scores</li></a>
-                  </ul>
-              </div>
-          </nav>
-        <div id="game-start" class="question-container">
-            <h1>Pick two cards from the board, to make the hand in question!</h1>
-      <p id="question" class="hide question-fade"></p>
-      <button id="start" class="start">Start<svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,2C9,7 4,9 4,14C4,16 6,18 8,18C9,18 10,18 11,17C11,17 11.32,19 9,22H15C13,19 13,17 13,17C14,18 15,18 16,18C18,18 20,16 20,14C20,9 15,7 12,2Z" />
-</svg></button>
-  </div>
-  <div id="card-choice" class="card-game-container hide"></div>
-  
-  <div id="card-board" class="card-board-container hide"></div>
-  <div id="results" class="results-container card-answer hide"></div>
-  <footer>
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="nav-links">
+          <ul>
+            <a href="index.html"><li>Other Games</li></a>
+            <a href="score.html"><li>View Scores</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Area showing 3 card board and 12 card options choice -->
+      <div id="game-start" class="question-container">
+        <h1>Pick two cards from the board, to make the hand in question!</h1>
+        <p id="question" class="hide question-fade"></p>
+        <button id="start" class="start">
+          Start<svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+            <path
+              d="M12,2C9,7 4,9 4,14C4,16 6,18 8,18C9,18 10,18 11,17C11,17 11.32,19 9,22H15C13,19 13,17 13,17C14,18 15,18 16,18C18,18 20,16 20,14C20,9 15,7 12,2Z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div id="card-choice" class="card-game-container hide"></div>
+
+      <div id="card-board" class="card-board-container hide"></div>
+      <div id="results" class="results-container card-answer hide"></div>
+      <!-- Footer -->
+      <footer>
         <div><button class="toggle-button">Toggle theme</button></div>
         <div class="social">
-            <div class="social-links"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
-            <div class="social-links"><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></div>
-            <div class="social-links"><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a></div>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.github.com" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
         </div>
-
-    </footer>
-</div>
-<div class="modal fade" id="modal">
-    <div class="modal-header">
-        <div class="modal-title">
-            Game Over
-        </div>
-        <!-- <button class="close">&times;</button> -->
+      </footer>
     </div>
+    <!-- End game modal showing score, navigation buttons and form to save score -->
+
+    <div class="modal fade" id="modal">
+      <div class="modal-header">
+        <div class="modal-title">Game Over</div>
+      </div>
       <div class="modal-body">
         <h1>You scored</h1>
         <p id="score"></p>
-                <div>
-            <form class="save-scores">
-                <input type="text" name="name" id="username" placeholder="Enter name">
-                <button class="next-game-buttons" id="save-score" type="button" onclick="saveScores()">Save Score</button>
-            </form>
+        <div>
+          <form class="save-scores">
+            <input
+              type="text"
+              name="name"
+              id="username"
+              placeholder="Enter name"
+            />
+            <button
+              class="next-game-buttons"
+              id="save-score"
+              type="button"
+              onclick="saveScores()"
+            >
+              Save Score
+            </button>
+          </form>
         </div>
         <div id="next-games">
-        <button id="heart" class="next-game-buttons">Play Heart</button>
-        <button id="club" class="next-game-buttons">Play Club</button>
-        <button id="diamond" class="next-game-buttons">Play Diamond</button>
+          <button id="heart" class="next-game-buttons">Play Heart</button>
+          <button id="club" class="next-game-buttons">Play Club</button>
+          <button id="diamond" class="next-game-buttons">Play Diamond</button>
         </div>
         <div id="go-home">
-            <button id="home-button" class="next-game-buttons">Go Home</button>
-            <button id="play-again-button" class="next-game-buttons">Play Again</button>
-            <button id="scores-button" class="next-game-buttons">View Scores</button>
-
+          <button id="home-button" class="next-game-buttons">Go Home</button>
+          <button id="play-again-button" class="next-game-buttons">
+            Play Again
+          </button>
+          <button id="scores-button" class="next-game-buttons">
+            View Scores
+          </button>
         </div>
+      </div>
     </div>
-</div>
-<div id="modal-overlay" class="overlay"></div>
+    <div id="modal-overlay" class="overlay"></div>
     <script src="assets/js/darktheme.js"></script>
     <script src="assets/js/spade.js"></script>
   </body>

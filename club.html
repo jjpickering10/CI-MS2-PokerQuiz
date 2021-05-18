@@ -6,82 +6,125 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Enter your description here" />
     <link rel="icon" type="image/png" href="assets/images/club.png" />
-    
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    /> 
+    />
     <link rel="stylesheet" href="assets/css/club.css" />
     <title>Club</title>
   </head>
   <body>
-          <div id="club-container" class="club-column">
-                        <nav class="navbar">
-              <div class="nav-links">
-                  <ul>
-                      <a href="index.html"><li>Other Games</li></a>
-                      <a href="score.html"><li>View Scores</li></a>
-                  </ul>
-              </div>
-          </nav>
-              <h1 id="question">Which is the winning hand?</h1>
-              <div class="col-12 answer-container">
-                  <div id="first-option-cards"></div>
-                  <button id="first-option" class="start hide" data-correct="true"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z" />
-</svg>This hand?&UpArrow;</button>
-              </div>
-              <div class="col-12 answer-container">
-                  <div id="second-option-cards"></div>
-                  <button id="second-option" class="start hide" data-correct="true"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z" />
-</svg>Or this one?&UpArrow;</button>
-              </div>
-              <button id="start" class="start">Start <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z" />
-</svg></button>
+    <div id="club-container" class="club-column">
+      <!-- Navigation -->
 
-              <footer>
+      <nav class="navbar">
+        <div class="nav-links">
+          <ul>
+            <a href="index.html"><li>Other Games</li></a>
+            <a href="score.html"><li>View Scores</li></a>
+          </ul>
+        </div>
+      </nav>
+
+      <h1 id="question">Which is the winning hand?</h1>
+      <!-- Section where each pair of 5 card hands are placed with answer buttons -->
+      <div class="col-12 answer-container">
+        <div id="first-option-cards"></div>
+        <button id="first-option" class="start hide" data-correct="true">
+          <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+            <path
+              d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z"
+            /></svg
+          >This hand?&UpArrow;
+        </button>
+      </div>
+      <div class="col-12 answer-container">
+        <div id="second-option-cards"></div>
+        <button id="second-option" class="start hide" data-correct="true">
+          <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+            <path
+              d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z"
+            /></svg
+          >Or this one?&UpArrow;
+        </button>
+      </div>
+      <button id="start" class="start">
+        Start
+        <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+          <path
+            d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z"
+          />
+        </svg>
+      </button>
+      <!-- Footer -->
+      <footer>
         <div><button class="toggle-button">Toggle theme</button></div>
         <div class="social">
-            <div class="social-links"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
-            <div class="social-links"><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></div>
-            <div class="social-links"><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a></div>
-        </div>
-
-    </footer>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
           </div>
-      <div class="modal fade" id="modal">
-    <div class="modal-header">
-        <div class="modal-title">
-            Game Over
+          <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.github.com" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
         </div>
+      </footer>
     </div>
+    <!-- End game modal showing score, navigation buttons and form to save score -->
+
+    <div class="modal fade" id="modal">
+      <div class="modal-header">
+        <div class="modal-title">Game Over</div>
+      </div>
       <div class="modal-body">
         <h1>You scored</h1>
         <p id="score"></p>
-                <div>
-            <form class="save-scores">
-                <input type="text" name="name" id="username" placeholder="Enter name">
-                <button class="next-game-buttons" id="save-score" type="button" onclick="saveScores()">Save Score</button>
-            </form>
+        <div>
+          <form class="save-scores">
+            <input
+              type="text"
+              name="name"
+              id="username"
+              placeholder="Enter name"
+            />
+            <button
+              class="next-game-buttons"
+              id="save-score"
+              type="button"
+              onclick="saveScores()"
+            >
+              Save Score
+            </button>
+          </form>
         </div>
         <div id="next-games">
-        <button id="heart" class="next-game-buttons">Play Heart</button>
-        <button id="diamond" class="next-game-buttons">Play Diamond</button>
-        <button id="spade" class="next-game-buttons">Play Spade</button>
+          <button id="heart" class="next-game-buttons">Play Heart</button>
+          <button id="diamond" class="next-game-buttons">Play Diamond</button>
+          <button id="spade" class="next-game-buttons">Play Spade</button>
         </div>
         <div id="go-home">
-            <button id="home-button" class="next-game-buttons">Go Home</button>
-            <button id="play-again-button" class="next-game-buttons">Play Again</button>
-            <button id="scores-button" class="next-game-buttons">View Scores</button>
+          <button id="home-button" class="next-game-buttons">Go Home</button>
+          <button id="play-again-button" class="next-game-buttons">
+            Play Again
+          </button>
+          <button id="scores-button" class="next-game-buttons">
+            View Scores
+          </button>
         </div>
+      </div>
     </div>
-</div>
-<div id="modal-overlay" class="overlay"></div>
-    
+    <div id="modal-overlay" class="overlay"></div>
 
-        <script src="assets/js/darktheme.js"></script>
+    <script src="assets/js/darktheme.js"></script>
 
     <script src="assets/js/club.js"></script>
   </body>

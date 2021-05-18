@@ -14,102 +14,145 @@
     <title>PokerQuiz</title>
   </head>
   <body>
-      <div class="modal fade" id="aboutModal">
+    <!-- About Modal -->
+    <div class="modal fade" id="aboutModal">
       <div class="modal-header">
         <h5 class="modal-title" id="aboutModalLabel">PokerQuiz</h5>
         <button data-close class="close">&times;</button>
       </div>
       <div class="modal-body red">
-          <p>About Us</p>
+        <p>About Us</p>
         <ul>
-            <li>4 quizzes/games</li>
-            <li>Designed to test your basic poker knowledge</li>
-            <li>And to have fun</li>
-            <li>Click the cards to read more</li>
-            <li>Save your scores and view the latest</li>
+          <li>4 quizzes/games</li>
+          <li>Designed to test your basic poker knowledge</li>
+          <li>And to have fun</li>
+          <li>Click the cards to read more</li>
+          <li>Save your scores and view the latest</li>
         </ul>
       </div>
-</div>
+    </div>
 
-<div class="modal fade" id="contactModal">
+    <!-- Contact Modal -->
+
+    <div class="modal fade" id="contactModal">
       <div class="modal-header">
         <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
         <button data-close class="close">&times;</button>
       </div>
       <div class="modal-body black">
-          <p>Got any questions?</p>
-          <form>
-              <fieldset>
-                  <label for="first-name">First Name:</label>
-                  <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
-                  <label for="email">Email:</label>
-                  <input type="email" name="email" id="email" placeholder="Email Address" required>
-                  <label for="message">Message:</label>
-                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Tell us what you want to know" required></textarea>
-                  <button class="next-game-buttons" type="submit">Submit</button>
-              </fieldset>
-          </form>
+        <p>Got any questions?</p>
+        <form>
+          <fieldset>
+            <label for="first-name">First Name:</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+              required
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+            <label for="message">Message:</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Tell us what you want to know"
+              required
+            ></textarea>
+            <button class="next-game-buttons" type="submit">Submit</button>
+          </fieldset>
+        </form>
       </div>
-</div>
+    </div>
+
+    <!-- Quiz Game Modals -->
 
     <div class="modal fade" id="diamondModal">
       <div class="modal-header">
-        <h5 class="modal-title" id="diamondModalLabel">Who won the Main Event...?</h5>
+        <h5 class="modal-title" id="diamondModalLabel">
+          Who won the Main Event...?
+        </h5>
         <button data-close class="close">&times;</button>
       </div>
       <div class="modal-body red">
-          <p>Here's how it works</p>
+        <p>Here's how it works</p>
         <ul>
-            <li>The World Series of Poker Main Event is poker's most prestigious tournament</li>
-            <li>It is held in Vegas every year</li>
-            <li>You will be given a year and 4 possible choices</li>
-            <li>Try and name the winner of each year</li>
-            <li>Lorem, ipsum dolor.</li>
+          <li>
+            The World Series of Poker Main Event is poker's most prestigious
+            tournament
+          </li>
+          <li>It is held in Vegas every year</li>
+          <li>You will be given a year and 4 possible choices</li>
+          <li>Try and name the winner of each year</li>
         </ul>
-        <button><a href="diamond.html">Play <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M19,12L12,22L5,12L12,2" />
-</svg></a></button>
+        <button>
+          <a href="diamond.html"
+            >Play
+            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path d="M19,12L12,22L5,12L12,2" /></svg
+          ></a>
+        </button>
       </div>
-</div>
-<div class="modal fade" id="clubModal">
+    </div>
+    <div class="modal fade" id="clubModal">
       <div class="modal-header">
-        <h5 class="modal-title" id="clubModalLabel">Which is the winning hand?</h5>
+        <h5 class="modal-title" id="clubModalLabel">
+          Which is the winning hand?
+        </h5>
         <button data-close class="close">&times;</button>
       </div>
       <div class="modal-body black">
-          <p>Here's how it works</p>
+        <p>Here's how it works</p>
         <ul>
-            <li>You will be given two 5 card hands</li>
-            <li>They each represent 1 of the 10 poker hand rankings</li>
-            <li>Try and pick which is the better hand</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem, ipsum dolor.</li>
+          <li>You will be given two 5 card hands</li>
+          <li>They each represent 1 of the 10 poker hand rankings</li>
+          <li>Try and pick which is the better hand</li>
         </ul>
-        <button><a href="club.html">Play <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z" />
-</svg></a></button>
+        <button>
+          <a href="club.html"
+            >Play
+            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path
+                d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z"
+              /></svg
+          ></a>
+        </button>
       </div>
-</div>
-<div class="modal fade" id="heartModal">
+    </div>
+    <div class="modal fade" id="heartModal">
       <div class="modal-header">
         <h5 class="modal-title" id="heartModalLabel">Can you make a pair?</h5>
         <button data-close class="close">&times;</button>
       </div>
       <div class="modal-body red">
-          <p>Here's how it works</p>
+        <p>Here's how it works</p>
         <ul>
-            <li>It's a running joke in poker, "I never make a pair"</li>
-            <li>Very simple this...</li>
-            <li>You will be dealt 2 random cards</li>
-            <li>See how many pairs you can make in 10 attempts</li>
-            <li>Lorem, ipsum dolor.</li>
+          <li>It's a running joke in poker, "I never make a pair"</li>
+          <li>Very simple this...</li>
+          <li>You will be dealt 2 random cards</li>
+          <li>See how many pairs you can make in 10 attempts</li>
         </ul>
-        <button><a href="heart.html">Play <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" /></svg></a></button>
+        <button>
+          <a href="heart.html"
+            >Play
+            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path
+                d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+              /></svg
+          ></a>
+        </button>
       </div>
-
-</div>
-<div class="modal fade" id="spadeModal">
+    </div>
+    <div class="modal fade" id="spadeModal">
       <div class="modal-header">
         <h5 class="modal-title" id="spadeModalLabel">Make this hand...</h5>
         <button data-close class="close">&times;</button>
@@ -117,105 +160,108 @@
       <div class="modal-body black">
         <p>Here's how it works</p>
         <ul>
-            <li>3 cards will be displayed at the top</li>
-            <li>12 cards will be displayed underneath</li>
-            <li>A hand will be listed in the middle</li>
-            <li>Click 2 of the 12 cards to try and make that hand</li>
-            <li>Lorem, ipsum dolor.</li>
+          <li>3 cards will be displayed at the top</li>
+          <li>12 cards will be displayed underneath</li>
+          <li>A hand will be listed in the middle</li>
+          <li>Click 2 of the 12 cards to try and make that hand</li>
         </ul>
-        <button><a href="spade.html">Play <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,2C9,7 4,9 4,14C4,16 6,18 8,18C9,18 10,18 11,17C11,17 11.32,19 9,22H15C13,19 13,17 13,17C14,18 15,18 16,18C18,18 20,16 20,14C20,9 15,7 12,2Z" />
-</svg></a></button>
-      </div>
-</div>
-  <div id="modal-overlay" class="overlay"></div>
-    
-
-  <div id="page-container" class="suits-container">
-      <div class="title-container">
-          <nav class="navbar">
-              <div class="nav-links">
-                  <ul>
-                      <li id="about-button" data-modal-target="#aboutModal">About</li>
-                      <li id="contact-button" data-modal-target="#contactModal">Contact</li>
-                      <li><a href="score.html">Scores</a></li>
-                  </ul>
-              </div>
-          </nav>
-          <header> 
-              <h1 class="header"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M19,12L12,22L5,12L12,2" />
-</svg><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z" />
-</svg>
-              PokerQuiz<svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" /></svg><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    <path d="M12,2C9,7 4,9 4,14C4,16 6,18 8,18C9,18 10,18 11,17C11,17 11.32,19 9,22H15C13,19 13,17 13,17C14,18 15,18 16,18C18,18 20,16 20,14C20,9 15,7 12,2Z" />
-</svg>
-</h1>
-          <p>
-              Click the cards, play games
-          </p>
-</header>
-
-      </div>
-    <div class="suits">
-      <div class="diamond-area">
-          <!-- <div class="flex-container">
-   <div class="flex-items"> -->
-       <p class="suit suit-diamond" data-modal-target="#diamondModal">&diamondsuit;</p>
-       <!-- Modal -->
-       
-   <!-- </div> -->
-<!-- </div> -->
-          
-      </div>
-      <div class="club-area">
-          <!-- <div class="flex-container"> -->
-   <!-- <div class="flex-items"> -->
-       <p class="suit suit-club" data-modal-target="#clubModal">&clubsuit;</p>
-       <!-- Modal -->
-       
-   <!-- </div> -->
-<!-- </div> -->
-          
-      </div>
-      <div class="heart-area">
-          <!-- <div class="flex-container"> -->
-   <!-- <div class="flex-items"> -->
-       <p class="suit suit-heart"data-modal-target="#heartModal">&heartsuit;</p>
-       <!-- Modal -->
-       
-   <!-- </div> -->
-<!-- </div> -->
-          
-      </div>
-      <div class="spade-area">
-          <!-- <div class="flex-container"> -->
-   <!-- <div class="flex-items"> -->
-      <p class="suit suit-spade" data-modal-target="#spadeModal">&spadesuit;</p>
-
-<!-- Modal -->
-
-   <!-- </div> -->
-<!-- </div> -->
-          
+        <button>
+          <a href="spade.html"
+            >Play
+            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path
+                d="M12,2C9,7 4,9 4,14C4,16 6,18 8,18C9,18 10,18 11,17C11,17 11.32,19 9,22H15C13,19 13,17 13,17C14,18 15,18 16,18C18,18 20,16 20,14C20,9 15,7 12,2Z"
+              /></svg
+          ></a>
+        </button>
       </div>
     </div>
-    <footer>
+    <div id="modal-overlay" class="overlay"></div>
+
+    <!-- Main site container -->
+    <div id="page-container" class="suits-container">
+      <div class="title-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+          <div class="nav-links">
+            <ul>
+              <li id="about-button" data-modal-target="#aboutModal">About</li>
+              <li id="contact-button" data-modal-target="#contactModal">
+                Contact
+              </li>
+              <li><a href="score.html">Scores</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Header -->
+        <header>
+          <h1 class="header">
+            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path d="M19,12L12,22L5,12L12,2" /></svg
+            ><svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path
+                d="M12,2C14.3,2 16.3,4 16.3,6.2C16.21,8.77 14.34,9.83 14.04,10C15.04,9.5 16.5,9.5 16.5,9.5C19,9.5 21,11.3 21,13.8C21,16.3 19,18 16.5,18C16.5,18 15,18 13,17C13,17 12.7,19 15,22H9C11.3,19 11,17 11,17C9,18 7.5,18 7.5,18C5,18 3,16.3 3,13.8C3,11.3 5,9.5 7.5,9.5C7.5,9.5 8.96,9.5 9.96,10C9.66,9.83 7.79,8.77 7.7,6.2C7.7,4 9.7,2 12,2Z"
+              />
+            </svg>
+            PokerQuiz<svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path
+                d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+              /></svg
+            ><svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path
+                d="M12,2C9,7 4,9 4,14C4,16 6,18 8,18C9,18 10,18 11,17C11,17 11.32,19 9,22H15C13,19 13,17 13,17C14,18 15,18 16,18C18,18 20,16 20,14C20,9 15,7 12,2Z"
+              />
+            </svg>
+          </h1>
+          <p>Click the cards, play games</p>
+        </header>
+      </div>
+      <!-- Main section of the home page where users can click the cards to view what each game is about and then play the game -->
+      <div class="suits">
+        <div class="diamond-area">
+          <p class="suit suit-diamond" data-modal-target="#diamondModal">
+            &diamondsuit;
+          </p>
+        </div>
+        <div class="club-area">
+          <p class="suit suit-club" data-modal-target="#clubModal">
+            &clubsuit;
+          </p>
+        </div>
+        <div class="heart-area">
+          <p class="suit suit-heart" data-modal-target="#heartModal">
+            &heartsuit;
+          </p>
+        </div>
+        <div class="spade-area">
+          <p class="suit suit-spade" data-modal-target="#spadeModal">
+            &spadesuit;
+          </p>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer>
         <div><button class="toggle-button">Toggle theme</button></div>
         <div class="social">
-            <div class="social-links"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
-            <div class="social-links"><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></div>
-            <div class="social-links"><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a></div>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.github.com" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
         </div>
+      </footer>
+    </div>
 
-    </footer>
-    
-  </div>
-  
-        
-        
     <script src="assets/js/script.js"></script>
     <script src="assets/js/darktheme.js"></script>
   </body>

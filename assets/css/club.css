@@ -1,40 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
 
-
 body {
-    --black-colour: rgba(41, 35, 38, 1);
-    --white-colour: rgba(232, 230, 227, 1);
-    --button-background-colour: var(--white-colour);
-    --modal-colour: white;
-    --modal-background-colour: rgba(0,0,0,0.2);
-    color: var(--black-colour);
-    background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
+  --black-colour: rgba(41, 35, 38, 1);
+  --white-colour: rgba(232, 230, 227, 1);
+  --button-background-colour: var(--white-colour);
+  --modal-colour: white;
+  --modal-background-colour: rgba(0, 0, 0, 0.2);
+  color: var(--black-colour);
+  background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
   background-size: cover;
   transition: 1s;
-    animation: body-load 3s;
-
+  animation: body-load 3s;
 }
 
 body.dark {
-    --black-colour: rgba(41, 35, 38, 1);
-    --white-colour: rgba(232, 230, 227, 1);
-    --button-background-colour: rgba(110,110,110,1);
-    --modal-colour: rgba(128,128,128,0.85);
-    --modal-background-colour: rgba(0,0,0,0.7);
-    color: var(--white-colour);
-    background: url(../images/darkpokerbackground.jpg) no-repeat center center fixed;
+  --black-colour: rgba(41, 35, 38, 1);
+  --white-colour: rgba(232, 230, 227, 1);
+  --button-background-colour: rgba(110, 110, 110, 1);
+  --modal-colour: rgba(128, 128, 128, 0.85);
+  --modal-background-colour: rgba(0, 0, 0, 0.7);
+  color: var(--white-colour);
+  background: url(../images/darkpokerbackground.jpg) no-repeat center center
+    fixed;
   background-size: cover;
 }
 
 @keyframes body-load {
-    0% {
-        opacity: 0;
-        transform: scaleZ(0);
-    }
-    100% {
-        transform: scaleZ(2);
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+    transform: scaleZ(0);
+  }
+  100% {
+    transform: scaleZ(2);
+    opacity: 1;
+  }
 }
 
 * {
@@ -45,46 +44,45 @@ body.dark {
 }
 
 .navbar {
-    padding: 2vh;
+  padding: 2vh;
 }
 
 .nav-links ul {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh;
 }
 
 .nav-links ul li {
-    list-style: none;
-    padding: 2vh;
-    border: 1px solid currentColor;
-    border-radius: 10px;
-    width: 100%;
-    text-align: center;
-    margin: 0.5vh;
-    background-color: var(--button-background-colour);
+  list-style: none;
+  padding: 2vh;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  margin: 0.5vh;
+  background-color: var(--button-background-colour);
 }
 
 .nav-links ul a {
-    text-decoration: none;
-    color: currentColor;
-    margin: 0.5vh;
-    width: 25vh;
+  text-decoration: none;
+  color: currentColor;
+  margin: 0.5vh;
+  width: 25vh;
 }
 
 .nav-links ul a:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .club-column h1 {
-    display: flex;
-    flex: 1;
-    align-items: flex-end;
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
   font-size: 50px;
   margin-bottom: 50px;
   text-align: center;
 }
-
 
 .answer-container {
   display: flex;
@@ -112,226 +110,230 @@ body.dark {
   height: 100vh;
 }
 
-#first-option-cards, #second-option-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
+#first-option-cards,
+#second-option-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
 }
 
 .image-size {
-    width: 10%;
+  width: 10%;
 }
 
 .start {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size: 1.5rem;
-    width: 40%;
-    margin: 10px;
-    color: currentColor;
-    background-color: var(--button-background-colour);
-    transition: 1s;
-    transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 40%;
+  margin: 10px;
+  color: currentColor;
+  background-color: var(--button-background-colour);
+  transition: 1s;
+  transform: scale(1);
 }
 
 .start svg {
-    margin: 0.2rem;
-    padding: 0.2rem;
-    fill: var(--white-colour);
+  margin: 0.2rem;
+  padding: 0.2rem;
+  fill: var(--white-colour);
 }
 
-.start:hover, .start:focus {
-    transform: scale(1.05);
+.start:hover,
+.start:focus {
+  transform: scale(1.05);
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .correct {
-    background-color:green;
+  background-color: green;
 }
 .wrong {
-    background-color: red;
+  background-color: red;
 }
 
 .next-game-buttons {
-    font-size: 1.5vh;
-    border: none;
-    border-radius: 1vh;
-    padding: 2vh;
-    margin: 1vh 1vw;
-    min-width: 30%;
+  font-size: 1.5vh;
+  border: none;
+  border-radius: 1vh;
+  padding: 2vh;
+  margin: 1vh 1vw;
+  min-width: 30%;
 }
 
-.next-game-buttons:hover, .next-game-buttons:focus {
-    cursor: pointer;
-    box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
-    transform: scale(1.05);
-    transition: 1s;
-    color: white;
-    background-color: rgba(110, 110, 110, 1);
+.next-game-buttons:hover,
+.next-game-buttons:focus {
+  cursor: pointer;
+  box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
+  transform: scale(1.05);
+  transition: 1s;
+  color: white;
+  background-color: rgba(110, 110, 110, 1);
 }
 
 .modal {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0);
-    background-color: var(--modal-colour);
-    top: 15vh;
-    left: 15vw;
-    right: 15vw;
-    bottom: 15vw;
-    border-radius: 10px;
-    z-index: 10000;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  background-color: var(--modal-colour);
+  top: 15vh;
+  left: 15vw;
+  right: 15vw;
+  bottom: 15vw;
+  border-radius: 10px;
+  z-index: 10000;
 }
 
 .modal-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2vh;
-    border-bottom: 2px solid currentColor;
-    border-radius: 1vh;
-    margin: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+  border-bottom: 2px solid currentColor;
+  border-radius: 1vh;
+  margin: 2vh;
 }
 
 .modal-title {
-    font-size: 2vh;
+  font-size: 2vh;
 }
 
-
 .modal-body {
-    display: flex;
-    flex: 2;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    padding: 2vh;
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: var(--modal-background-colour);
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 2vh;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--modal-background-colour);
 }
 
 .modal-body h1 {
-    font-size: 3vh;
-    text-align: center;
-    padding: 1vh;
+  font-size: 3vh;
+  text-align: center;
+  padding: 1vh;
 }
 
 .save-scores {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .save-scores input {
-    border: none;
-    text-align: center;
-    margin: 1%;
-    padding: 1%;
+  border: none;
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
 }
 
 .overlay {
-    position: fixed;
-    opacity: 0.5;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    background: url(../images/fouracesbackground.jpg) center center fixed;
-    /* background-size: cover; */
-    pointer-events: none;
-    transform: scale(0);
+  position: fixed;
+  opacity: 0.5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  background: url(../images/fouracesbackground.jpg) center center fixed;
+  /* background-size: cover; */
+  pointer-events: none;
+  transform: scale(0);
 }
 
 .fade {
-    transition: 1s;
-    transition-timing-function: cubic-bezier(1, 0.18, 0.9, 0.99);
+  transition: 1s;
+  transition-timing-function: cubic-bezier(1, 0.18, 0.9, 0.99);
 }
 .active {
-    transition: 2s;
-    transform: scale(1);
+  transition: 2s;
+  transform: scale(1);
 }
 
 .not-active {
-    transition: 5s;
-    transform: scale(0);
+  transition: 5s;
+  transform: scale(0);
 }
 
 #score {
-    font-size: 5vh;
-    text-align: center;
+  font-size: 5vh;
+  text-align: center;
 }
 
-#next-games, #go-home {
-    display: flex;
-    padding: 1vh;
-    justify-content: center;
+#next-games,
+#go-home {
+  display: flex;
+  padding: 1vh;
+  justify-content: center;
 }
 
 .toggle-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size: 75%;
-    margin: 10px;
-    background-color: var(--button-background-colour);
-    color: var(--button-text-colour);
-    transition: 1s;
-    transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 75%;
+  margin: 10px;
+  background-color: var(--button-background-colour);
+  color: var(--button-text-colour);
+  transition: 1s;
+  transform: scale(1);
 }
 
 .toggle-button svg {
-    padding: 5px;
-    fill: var(--button-text-colour);
+  padding: 5px;
+  fill: var(--button-text-colour);
 }
 
-.toggle-button:hover, .toggle-button:focus {
-    transform: scale(1.05);
+.toggle-button:hover,
+.toggle-button:focus {
+  transform: scale(1.05);
 }
 
 footer {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
 }
 
 .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .social-links {
-    padding: 1vh;
+  padding: 1vh;
 }
 
 .social-links i {
-    color: var(--black-colour);
+  color: var(--black-colour);
 }
 
 body.dark .social-links i {
-    color: var(--white-colour)
+  color: var(--white-colour);
 }

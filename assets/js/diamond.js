@@ -1,132 +1,134 @@
 const startButton = document.getElementById("diamond-play-btn");
-const currentQuestion = document.getElementById('question-option');
-const answerDiv = document.getElementById('diamond-answer-buttons')
-const modal = document.getElementById('modal')
-const overlay = document.getElementById('modal-overlay')
-const score = document.getElementById('score')
-const clubButton = document.getElementById('club')
-const heartButton = document.getElementById('heart')
-const spadeButton = document.getElementById('spade')
-const homeButton = document.getElementById('home-button')
-const playAgainButton = document.getElementById('play-again-button')
-const scoresButton = document.getElementById('scores-button')
+const currentQuestion = document.getElementById("question-option");
+const answerDiv = document.getElementById("diamond-answer-buttons");
+const modal = document.getElementById("modal");
+const overlay = document.getElementById("modal-overlay");
+const score = document.getElementById("score");
+const clubButton = document.getElementById("club");
+const heartButton = document.getElementById("heart");
+const spadeButton = document.getElementById("spade");
+const homeButton = document.getElementById("home-button");
+const playAgainButton = document.getElementById("play-again-button");
+const scoresButton = document.getElementById("scores-button");
 
-const pageContainer = document.getElementById('whole-page')
+const pageContainer = document.getElementById("whole-page");
 
 let shuffledQuestions;
 let questionIndex = 0;
 let rightAnswers = 0;
 
-startButton.addEventListener('click', startGame);
-clubButton.addEventListener('click', () => {
-    window.location.assign('club.html')
+startButton.addEventListener("click", startGame);
+clubButton.addEventListener("click", () => {
+  window.location.assign("club.html");
 });
-heartButton.addEventListener('click', () => {
-    window.location.assign('heart.html')
+heartButton.addEventListener("click", () => {
+  window.location.assign("heart.html");
 });
-spadeButton.addEventListener('click', () => {
-    window.location.assign('spade.html')
-} );
-homeButton.addEventListener('click', () => {
-    window.location.assign('index.html')
-} );
-playAgainButton.addEventListener('click', () => {
-    window.location.assign('diamond.html')
-} );
-scoresButton.addEventListener('click', () => {
-    window.location.assign('score.html')
-} );
+spadeButton.addEventListener("click", () => {
+  window.location.assign("spade.html");
+});
+homeButton.addEventListener("click", () => {
+  window.location.assign("index.html");
+});
+playAgainButton.addEventListener("click", () => {
+  window.location.assign("diamond.html");
+});
+scoresButton.addEventListener("click", () => {
+  window.location.assign("score.html");
+});
 
 function startGame() {
-    shuffledQuestions = shuffleQuestions(questions);
-    setQuestion();
+  shuffledQuestions = shuffleQuestions(questions);
+  setQuestion();
 }
 
 function setQuestion() {
-    startButton.classList.add('hide')
-     while (answerDiv.firstChild) {
-         answerDiv.removeChild(answerDiv.firstChild)
-     }
-    displayQuestion(shuffledQuestions[questionIndex]);
+  startButton.classList.add("hide");
+  while (answerDiv.firstChild) {
+    answerDiv.removeChild(answerDiv.firstChild);
+  }
+  displayQuestion(shuffledQuestions[questionIndex]);
 }
 
-function shuffleQuestions(array) { // Used code from --- https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-    var currentIndex = array.length, temporaryValue, randomIndex;
+function shuffleQuestions(array) {
+  // Used code from --- https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+  var currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
 
   // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
 
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
 
-    return array;
+  return array;
 }
 
 function displayQuestion(question) {
-    currentQuestion.classList.add('current-question')
-    currentQuestion.innerText = question.question;
-    question.answers.forEach(answer => {
-        const button = document.createElement('button');
-        button.innerText = answer.text;
-        answerDiv.classList.add('flex-container')
-        button.classList.add('diamond-buttons')
-        if (answer.correctAnswer) {
-            button.dataset.correctAnswer = answer.correctAnswer;
-        }
-        button.addEventListener('click', answerInfo)
-        answerDiv.appendChild(button)
-
-    })
+  currentQuestion.classList.add("current-question");
+  currentQuestion.innerText = question.question;
+  question.answers.forEach((answer) => {
+    const button = document.createElement("button");
+    button.innerText = answer.text;
+    answerDiv.classList.add("flex-container");
+    button.classList.add("diamond-buttons");
+    if (answer.correctAnswer) {
+      button.dataset.correctAnswer = answer.correctAnswer;
+    }
+    button.addEventListener("click", answerInfo);
+    answerDiv.appendChild(button);
+  });
 }
 
- function answerInfo(answer) {
-     const buttonSelect = answer.target
-     const correct = buttonSelect.dataset.correctAnswer;
-     if (buttonSelect.dataset = correct) {
-         rightAnswers++;
-     }
-     localStorage.setItem("latest-diamond-score", rightAnswers);
-     document.getElementById('diamond-right-answers').innerText = rightAnswers;
-     if (shuffledQuestions.length > questionIndex + 16) {
-         questionIndex++
-         setTimeout(() => {
-             setQuestion();
-         }, 1000);
-     } else {
-        openModal();
-     }
- }
+function answerInfo(answer) {
+  const buttonSelect = answer.target;
+  const correct = buttonSelect.dataset.correctAnswer;
+  if ((buttonSelect.dataset = correct)) {
+    rightAnswers++;
+  }
+  localStorage.setItem("latest-diamond-score", rightAnswers);
+  document.getElementById("diamond-right-answers").innerText = rightAnswers;
+  if (shuffledQuestions.length > questionIndex + 16) {
+    questionIndex++;
+    setTimeout(() => {
+      setQuestion();
+    }, 1000);
+  } else {
+    openModal();
+  }
+}
 
- function openModal(){
-     modal.classList.add('active')
-     overlay.classList.add('active')
-     pageContainer.classList.add('not-active')
-     score.innerText = `${rightAnswers} out of 5`
- }
+function openModal() {
+  modal.classList.add("active");
+  overlay.classList.add("active");
+  pageContainer.classList.add("not-active");
+  score.innerText = `${rightAnswers} out of 5`;
+}
 
 //  https://stackoverflow.com/questions/12162786/adding-new-objects-to-localstorage
 
- function saveScores(){
-     const saveScoreButton = document.getElementById('save-score')
-     const userScore = localStorage.getItem('latest-diamond-score')
-     const userName = document.getElementById('username')
-     const diamondScores = JSON.parse(localStorage.getItem('diamondScores')) || [];
-     const latestDiamondScores = {
-         'name': userName.value,
-         'score': userScore
-     }
-     diamondScores.push(latestDiamondScores)
-     localStorage.setItem('diamondScores', JSON.stringify(diamondScores))
+function saveScores() {
+  const saveScoreButton = document.getElementById("save-score");
+  const userScore = localStorage.getItem("latest-diamond-score");
+  const userName = document.getElementById("username");
+  const diamondScores = JSON.parse(localStorage.getItem("diamondScores")) || [];
+  const latestDiamondScores = {
+    name: userName.value,
+    score: userScore,
+  };
+  diamondScores.push(latestDiamondScores);
+  localStorage.setItem("diamondScores", JSON.stringify(diamondScores));
 
-     userName.classList.add('hide')
-     saveScoreButton.classList.add('hide')
- }
+  userName.classList.add("hide");
+  saveScoreButton.classList.add("hide");
+}
 
 const questions = [
   {

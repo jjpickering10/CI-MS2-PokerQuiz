@@ -9,78 +9,100 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    /> 
+    />
     <link rel="stylesheet" href="assets/css/heart.css" />
     <title>Heart</title>
   </head>
   <body>
-      <div id="pair-container" class="pair-game-container">
-          <nav class="navbar">
-              <div class="nav-links">
-                  <ul>
-                      <a href="index.html"><li>Other Games</li></a>
-                      <a href="score.html"><li>View Scores</li></a>
-                  </ul>
-              </div>
-          </nav>
-          <div class="row heart-column">
-              <h1 id="question">Can you make a pair?</h1>
-              <div class="flex-container">
-              <div id="hand-one" class="hand-container">
-                  
-              </div>
-              <div id="hand-two" class="hand-container">
-                  
-              </div>
-              </div>
-              
-              
-          </div>
-          <p id="message"></p>
-          <button id="start" class="next-button">Start</button>
-            <button id="next" class="next-button hide">Next Attempt</button>
-            <footer>
+    <div id="pair-container" class="pair-game-container">
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="nav-links">
+          <ul>
+            <a href="index.html"><li>Other Games</li></a>
+            <a href="score.html"><li>View Scores</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Area displaying random 2 cards and next attempt button -->
+      <div class="row heart-column">
+        <h1 id="question">Can you make a pair?</h1>
+        <div class="flex-container">
+          <div id="hand-one" class="hand-container"></div>
+          <div id="hand-two" class="hand-container"></div>
+        </div>
+      </div>
+      <p id="message"></p>
+      <button id="start" class="next-button">Start</button>
+      <button id="next" class="next-button hide">Next Attempt</button>
+      <!-- Footer -->
+      <footer>
         <div><button class="toggle-button">Toggle theme</button></div>
         <div class="social">
-            <div class="social-links"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
-            <div class="social-links"><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></div>
-            <div class="social-links"><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a></div>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.github.com" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
         </div>
-
-    </footer>
-      </div>
-      <div class="modal fade" id="modal">
-    <div class="modal-header">
-        <div class="modal-title">
-            Game Over
-        </div>
+      </footer>
     </div>
+    <!-- End game modal showing score, navigation buttons and form to save score -->
+
+    <div class="modal fade" id="modal">
+      <div class="modal-header">
+        <div class="modal-title">Game Over</div>
+      </div>
       <div class="modal-body">
         <h1>You hit</h1>
         <p id="score"></p>
-                <div>
-            <form class="save-scores">
-                <input type="text" name="name" id="username" placeholder="Enter name">
-                <button class="next-game-buttons" id="save-score" type="button" onclick="saveScores()">Save Score</button>
-            </form>
+        <div>
+          <form class="save-scores">
+            <input
+              type="text"
+              name="name"
+              id="username"
+              placeholder="Enter name"
+            />
+            <button
+              class="next-game-buttons"
+              id="save-score"
+              type="button"
+              onclick="saveScores()"
+            >
+              Save Score
+            </button>
+          </form>
         </div>
         <div id="next-games">
-        <button id="diamond" class="next-game-buttons">Play Diamond</button>
-        <button id="club" class="next-game-buttons">Play Club</button>
-        <button id="spade" class="next-game-buttons">Play Spade</button>
+          <button id="diamond" class="next-game-buttons">Play Diamond</button>
+          <button id="club" class="next-game-buttons">Play Club</button>
+          <button id="spade" class="next-game-buttons">Play Spade</button>
         </div>
         <div id="go-home">
-            <button id="home-button" class="next-game-buttons">Go Home</button>
-            <button id="play-again-button" class="next-game-buttons">Play Again</button>
-            <button id="scores-button" class="next-game-buttons">View Scores</button>
-
+          <button id="home-button" class="next-game-buttons">Go Home</button>
+          <button id="play-again-button" class="next-game-buttons">
+            Play Again
+          </button>
+          <button id="scores-button" class="next-game-buttons">
+            View Scores
+          </button>
         </div>
+      </div>
     </div>
-</div>
-<div id="modal-overlay" class="overlay"></div>
-    
+    <div id="modal-overlay" class="overlay"></div>
 
-        <script src="assets/js/darktheme.js"></script>
+    <script src="assets/js/darktheme.js"></script>
 
     <script src="assets/js/heart.js"></script>
   </body>
