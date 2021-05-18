@@ -16,6 +16,7 @@ const pageContainer = document.getElementById("whole-page");
 let shuffledQuestions;
 let questionIndex = 0;
 let rightAnswers = 0;
+let questionCounter = 0;
 
 startButton.addEventListener("click", startGame);
 clubButton.addEventListener("click", () => {
@@ -88,13 +89,14 @@ function displayQuestion(question) {
 }
 
 function answerInfo(answer) {
+    questionCounter++
   const buttonSelect = answer.target;
   const correct = buttonSelect.dataset.correctAnswer;
   if ((buttonSelect.dataset = correct)) {
     rightAnswers++;
   }
   localStorage.setItem("latest-diamond-score", rightAnswers);
-  document.getElementById("diamond-right-answers").innerText = rightAnswers;
+  document.getElementById("diamond-right-answers").innerText = `${rightAnswers} out of ${questionCounter}`
   if (shuffledQuestions.length > questionIndex + 16) {
     questionIndex++;
     setTimeout(() => {

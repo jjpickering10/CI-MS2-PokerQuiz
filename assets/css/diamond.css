@@ -130,9 +130,8 @@ body.dark {
 
 .diamond-results {
   padding: 10px;
-  margin: 10px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2vh;
   background-color: var(--button-background-colour);
   border-radius: 10px;
   height: 100%;
