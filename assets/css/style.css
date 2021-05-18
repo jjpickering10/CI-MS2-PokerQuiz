@@ -473,3 +473,7 @@ footer {
 body.dark .social-links i {
   color: var(--white-colour);
 }
+
+.hide {
+    display: none;
+}

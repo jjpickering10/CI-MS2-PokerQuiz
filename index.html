@@ -45,15 +45,15 @@
         <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
         <button data-close class="close">&times;</button>
       </div>
-      <div class="modal-body black">
+      <div id="send-email-form" class="modal-body black">
         <p>Got any questions?</p>
-        <form onsubmit="return sendMail(this);">
+        <form id="form" onsubmit="return sendEmail(this);">
           <fieldset>
-            <label for="first-name">First Name:</label>
+            <label for="firstname">First Name:</label>
             <input
               type="text"
-              name="first-name"
-              id="first-name"
+              name="firstname"
+              id="firstname"
               placeholder="First Name"
               required
             />
