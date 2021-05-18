@@ -14,6 +14,22 @@
     <title>PokerQuiz</title>
   </head>
   <body>
+      <div class="modal fade" id="aboutModal">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutModalLabel">PokerQuiz</h5>
+        <button data-close class="close">&times;</button>
+      </div>
+      <div class="modal-body red">
+          <p>About Us</p>
+        <ul>
+            <li>4 quizzes/games</li>
+            <li>Designed to test your basic poker knowledge</li>
+            <li>And to have fun</li>
+            <li>Click the cards to read more</li>
+            <li>Save your scores and view the latest</li>
+        </ul>
+      </div>
+</div>
 
     <div class="modal fade" id="diamondModal">
       <div class="modal-header">
@@ -99,9 +115,9 @@
           <nav class="navbar">
               <div class="nav-links">
                   <ul>
-                      <li>About</li>
-                      <li>Contact</li>
-                      <li>Scores</li>
+                      <li id="about-button" data-modal-target="#aboutModal">About</li>
+                      <li id="contact-button">Contact</li>
+                      <li><a href="score.html">Scores</a></li>
                   </ul>
               </div>
           </nav>

@@ -86,6 +86,14 @@ body.dark .suit:hover, body.dark .suit:focus {
     transform: scale(1.02);
 }
 
+#about-button, #contact-button {
+    cursor: pointer;
+}
+
+.nav-links ul li a {
+    color: currentColor;
+}
+
 .toggle-button {
     display: flex;
     justify-content: center;
