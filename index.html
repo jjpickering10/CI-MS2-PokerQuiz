@@ -31,6 +31,27 @@
       </div>
 </div>
 
+<div class="modal fade" id="contactModal">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+        <button data-close class="close">&times;</button>
+      </div>
+      <div class="modal-body black">
+          <p>Got any questions?</p>
+          <form>
+              <fieldset>
+                  <label for="first-name">First Name:</label>
+                  <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" id="email" placeholder="Email Address" required>
+                  <label for="message">Message:</label>
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Tell us what you want to know" required></textarea>
+                  <button class="next-game-buttons" type="submit">Submit</button>
+              </fieldset>
+          </form>
+      </div>
+</div>
+
     <div class="modal fade" id="diamondModal">
       <div class="modal-header">
         <h5 class="modal-title" id="diamondModalLabel">Who won the Main Event...?</h5>
@@ -116,7 +137,7 @@
               <div class="nav-links">
                   <ul>
                       <li id="about-button" data-modal-target="#aboutModal">About</li>
-                      <li id="contact-button">Contact</li>
+                      <li id="contact-button" data-modal-target="#contactModal">Contact</li>
                       <li><a href="score.html">Scores</a></li>
                   </ul>
               </div>

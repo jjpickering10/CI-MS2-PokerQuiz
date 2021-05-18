@@ -94,6 +94,32 @@ body.dark .suit:hover, body.dark .suit:focus {
     color: currentColor;
 }
 
+fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+}
+
+label {
+    padding: 0.2vh;
+    font-size: 1.5vh;
+}
+
+input {
+    font-size: 1vh;
+}
+
+textarea {
+    overflow: scroll;
+    max-height: 15vh;
+    min-width: 35vh;
+    font-size: 1.5vh;
+}
+
+
 .toggle-button {
     display: flex;
     justify-content: center;
