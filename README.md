@@ -210,9 +210,33 @@ First Time Visitor Goals
 >>> By referring the user back to the home page for the start of each game, they are able to see the game description every time.
 >>>> My mother helped identify this issue as a first time user when she tested the site.
 
+2. I want to - test my knowledge on the game of poker.
+> Even though the quizzes are quite basic. You do get tested with various questions as expected.
+
+3. I want to - find out my score.
+> Tested this by completing each quiz. Viewing score expectation is achieved with end of game modals that give a clear visual of your end score as well as in game interaction that lets you know if each answer is correct or incorrect.
+
 Returning Visitor Goals
 
+1. I want to - test my score against my previous attempts.
+> After completing each quiz and submitting score I repeated this process. The previous scores were listed in the score page with my name.
+
+2. I want to - have different questions to my previous attempts.
+> Repeated each quiz multiple times. Got a wide variety in the diamond quiz and the pair game is totally random. Whilst The club and spade quizzes do offer different questions. The variety is limited and could be improved with many more questions.
+
+3. I want to - use the same dark/light theme.
+> Navigated through the site using both themes, toggling between them. The site stays on either theme until toggled back to the other. Also stays on that theme when the page is refreshed.
+
 Frequent User Goals
+
+1. I want to - be able to contact the site.
+> Sent an message in the contact form and got an auto reply letting me know my message had been recieved by the site.
+
+2. I want to - test myself over and over again.
+> Whilst you are able to repeat the quizzes over and over, eventually you see the same questions. This could be improved with more questions.
+
+3. I want to - check all previous scores.
+> The score page showed all my previous scores with my name attached to each score.
 
 Other Testing
 
@@ -252,6 +276,7 @@ Code cleaned up
 Spelling
 
 Image sizes
+> images were compressed using CompressJPEG.
 
 CSS autoprefixer
 > Used autoprefixer on all CSS files. Copied updated code back into each CSS file.
