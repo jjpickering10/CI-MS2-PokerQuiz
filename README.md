@@ -221,10 +221,33 @@ Other Testing
 
 ### Project Barriers and Solutions
 
-- Had to rewrite functions in spade.html to allow global functions to work for each question. Had to put each question, which was a function itself, into an array.
-- Started with CSS grid, switched entirely to flexbox midway through.
+- There was an issue in club.js where because of where the shuffle rankings function was in the code and how the ranking index incremented, once you got to the end of the array, it would duplicate the same hand as the final question. This was because the rankings array was only shuffled once.
+> To fix this I moved the shuffle ranking function out of the start game function, so that every question had a new shuffle.
+
+- In spade.js I initially wrote the code for attributing the correct answers into the global displayhands function. But because of the nature of the API and having to use totally different personalised URLs for each request. This meant that this global function would have to be re-written for each question.
+> To get around this I used object destructuring to attribute the correct answers in each question function, so that the global displayhands function would only have to be written once and could be used for each question.
+
+- In spade.js because of how I used the API. This meant having to input my own chosen URLs. This also meant that being able to shuffle the questions for a better user experience was harder as each question came from a function and not my own created array.
+> To get around this I had to put each question, which was a function itself, into an array. I got this help from stackoverflow.
+
+- In spade.js I had issues with multiply shuffling.
+> To get around this I added a reset function that reset each variable for the new question.
+
+- I started my site layout with CSS grid, but I could quite manage to make the site look how I wanted it to, due to lack of experience using grid.
+> I switched entirely to flexbox midway through as I am better using flexbox than grid. I realised I need to work on my grid css skills.
+
+- Didn't like original homepage layout that is in the wireframe.
+> Decided to place the four cards next to each other as I felt this looks better on desktop.
+
+- Midway through I had issues with the modals due to using bootstrap as well as my own modals.
+> I decided to completely remove all bootstrap from the project as I didnt need it and could write my own modals with js.
+
+- Throughout the site there was issues with DOM manipulation and timing.
+> I used the setTimeout function in certain places to help with better user experience.
+
+
+
 - Trouble with API not loading sometimes.
-- Didn't like original homepage layout.
 
 
 ### Feature To Improve
