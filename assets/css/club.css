@@ -259,6 +259,10 @@ body.dark {
   color: currentColor;
 }
 
+.next-game-buttons:disabled {
+    cursor: not-allowed;
+}
+
 .modal {
   position: fixed;
   display: -webkit-box;

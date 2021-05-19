@@ -246,6 +246,10 @@ body.dark {
   transition: 1s;
 }
 
+.next-game-buttons:disabled {
+    cursor: not-allowed;
+}
+
 .hide {
   display: none;
 }

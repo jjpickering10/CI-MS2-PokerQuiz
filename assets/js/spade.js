@@ -169,12 +169,18 @@ function openModal() {
   score.innerText = `${rightAnswers} out of 5`;
 }
 
+
+const saveScoreButton = document.getElementById("save-score");
+const userName = document.getElementById("username");
+userName.addEventListener('keyup', () => {
+    saveScoreButton.disabled = false
+})
+
 //  https://stackoverflow.com/questions/12162786/adding-new-objects-to-localstorage
 
-function saveScores() {
-  const saveScoreButton = document.getElementById("save-score");
+
+function saveScores() { 
   const userScore = localStorage.getItem("latest-spade-score");
-  const userName = document.getElementById("username");
   const spadeScores = JSON.parse(localStorage.getItem("spadeScores")) || [];
   const latestSpadeScores = {
     name: userName.value,
