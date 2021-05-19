@@ -144,7 +144,7 @@ let handRankings = [
     text: "High Card",
     id: 11,
     images: [
-      "assets/images/AD.png",
+      "assets/images/acediamond.png",
       "assets/images/KH.png",
       "assets/images/9S.png",
       "assets/images/0D.png",
