@@ -12,7 +12,7 @@ PokerQuiz - Have fun testing your poker knowledge.
 
 ## Description
 
-A site aimed at providing quiz games based on the game of poker.
+-This is a site aimed at providing simple quiz games based on the game of poker.
 
 ---
 
@@ -20,29 +20,33 @@ A site aimed at providing quiz games based on the game of poker.
 
 ### User Stories
 
-First Time Visitor Goals
+As a first time visitor: 
 
-1. As a First Time Visitor, I want to - easily navigate the quiz games.
-2. As a First Time Visitor, I want to - test my knowledge on the game of poker.
-3. As a First Time Visitor, I want to - find out my score.
+1. I want to - easily navigate the quiz games.
+2. I want to - test my knowledge on the game of poker.
+3. I want to - find out my score.
 
-Returning Visitor Goals
+As a returning visitor:
 
-1. As a Returning Visitor, I want to - test my score against my previous attempts.
-2. As a Returning Visitor, I want to - have different questions to my previous attempts.
-3. As a Returning Visitor, I want to - complete the quiz games faster than previous attempts.
+1. I want to - test my score against my previous attempts.
+2. I want to - have different questions to my previous attempts.
+3. I want to - use the same dark/light theme.
 
-Frequent User Goals
+As a frequent user:
 
-1. As a Frequent User, I want to - be able to contact the site.
-2. As a Frequent User, I want to - test myself over and over again.
-3. As a Frequent User, I want to -
+1. I want to - be able to contact the site.
+2. I want to - test myself over and over again.
+3. I want to - check all previous scores.
 
 ### **Strategy**
 
 #### External User's Goals
 
 - Test their poker knowledge on various topics.
+- Have fun.
+- Contact the site.
+- View scores (new and old).
+- Change theme (dark and light).
 
 #### Site Owner's Goals
 
@@ -50,18 +54,20 @@ Frequent User Goals
 
 ### **Scope**
 
-- Visually appealing, easy to navigate site.
+- Visually appealing, easy to navigate site, with dark and light themes.
 - Defines the quiz games easily.
 - Interactive games.
+
 
 ### **Structure**
 
 - 4 quiz game site. Seperated into 4 containers. Diamond, Club, Heart and Spade.
-- Game 1: multiple choice quiz for who won the main event
-- Game 2: Pick which hand ranking is higher
+- Game 1: Multiple choice quiz for who won the World Series of Poker Main Event.
+- Game 2: Pick which hand is better, based on hand rankings.
 - Game 3: A game using an API where you try to shuffle a pair.
-- Game 4: Player is given 3 cards, and a card selection of 12 possible other cards and has to make the hand that is asked of them.
-- Able to view scores.
+- Game 4: Again using an API, a player is given 3 cards, and a card selection of 12 possible other cards and has to make the hand that is asked of them.
+- Able to view scores with score board.
+- Contact form.
 
 ### **Skeleton**
 
@@ -85,26 +91,45 @@ Frequent User Goals
 
 [Contact Page Mobile Wireframe](assets/docs/contactpagemobile.png)
 
+- 6 page site with navigation to score board and back to home page.
+- End of game modals to show score, input to save score and various next game buttons and a play again button.
+- Short about section in home page modal.
+- Contact form in home page modal.
+
 
 ### **Surface**
 
 Colour scheme:
 
-- Black and red to match the colours of a deck of cards.
-- Light and dark theme 
+- White, black and red to match the colours of a deck of cards.
+> rgba(157, 35, 29, 1);
+
+- Light and dark theme based on:
+> rgba(41, 35, 38, 1);
+> rgba(232, 230, 227, 1);
 
 Images:
 
+- A light theme background image.
+- A dark theme background image.
 - Poker images of the 4 suits.
-- Images of poker chips, cards, tables.
+- Images of poker chips, cards, tables. Used as overlays in modals.
 
 Typography:
 
+- Crete Round - as this is similar to certain fonts used on playing cards
+- Serif as a back up.
 ---
 
 ## Features
 
--
+- Responsive on all device sizes.
+- Dark and light theme with toggle button.
+- Score board.
+- Various about game modals.
+- End of game modals.
+- API used to shuffle cards.
+- Fully functional contact form.
 
 ## Technologies Used
 
@@ -118,8 +143,6 @@ Typography:
 
 ### Frameworks, Libraries and Programs Used
 
-[Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/) - for responsive design and grid layout
-
 [GitPod](https://www.gitpod.io/) - Online IDE
 
 [Git](https://git-scm.com/) - Version Control
@@ -128,13 +151,14 @@ Typography:
 
 [Balsamiq](https://balsamiq.com/) - for wireframes
 
-[FontAwesome](https://fontawesome.com/) - for icons
+[FontAwesome](https://fontawesome.com/) - for footer icons
 
 [Google Fonts](https://fonts.google.com/) - for fonts
 
-### Resources
+[Material Design Icons](https://materialdesignicons.com/) - for svg icons
 
-[Image Color](https://image-color.com/) - for color palette
+
+### Resources
 
 [CSS Tricks](https://css-tricks.com/) - for general help
 
