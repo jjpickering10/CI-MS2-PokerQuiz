@@ -199,9 +199,14 @@ let questions = [
         "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=4S,6H,7H"
       );
       ourRequest.onload = function () {
-        partialBoard = JSON.parse(ourRequest.responseText);
-        getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
-        drawBoard();
+          if (ourRequest.status >= 200 && ourRequest.status < 400) {
+                partialBoard = JSON.parse(ourRequest.responseText);
+                getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
+                drawBoard();
+          } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
+        
       };
       ourRequest.send();
 
@@ -212,6 +217,7 @@ let questions = [
           `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`
         );
         ourRequest.onload = function () {
+            if (ourRequest.status >= 200 && ourRequest.status < 400) {
           gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
@@ -221,6 +227,9 @@ let questions = [
           });
 
           getOptions();
+           } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
       }
@@ -233,9 +242,14 @@ let questions = [
           "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,QD,5C,8C,7S,JH,0D,9C"
         );
         ourRequest.onload = function () {
+            if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
           partialDeck = JSON.parse(ourRequest.responseText);
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
+           } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
 
@@ -246,6 +260,8 @@ let questions = [
             `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`
           );
           ourRequest.onload = function () {
+                          if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
             gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
@@ -270,6 +286,9 @@ let questions = [
             }, 500);
 
             displayHands(finalArray);
+             } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
           };
           ourRequest.send();
         }
@@ -286,9 +305,14 @@ let questions = [
         "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=3H,2H,8H"
       );
       ourRequest.onload = function () {
+                      if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
         partialBoard = JSON.parse(ourRequest.responseText);
         getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
         drawBoard();
+        } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
       };
       ourRequest.send();
 
@@ -299,6 +323,8 @@ let questions = [
           `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`
         );
         ourRequest.onload = function () {
+                        if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
           gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
@@ -308,6 +334,9 @@ let questions = [
           });
 
           getOptions();
+          } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
       }
@@ -320,9 +349,14 @@ let questions = [
           "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=7H,KH,7C,AC,9S,4D,9D,QS,JS,7D,2C,JC"
         );
         ourRequest.onload = function () {
+                        if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
           partialDeck = JSON.parse(ourRequest.responseText);
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
+          } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
 
@@ -333,6 +367,8 @@ let questions = [
             `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`
           );
           ourRequest.onload = function () {
+                          if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
             gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
@@ -356,6 +392,9 @@ let questions = [
               question.innerText = "Make a flush";
             }, 500);
             displayHands(finalArray);
+            } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
           };
           ourRequest.send();
         }
@@ -372,9 +411,14 @@ let questions = [
         "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=JH,JC,QC"
       );
       ourRequest.onload = function () {
+                      if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
         partialBoard = JSON.parse(ourRequest.responseText);
         getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
         drawBoard();
+        } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
       };
       ourRequest.send();
 
@@ -385,6 +429,8 @@ let questions = [
           `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`
         );
         ourRequest.onload = function () {
+                        if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
           gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
@@ -394,6 +440,9 @@ let questions = [
           });
 
           getOptions();
+          } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
       }
@@ -406,9 +455,14 @@ let questions = [
           "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AD,AS,4S,5H,5D,3D,9D,8C,7C,7D,JS,QS"
         );
         ourRequest.onload = function () {
+                        if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
           partialDeck = JSON.parse(ourRequest.responseText);
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
+          } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
 
@@ -419,6 +473,8 @@ let questions = [
             `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`
           );
           ourRequest.onload = function () {
+                          if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
             gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
@@ -442,6 +498,9 @@ let questions = [
               question.innerText = "Make a full house";
             }, 500);
             displayHands(finalArray);
+            } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
           };
           ourRequest.send();
         }
@@ -458,9 +517,14 @@ let questions = [
         "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=4S,6S,8S"
       );
       ourRequest.onload = function () {
+                      if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
         partialBoard = JSON.parse(ourRequest.responseText);
         getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
         drawBoard();
+        } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
       };
       ourRequest.send();
 
@@ -471,6 +535,8 @@ let questions = [
           `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`
         );
         ourRequest.onload = function () {
+                        if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
           gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
@@ -480,6 +546,9 @@ let questions = [
           });
 
           getOptions();
+          } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
       }
@@ -492,9 +561,14 @@ let questions = [
           "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=5S,7S,9D,JC,2S,9C,KD,KS,AS,QS,JS,3D"
         );
         ourRequest.onload = function () {
+                        if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
           partialDeck = JSON.parse(ourRequest.responseText);
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
+          } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
 
@@ -505,6 +579,8 @@ let questions = [
             `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`
           );
           ourRequest.onload = function () {
+                          if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
             gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
@@ -528,6 +604,9 @@ let questions = [
               question.innerText = "Make a straight flush";
             }, 500);
             displayHands(finalArray);
+            } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
           };
           ourRequest.send();
         }
@@ -544,9 +623,14 @@ let questions = [
         "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=AH,JH,0H"
       );
       ourRequest.onload = function () {
+                      if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
         partialBoard = JSON.parse(ourRequest.responseText);
         getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
         drawBoard();
+        } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
       };
       ourRequest.send();
 
@@ -557,6 +641,8 @@ let questions = [
           `https://deckofcardsapi.com/api/deck/${getBoard}/draw/?count=3`
         );
         ourRequest.onload = function () {
+                        if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
           gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
@@ -566,6 +652,9 @@ let questions = [
           });
 
           getOptions();
+          } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
       }
@@ -578,9 +667,14 @@ let questions = [
           "https://deckofcardsapi.com/api/deck/new/shuffle/?cards=KH,QH,9H,8H,KS,QS,QD,QC,KC,KD,AD,AS"
         );
         ourRequest.onload = function () {
+                        if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
           partialDeck = JSON.parse(ourRequest.responseText);
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
+          } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
         };
         ourRequest.send();
 
@@ -591,6 +685,8 @@ let questions = [
             `https://deckofcardsapi.com/api/deck/${getDeck}/draw/?count=12`
           );
           ourRequest.onload = function () {
+                          if (ourRequest.status >= 200 && ourRequest.status < 400) {
+
             gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
@@ -614,6 +710,9 @@ let questions = [
               question.innerText = "Make a royal flush";
             }, 500);
             displayHands(finalArray);
+            } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
           };
           ourRequest.send();
         }
