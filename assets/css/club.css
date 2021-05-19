@@ -16,6 +16,7 @@ body {
   color: var(--black-colour);
   background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
   background-size: cover;
+  height: 100vh;
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
@@ -70,6 +71,7 @@ body.dark {
 }
 
 .navbar {
+    width: 100%;
   padding: 2vh;
 }
 
@@ -88,7 +90,7 @@ body.dark {
   padding: 2vh;
   border: 1px solid currentColor;
   border-radius: 10px;
-  width: 100%;
+  width: 35vw;
   text-align: center;
   margin: 0.5vh;
   background-color: var(--button-background-colour);
@@ -98,10 +100,9 @@ body.dark {
   text-decoration: none;
   color: currentColor;
   margin: 0.5vh;
-  width: 25vh;
 }
 
-.nav-links ul a:hover {
+.nav-links ul li:hover {
   -webkit-transform: scale(1.02);
       -ms-transform: scale(1.02);
           transform: scale(1.02);
@@ -165,7 +166,7 @@ body.dark {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  min-height: 100%;
 }
 
 #first-option-cards,
@@ -200,7 +201,7 @@ body.dark {
   border-radius: 10px;
   border: none;
   outline: none;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   width: 40%;
   margin: 10px;
   color: currentColor;
@@ -285,7 +286,7 @@ body.dark {
   top: 15vh;
   left: 15vw;
   right: 15vw;
-  bottom: 15vw;
+  /* bottom: 15vw; */
   border-radius: 10px;
   z-index: 10000;
 }

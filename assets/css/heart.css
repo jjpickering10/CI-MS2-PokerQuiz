@@ -75,6 +75,7 @@ body.dark {
 .heart-column h1 {
   font-size: 50px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 #message {
@@ -102,6 +103,7 @@ body.dark {
 }
 
 .navbar {
+    width: 100%;
   padding: 2vh;
 }
 
@@ -120,7 +122,7 @@ body.dark {
   padding: 2vh;
   border: 1px solid currentColor;
   border-radius: 10px;
-  width: 100%;
+  width: 35vw;
   text-align: center;
   margin: 0.5vh;
   background-color: var(--button-background-colour);
@@ -130,10 +132,9 @@ body.dark {
   text-decoration: none;
   color: currentColor;
   margin: 0.5vh;
-  width: 25vh;
 }
 
-.nav-links ul a:hover {
+.nav-links ul li:hover {
   -webkit-transform: scale(1.02);
       -ms-transform: scale(1.02);
           transform: scale(1.02);
@@ -438,7 +439,7 @@ body.dark {
   top: 15vh;
   left: 15vw;
   right: 15vw;
-  bottom: 15vw;
+  /* bottom: 15vw; */
   border-radius: 10px;
   z-index: 10000;
 }

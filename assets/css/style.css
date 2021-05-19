@@ -472,7 +472,7 @@ a {
   top: 15vh;
   left: 15vw;
   right: 15vw;
-  bottom: 15vw;
+  /* bottom: 15vw; */
   border: 2px solid black;
   border-radius: 10px;
   z-index: 10000;
@@ -594,7 +594,7 @@ body.dark .modal-body.red {
   fill: black;
 }
 
-.modal-body button {
+.modal-body .play-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,9 +616,9 @@ body.dark .modal-body.red {
   width: 15vh;
 }
 
-.modal-body button:hover,
-.modal-body button:focus {
-  cursor: pointer;
+.modal-body .play-link:hover,
+.modal-body .play-link:focus {
+  
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
