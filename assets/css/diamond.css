@@ -209,7 +209,6 @@ body.dark {
 
 .diamond-buttons,
 .next-game-buttons {
-  font-size: 1.5vh;
   border: none;
   border-radius: 1vh;
   padding: 2vh;
@@ -219,21 +218,32 @@ body.dark {
   background-color: var(--button-background-colour);
 }
 
+#diamond-play-btn {
+    font-size: 3vh;
+    border: none;
+  border-radius: 1vh;
+  padding: 2vh;
+  margin: 1vh 1vw;
+  color: currentColor;
+  min-width: 30%;
+  background-color: var(--button-background-colour);
+}
+
+#diamond-play-btn svg {
+    fill: currentColor;
+}
+
 .diamond-buttons:hover,
 .diamond-buttons:focus,
 .next-game-buttons:hover,
-.next-game-buttons:focus {
+.next-game-buttons:focus, #diamond-play-btn:hover, #diamond-play-btn:focus {
   cursor: pointer;
-  -webkit-box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
-          box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  color: white;
-  background-color: rgba(110, 110, 110, 1);
 }
 
 .hide {

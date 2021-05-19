@@ -233,18 +233,28 @@ body.dark {
 .next-button,
 #start {
   border-radius: 10px;
-  font-size: 2rem;
+  font-size: 4vh;
   border: none;
   -webkit-animation: next-button 5s;
           animation: next-button 5s;
   color: currentColor;
   cursor: pointer;
   background-color: var(--button-background-colour);
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 32vw;
+  margin-right: 32vw;
+  padding: 1vh;
+}
+
+#start svg {
+    margin-left: 0.5vh;
+    padding: 0.5vh;
+    fill: currentColor;
 }
 
 .next-button:hover {
+    -webkit-transition: 1s;
+  -o-transition: 1s;
+    transition: 1s;
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
@@ -403,8 +413,6 @@ body.dark {
 .next-game-buttons:hover,
 .next-game-buttons:focus {
   cursor: pointer;
-  -webkit-box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
-          box-shadow: 1px 0px 5px 5px rgba(41, 35, 38, 1);
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
@@ -412,7 +420,6 @@ body.dark {
   -o-transition: 1s;
   transition: 1s;
   color: currentColor;
-  background-color: var(--button-background-colour);
 }
 
 .modal {

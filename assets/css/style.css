@@ -20,6 +20,7 @@ body {
   --black-colour: rgba(41, 35, 38, 1);
   --white-colour: rgba(232, 230, 227, 1);
   --button-background-colour: var(--white-colour);
+  --play-colour : white;
   background: url(../images/frontpagepoker.jpg) no-repeat center center fixed;
   background-color: var(--white-colour);
   background-size: cover;
@@ -39,6 +40,7 @@ body.dark {
   background-color: var(--black-colour);
   --button-background-colour: var(--black-colour);
   --button-text-colour: var(--white-colour);
+  --play-colour: rgba(128,128,128, 0.8);
   color: var(--white-colour);
 
   -webkit-animation: body-load 5s;
@@ -612,8 +614,10 @@ body.dark .modal-body.red {
   border-radius: 1vh;
   padding: 0.8vh;
   margin: 1vh 1vw;
-  background-color: rgba(110, 110, 110, 0.8);
+  background-color: var(--play-colour);
   width: 15vh;
+  color: currentColor;
+  cursor: pointer;
 }
 
 .modal-body .play-link:hover,
@@ -625,8 +629,6 @@ body.dark .modal-body.red {
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  color: white;
-  background-color: rgba(110, 110, 110, 1);
 }
 
 .overlay {
