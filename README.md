@@ -199,18 +199,25 @@ Other Testing
 - Responsiveness
 
 - HTML Validity
+> index.html had issues with the a tag being a decendant of the button tag. Changed button tag to p tag. No errors other than this.
+> the score and game html pages had an issue with the a tag being outside the li tag, so I put the a tag inside the li tag. No errors other than this.
+> diamond.html had an issue with there being an empty h2 tag. I changed it to a div tag. No errors other than this.
 
 - CSS Validity
+> No errors in CSS files.
 
 - Contrast colours
+> Used a11y contrast checker. No issues found throughout site.
 
 - Code cleaned up
+> Used prettier extension to clean up the code in all html, css and js files.
 
 - Spelling
 
 - Image sizes
 
 - CSS autoprefixer
+> Used autoprefixer on all CSS files. Copied updated code back into each CSS file.
 
 ### Project Barriers and Solutions
 
