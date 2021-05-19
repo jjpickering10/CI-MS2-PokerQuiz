@@ -8,24 +8,24 @@ const currentScore = document.getElementById("score");
 const modal = document.getElementById("modal");
 const overlay = document.getElementById("modal-overlay");
 
-const diamondButton = document.getElementById("diamond");
-const heartButton = document.getElementById("heart");
-const spadeButton = document.getElementById("spade");
+// const diamondButton = document.getElementById("diamond");
+// const heartButton = document.getElementById("heart");
+// const spadeButton = document.getElementById("spade");
 const homeButton = document.getElementById("home-button");
 const playAgainButton = document.getElementById("play-again-button");
 const scoresButton = document.getElementById("scores-button");
 const pageContainer = document.getElementById("club-container");
 
 startButton.addEventListener("click", startGame);
-diamondButton.addEventListener("click", () => {
-  window.location.assign("diamond.html");
-});
-heartButton.addEventListener("click", () => {
-  window.location.assign("heart.html");
-});
-spadeButton.addEventListener("click", () => {
-  window.location.assign("spade.html");
-});
+// diamondButton.addEventListener("click", () => {
+//   window.location.assign("diamond.html");
+// });
+// heartButton.addEventListener("click", () => {
+//   window.location.assign("heart.html");
+// });
+// spadeButton.addEventListener("click", () => {
+//   window.location.assign("spade.html");
+// });
 homeButton.addEventListener("click", () => {
   window.location.assign("index.html");
 });

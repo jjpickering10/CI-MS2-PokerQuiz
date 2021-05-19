@@ -9,9 +9,9 @@ const question = document.getElementById("question");
 const modal = document.getElementById("modal");
 const overlay = document.getElementById("modal-overlay");
 
-const clubButton = document.getElementById("club");
-const diamondButton = document.getElementById("diamond");
-const spadeButton = document.getElementById("spade");
+// const clubButton = document.getElementById("club");
+// const diamondButton = document.getElementById("diamond");
+// const spadeButton = document.getElementById("spade");
 const homeButton = document.getElementById("home-button");
 const playAgainButton = document.getElementById("play-again-button");
 const scoresButton = document.getElementById("scores-button");
@@ -23,15 +23,15 @@ let questionCounter = 0;
 
 startButton.addEventListener("click", startGame);
 
-clubButton.addEventListener("click", () => {
-  window.location.assign("club.html");
-});
-diamondButton.addEventListener("click", () => {
-  window.location.assign("diamond.html");
-});
-spadeButton.addEventListener("click", () => {
-  window.location.assign("spade.html");
-});
+// clubButton.addEventListener("click", () => {
+//   window.location.assign("club.html");
+// });
+// diamondButton.addEventListener("click", () => {
+//   window.location.assign("diamond.html");
+// });
+// spadeButton.addEventListener("click", () => {
+//   window.location.assign("spade.html");
+// });
 homeButton.addEventListener("click", () => {
   window.location.assign("index.html");
 });

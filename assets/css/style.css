@@ -418,7 +418,7 @@ header p {
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  font-size: 10rem;
+  font-size: 20vh;
   margin: 0;
   border-radius: 10px;
   text-align: center;

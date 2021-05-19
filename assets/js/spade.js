@@ -11,24 +11,24 @@ const score = document.getElementById("score");
 const modal = document.getElementById("modal");
 const overlay = document.getElementById("modal-overlay");
 
-const clubButton = document.getElementById("club");
-const heartButton = document.getElementById("heart");
-const diamondButton = document.getElementById("diamond");
+// const clubButton = document.getElementById("club");
+// const heartButton = document.getElementById("heart");
+// const diamondButton = document.getElementById("diamond");
 const homeButton = document.getElementById("home-button");
 const playAgainButton = document.getElementById("play-again-button");
 const scoresButton = document.getElementById("scores-button");
 
 const pageContainer = document.getElementById("spade-container");
 
-clubButton.addEventListener("click", () => {
-  window.location.assign("club.html");
-});
-heartButton.addEventListener("click", () => {
-  window.location.assign("heart.html");
-});
-diamondButton.addEventListener("click", () => {
-  window.location.assign("diamond.html");
-});
+// clubButton.addEventListener("click", () => {
+//   window.location.assign("club.html");
+// });
+// heartButton.addEventListener("click", () => {
+//   window.location.assign("heart.html");
+// });
+// diamondButton.addEventListener("click", () => {
+//   window.location.assign("diamond.html");
+// });
 homeButton.addEventListener("click", () => {
   window.location.assign("index.html");
 });
