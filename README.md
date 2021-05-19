@@ -22,7 +22,7 @@ PokerQuiz - Have fun testing your poker knowledge.
 
 As a first time visitor: 
 
-1. I want to - easily navigate the quiz games.
+1. I want to - easily navigate the quiz games and understand the rules of each.
 2. I want to - test my knowledge on the game of poker.
 3. I want to - find out my score.
 
@@ -182,9 +182,6 @@ Typography:
 [Responsinator](http://www.responsinator.com/)
 > helping to test responsiveness
 
-[TinyPNG](https://tinypng.com/)
-> for image compression
-
 [CompressJPEG](https://compressjpeg.com/)
 > for image compression
 
@@ -206,6 +203,12 @@ Chrome Dev Tools
 ## Testing
 
 First Time Visitor Goals
+
+1. I want to - easily navigate the quiz games and understand the rules of each.
+> When testing I decided to remove the end of game buttons taking you to other games. But instead left the button taking you back home.
+>> I expected an easy navigation to understand the rules of each, but the next game buttons bypassed the rules that are in the homepage modals.
+>>> By referring the user back to the home page for the start of each game, they are able to see the game description every time.
+>>>> My mother helped identify this issue as a first time user when she tested the site.
 
 Returning Visitor Goals
 
