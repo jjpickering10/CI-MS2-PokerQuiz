@@ -206,6 +206,17 @@ Other Testing
 - CSS Validity
 > No errors in CSS files.
 
+JavaScript
+
+- Cleared localStorage to test if scores would update when localStorage was empty. There was an error due to null values preventing the code from displaying results.
+> To fix this I wrote an if statement that would return from the forEach function if the value was null. 
+
+- One of the images in club.js wasn't being shown. Console showed "ERR_BLOCKED_BY_CLIENT"
+> After deleting, reuploading and renaming the file. The image now worked as intended.
+
+- When testing, sometimes the XMLHttpRequest showed a 500 error in the console and stopped the game.
+> I added in some error handling on each XMLHttpRequest throughout the project to display an alert to the user that an error had occured and to refresh the page.
+
 - Contrast colours
 > Used a11y contrast checker. No issues found throughout site.
 
