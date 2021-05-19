@@ -198,6 +198,9 @@ Other Testing
 
 - Responsiveness
 
+- There was an issue with viewing the game pages in landscape mobile view.
+> To fix this I used a body height of 100vh and a min-height of 100% for the page containers.
+
 - HTML Validity
 > index.html had issues with the a tag being a decendant of the button tag. Changed button tag to p tag. No errors other than this.
 > the score and game html pages had an issue with the a tag being outside the li tag, so I put the a tag inside the li tag. No errors other than this.
