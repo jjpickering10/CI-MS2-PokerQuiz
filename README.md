@@ -12,7 +12,7 @@ PokerQuiz - Have fun testing your poker knowledge.
 
 ## Description
 
--This is a site aimed at providing simple quiz games based on the game of poker.
+-This is a site aimed at providing simple quiz games based on the game of poker. It is a fun, interactive site with a light and dark theme that allows users to take multiple quizzes/games and save their scores.
 
 ---
 
@@ -58,14 +58,13 @@ As a frequent user:
 - Defines the quiz games easily.
 - Interactive games.
 
-
 ### **Structure**
 
 - 4 quiz game site. Seperated into 4 containers. Diamond, Club, Heart and Spade.
-- Game 1: Multiple choice quiz for who won the World Series of Poker Main Event.
-- Game 2: Pick which hand is better, based on hand rankings.
-- Game 3: A game using an API where you try to shuffle a pair.
-- Game 4: Again using an API, a player is given 3 cards, and a card selection of 12 possible other cards and has to make the hand that is asked of them.
+- Game 1: Multiple choice quiz for who won the World Series of Poker Main Event. This game has 20 total questions that are randomised into 5 questions per game.
+- Game 2: Pick which hand is better, based on hand rankings. There are 10 hand rankings. Each hand ranking is represented by a 5 card hand. Each quiz compares 2 hands at a time, a total of 5 times asking the user to pick the best hand.
+- Game 3: A game using [Deck of Cards API](https://deckofcardsapi.com/) where you have 10 attempts to shuffle a pair.
+- Game 4: Again using [Deck of Cards API](https://deckofcardsapi.com/), a player is given 3 cards, and a card selection of 12 possible other cards and has to make the hand that is asked of them.
 - Able to view scores with score board.
 - Contact form.
 
@@ -106,6 +105,7 @@ Colour scheme:
 
 - Light and dark theme based on:
 > rgba(41, 35, 38, 1);
+
 > rgba(232, 230, 227, 1);
 
 Images:
@@ -128,7 +128,7 @@ Typography:
 - Score board.
 - Various about game modals.
 - End of game modals.
-- API used to shuffle cards.
+- [Deck of Cards API](https://deckofcardsapi.com/) used to shuffle cards.
 - Fully functional contact form.
 
 ## Technologies Used
@@ -160,29 +160,46 @@ Typography:
 
 ### Resources
 
-[CSS Tricks](https://css-tricks.com/) - for general help
+[Deck of Cards API](https://deckofcardsapi.com/)
 
-[Stack Overflow](https://stackoverflow.com/) - for support
+> This API allows you to shuffle a deck of cards. You can also pick a partial deck as well as a full deck. I used this 2 of the quiz/games in this site.
+>> It was used in the shuffle a pair game that took a full deck of cards, then picked two cards from that shuffled deck and if they matched, You got a pair.
+>>> The second time it was used was in the quiz where the user is asked to make a hand. Here I took a a partial deck of 3 cards (these werent random, I picked the cards), and a partial deck of 12 cards (again I picked these). Here both sets of cards are put onto the screen and the user is asked to make a hand with 2 cards from the 12 card selection and the 3 cards on the board. All cards are displayed differently on screen for each game.
 
-[W3Schools](https://www.w3schools.com/) - for general help
 
-[YouTube](https://youtube.com) - for general help
+[CSS Tricks](https://css-tricks.com/)
+> for general help, primarily with flexbox
 
-[Responsinator](http://www.responsinator.com/) - helping to test responsiveness
+[Stack Overflow](https://stackoverflow.com/)
+> for support
 
-[TinyPNG](https://tinypng.com/) - for image compression
+[W3Schools](https://www.w3schools.com/)
+> for general help
 
-[CompressJPEG](https://compressjpeg.com/) - for image compression
+[YouTube](https://youtube.com)
+> this was my main sources of help. I used Web Dev Simplified, Brian Design, LearnWebCode and Code with Ania Kubow as my main resources for learning.
 
-[Am I Responsive](http://ami.responsivedesign.is/) - for responsive help and README image
+[Responsinator](http://www.responsinator.com/)
+> helping to test responsiveness
 
-[Autoprefixer](https://autoprefixer.github.io/) - adds vendor prefixes to CSS
+[TinyPNG](https://tinypng.com/)
+> for image compression
+
+[CompressJPEG](https://compressjpeg.com/)
+> for image compression
+
+[Am I Responsive](http://ami.responsivedesign.is/)
+> for responsive help and README image
+
+[Autoprefixer](https://autoprefixer.github.io/)
+> adds vendor prefixes to CSS
 
 Code Institute Course
 
 Code Institute Slack Community
 
 Chrome Dev Tools
+> Alongside using dev tools for HTML and CSS help. I used the console constantly for the JavaScript code. I truly realised how much help console.log is.
 
 ---
 
@@ -196,17 +213,17 @@ Frequent User Goals
 
 Other Testing
 
-- Responsiveness
-
+Responsiveness
 - There was an issue with viewing the game pages in landscape mobile view.
 > To fix this I used a body height of 100vh and a min-height of 100% for the page containers.
+- Other than that issue, the site works on desktop, tablet and mobile. In both portrait and landscape.
 
-- HTML Validity
+HTML Validity
 > index.html had issues with the a tag being a decendant of the button tag. Changed button tag to p tag. No errors other than this.
 > the score and game html pages had an issue with the a tag being outside the li tag, so I put the a tag inside the li tag. No errors other than this.
 > diamond.html had an issue with there being an empty h2 tag. I changed it to a div tag. No errors other than this.
 
-- CSS Validity
+CSS Validity
 > No errors in CSS files.
 
 JavaScript
@@ -220,17 +237,20 @@ JavaScript
 - When testing, sometimes the XMLHttpRequest showed a 500 error in the console and stopped the game.
 > I added in some error handling on each XMLHttpRequest throughout the project to display an alert to the user that an error had occured and to refresh the page.
 
-- Contrast colours
+- When testing the saveScores function I realised you could save your score without inputting your name.
+> To improve this I disabled the button and added a keyup event listener in each js file to enable the button when a user types.
+
+Contrast colours
 > Used a11y contrast checker. No issues found throughout site.
 
-- Code cleaned up
+Code cleaned up
 > Used prettier extension to clean up the code in all html, css and js files.
 
-- Spelling
+Spelling
 
-- Image sizes
+Image sizes
 
-- CSS autoprefixer
+CSS autoprefixer
 > Used autoprefixer on all CSS files. Copied updated code back into each CSS file.
 
 ### Project Barriers and Solutions
@@ -259,12 +279,15 @@ JavaScript
 - Throughout the site there was issues with DOM manipulation and timing.
 > I used the setTimeout function in certain places to help with better user experience.
 
-
-
-- Trouble with API not loading sometimes.
+- I had trouble with API not loading sometimes.
+> To get around this I added some error handling with an alert to ask the user to refresh the page.
 
 
 ### Feature To Improve
+
+- I initially wanted to have a timer on the quizzes, but I had a bit of an issue getting it to function properly. I would add this next time.
+- I would like more games. And more complex games but because poker is so complex I felt it was too much for my first JavaScript project to have too much complexity.
+- Some of the animations are a little jerky. This could definitely be improved.
 
 ### Code Validity
 

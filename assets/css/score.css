@@ -113,7 +113,7 @@ body.dark {
   padding: 2vh;
   border: 1px solid currentColor;
   border-radius: 10px;
-  width: 100%;
+  width: 35vw;
   text-align: center;
   margin: 0.5vh;
   background-color: var(--background-colour);
