@@ -54,9 +54,14 @@ function startGame() {
     "https://deckofcardsapi.com/api/deck/new/draw/?count=2"
   );
   handRequest.onload = function () {
+                                if (handRequest.status >= 200 && handRequest.status < 400) {
+
     const handData = JSON.parse(handRequest.responseText);
     console.log(handData);
     displayHands(handData);
+    } else {
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+          }
   };
   handRequest.send();
 }
