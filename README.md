@@ -1,8 +1,8 @@
-# [**Poker Quiz**](https://jjpickering10.github.io/CI-MS2-PokerQuiz/)
+# [**PokerQuiz**](https://jjpickering10.github.io/CI-MS2-PokerQuiz/)
 
 _Use CTRL+click or CMD+click to open links throughout the README in a new tab_
 
-![-](-) - image
+![-](assets/images/amiresponsive.png)
 
 ## Overview
 
@@ -12,7 +12,7 @@ PokerQuiz - Have fun testing your poker knowledge.
 
 ## Description
 
-- This is a site aimed at providing simple quiz games based on the game of poker. It is a fun, interactive site with a light and dark theme that allows users to take multiple quizzes/games and save their scores.
+This is a site aimed at providing simple quiz games based on the game of poker. It is a fun, interactive site with a light and dark theme that allows users to take multiple quizzes/games and save their scores.
 
 ---
 
@@ -62,7 +62,7 @@ As a frequent user:
 
 - 4 quiz game site. Seperated into 4 containers. Diamond, Club, Heart and Spade.
 - Game 1: Multiple choice quiz for who won the World Series of Poker Main Event. This game has 20 total questions that are randomised into 5 questions per game.
-- Game 2: Pick which hand is better, based on hand rankings. There are 10 hand rankings. Each hand ranking is represented by a 5 card hand. Each quiz compares 2 hands at a time, a total of 5 times asking the user to pick the best hand.
+- Game 2: Pick which hand is better, based on hand rankings. There are 10 hand rankings. Each hand ranking is represented by a 5 card hand. Each quiz compares 2 hands at a time, a total of 10 times asking the user to pick the best hand.
 - Game 3: A game using [Deck of Cards API](https://deckofcardsapi.com/) where you have 10 attempts to shuffle a pair.
 - Game 4: Again using [Deck of Cards API](https://deckofcardsapi.com/), a player is given 3 cards, and a card selection of 12 possible other cards and has to make the hand that is asked of them.
 - Able to view scores with score board.
@@ -101,12 +101,10 @@ As a frequent user:
 Colour scheme:
 
 - White, black and red to match the colours of a deck of cards.
-> rgba(157, 35, 29, 1);
-
 - Light and dark theme based on:
-> rgba(41, 35, 38, 1);
 
-> rgba(232, 230, 227, 1);
+![-](assets/images/colourscheme.png)
+
 
 Images:
 
@@ -124,7 +122,7 @@ Typography:
 ## Features
 
 - Responsive on all device sizes.
-- Dark and light theme with toggle button that is consitent throughout site.
+- Dark and light theme with toggle button that is consistent throughout site.
 - Animation throughout site.
 - Able to save score and view on score board.
 - Various about game modals, with rules and direct links to games.
@@ -137,7 +135,7 @@ Typography:
 - - Club Quiz
 - - - 10 questions shuffled.
 - - - Correct answers turn green, incorrect answers turn red.
-- - Heart Quiz
+- - Heart Game
 - - - 10 attempts using API shuffle.
 - - - Selection of random correct and incorrect pop up phrases
 - - Spade Quiz
@@ -175,9 +173,9 @@ Typography:
 
 [Deck of Cards API](https://deckofcardsapi.com/)
 
-> This API allows you to shuffle a deck of cards. You can also pick a partial deck as well as a full deck. I used this 2 of the quiz/games in this site.
->> It was used in the shuffle a pair game that took a full deck of cards, then picked two cards from that shuffled deck and if they matched, You got a pair.
->>> The second time it was used was in the quiz where the user is asked to make a hand. Here I took a a partial deck of 3 cards (these werent random, I picked the cards), and a partial deck of 12 cards (again I picked these). Here both sets of cards are put onto the screen and the user is asked to make a hand with 2 cards from the 12 card selection and the 3 cards on the board. All cards are displayed differently on screen for each game.
+> This API allows you to shuffle a deck of cards. You can also pick a partial deck as well as a full deck. I used this for 2 of the quizzes/games in this project.
+>> It is used in the shuffle a pair game that takes a full deck of cards, then two cards are picked from that shuffled deck and if they match, you get a pair.
+>>> The second time it is used is in the quiz where the user is asked to make a hand. Here I took a a partial deck of 3 cards (these werent random, I picked the cards), and a partial deck of 12 cards (again I picked these). Here both sets of cards are put onto the screen and the user is asked to make a hand with 2 cards from the 12 card selection and the 3 cards on the board. All cards are displayed differently on screen for each game.
 
 [Email.js](https://www.emailjs.com/)
 > for working contact form
@@ -192,10 +190,13 @@ Typography:
 > for general help
 
 [YouTube](https://youtube.com)
-> this was my main sources of help. I used Web Dev Simplified, Brian Design, LearnWebCode and Code with Ania Kubow as my main resources for learning.
+> this was my main source of help. I used Web Dev Simplified, Brian Design, LearnWebCode and Code with Ania Kubow as my main resources for learning.
 
 [Responsinator](http://www.responsinator.com/)
 > helping to test responsiveness
+
+[Shutterstock](https://www.shutterstock.com/home)
+> for images
 
 [CompressJPEG](https://compressjpeg.com/)
 > for image compression
@@ -234,7 +235,7 @@ First Time Visitor Goals
 Returning Visitor Goals
 
 1. I want to - test my score against my previous attempts.
-> After completing each quiz and submitting score I repeated this process. The previous scores were listed in the score page with my name.
+> After completing each quiz and submitting the score, I repeated this process. The previous scores were listed in the score page with my name.
 
 2. I want to - have different questions to my previous attempts.
 > Repeated each quiz multiple times. Got a wide variety in the diamond quiz and the pair game is totally random. Whilst The club and spade quizzes do offer different questions. The variety is limited and could be improved with many more questions.
@@ -245,7 +246,7 @@ Returning Visitor Goals
 Frequent User Goals
 
 1. I want to - be able to contact the site.
-> Sent an message in the contact form and got an auto reply letting me know my message had been recieved by the site.
+> Sent a message in the contact form and got an auto reply letting me know my message had been recieved by the site.
 
 2. I want to - test myself over and over again.
 > Whilst you are able to repeat the quizzes over and over, eventually you see the same questions. This could be improved with more questions.
@@ -260,8 +261,8 @@ Responsiveness
 
 HTML Validity
 > index.html had issues with the a tag being a decendant of the button tag. Changed button tag to p tag. No errors other than this.
-> the score and game html pages had an issue with the a tag being outside the li tag, so I put the a tag inside the li tag. No errors other than this.
-> diamond.html had an issue with there being an empty h2 tag. I changed it to a div tag. No errors other than this.
+>> the score and game html pages had an issue with the a tag being outside the li tag, so I put the a tag inside the li tag. No errors other than this.
+>>> diamond.html had an issue with there being an empty h2 tag. I changed it to a div tag. No errors other than this.
 
 CSS Validity
 > No errors in CSS files.
@@ -290,7 +291,7 @@ JavaScript
 >>> After vigourous testing on multiple browsers, the code works as expected. Although on Safari, occasionally the message pop up stating whether you got the question correct or incorrect didnt show. This is a minor problem as the end modal showing final result works.
 
 Contrast colours
-> Used a11y contrast checker. No issues found throughout site.
+> Used [a11y contrast checker](https://color.a11y.com/). No issues found throughout site.
 
 Code cleaned up
 > Used prettier extension to clean up the code in all html, css and js files.
@@ -298,10 +299,10 @@ Code cleaned up
 Spelling
 
 Image sizes
-> images were compressed using CompressJPEG.
+> images were compressed using [CompressJPEG](https://compressjpeg.com/).
 
 CSS autoprefixer
-> Used autoprefixer on all CSS files. Copied updated code back into each CSS file.
+> Used [autoprefixer](https://autoprefixer.github.io/) on all CSS files. Copied updated code back into each CSS file.
 
 Other Testing
 
@@ -334,7 +335,7 @@ Other Testing
 - In spade.js I had issues with multiply shuffling.
 > To get around this I added a reset function that reset each variable for the new question.
 
-- I started my site layout with CSS grid, but I could quite manage to make the site look how I wanted it to, due to lack of experience using grid.
+- I started my site layout with CSS grid, but I couldn't quite manage to make the site look how I wanted it to, due to lack of experience using grid.
 > I switched entirely to flexbox midway through as I am better using flexbox than grid. I realised I need to work on my grid css skills.
 
 - Didn't like original homepage layout that is in the wireframe.
@@ -357,6 +358,7 @@ Other Testing
 - I would like to edit the score page into a high score page rather than just a page showing results.
 - I would like more games. And more complex games but because poker is so complex I felt it was too much for my first JavaScript project to have too much complexity.
 - Some of the animations are a little jerky. This could definitely be improved.
+- I would like to improve the layout of the game pages and the css styling. But because this was my first JavaScript project, I focused mainly on that for this project.
 
 ### Code Validity
 
@@ -421,6 +423,7 @@ Help with dark theme saving to localStorage - [codepen](https://codepen.io/kevin
 
 ### Acknowledgments
 
+- Various YouTube tutorials from channels listed in resources section helped me out immensely.
 - Code Institute Software Development Course - for the education.
 - Code Institute Slack Community group - for the support.
 - My mentor [Antonio Rodriguez](https://github.com/AkaAnto) - for the guidance and support throughout.
