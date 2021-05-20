@@ -1,4 +1,4 @@
-# [**Poker Quiz**]()
+# [**Poker Quiz**](https://jjpickering10.github.io/CI-MS2-PokerQuiz/)
 
 _Use CTRL+click or CMD+click to open links throughout the README in a new tab_
 
@@ -12,7 +12,7 @@ PokerQuiz - Have fun testing your poker knowledge.
 
 ## Description
 
--This is a site aimed at providing simple quiz games based on the game of poker. It is a fun, interactive site with a light and dark theme that allows users to take multiple quizzes/games and save their scores.
+- This is a site aimed at providing simple quiz games based on the game of poker. It is a fun, interactive site with a light and dark theme that allows users to take multiple quizzes/games and save their scores.
 
 ---
 
@@ -91,7 +91,7 @@ As a frequent user:
 [Contact Page Mobile Wireframe](assets/docs/contactpagemobile.png)
 
 - 6 page site with navigation to score board and back to home page.
-- End of game modals to show score, input to save score and various next game buttons and a play again button.
+- End of game modals to show score, input to save score, return to other games and a play again button.
 - Short about section in home page modal.
 - Contact form in home page modal.
 
@@ -124,12 +124,25 @@ Typography:
 ## Features
 
 - Responsive on all device sizes.
-- Dark and light theme with toggle button.
-- Score board.
-- Various about game modals.
-- End of game modals.
+- Dark and light theme with toggle button that is consitent throughout site.
+- Animation throughout site.
+- Able to save score and view on score board.
+- Various about game modals, with rules and direct links to games.
+- End of game modals with site navigation and save score feature.
 - [Deck of Cards API](https://deckofcardsapi.com/) used to shuffle cards.
 - Fully functional contact form.
+- - Diamond Quiz
+- - - 5 questions out of possible 20 options.
+- - - Score updated throughout quiz.
+- - Club Quiz
+- - - 10 questions shuffled.
+- - - Correct answers turn green, incorrect answers turn red.
+- - Heart Quiz
+- - - 10 attempts using API shuffle.
+- - - Selection of random correct and incorrect pop up phrases
+- - Spade Quiz
+- - - 5 questions shuffled.
+- - - Correct and incorrect pop up statements
 
 ## Technologies Used
 
@@ -240,8 +253,6 @@ Frequent User Goals
 3. I want to - check all previous scores.
 > The score page showed all my previous scores with my name attached to each score.
 
-Other Testing
-
 Responsiveness
 - There was an issue with viewing the game pages in landscape mobile view.
 > To fix this I used a body height of 100vh and a min-height of 100% for the page containers.
@@ -292,6 +303,23 @@ Image sizes
 CSS autoprefixer
 > Used autoprefixer on all CSS files. Copied updated code back into each CSS file.
 
+Other Testing
+
+- Testing live site shows that...
+
+- - Dark/light theme is consistent works through out site.
+- - Footer links all link correctly to a new tab.
+- - Contact form works and sends out auto-reply message.
+- - All homepage modals open on click.
+- - All end game modals open at the end of each quiz.
+- - All buttons throughout are linked correctly to their target destination.
+- - Score page correctly displays localStorage values.
+- - Save score button is disabled on all end game modals until user has inputted into the text box. Button is disabled again when all text is removed.
+- - Save score button and text input are removed after save score button is clicked.
+- - **Game pages**
+- - - Displays correct amount of questions/attempts, which are different each time you take the quizzes.
+- - - Score and/or question result display is updated throughout games and final score is shown in end game modals.
+
 ### Project Barriers and Solutions
 
 - There was an issue in club.js where because of where the shuffle rankings function was in the code and how the ranking index incremented, once you got to the end of the array, it would duplicate the same hand as the final question. This was because the rankings array was only shuffled once.
@@ -332,9 +360,11 @@ CSS autoprefixer
 
 ### Code Validity
 
-HTML W3C Validator
-CSS W3C Validator
-JSHINT - for errors and warnings in JavaScript code.
+[HTML W3C Validator](https://validator.w3.org/)
+
+[CSS W3C Validator](https://jigsaw.w3.org/css-validator/)
+
+[JSHint](https://jshint.com/) - for errors and warnings in JavaScript code.
 
 
 ---
@@ -382,11 +412,12 @@ Help with dark theme saving to localStorage - [codepen](https://codepen.io/kevin
 
 ### Images and videos
 
-- ShutterStock images and DeckofCards API
+-  Images came from [Shutterstock images](https://www.shutterstock.com/home) and [Deck of Cards API](https://deckofcardsapi.com/)
 
 ### Written Content
 
-- All my own words.
+- Site written with my own words.
+- Poker Main Event winners and poker hand rankings all from general poker knowledge.
 
 ### Acknowledgments
 
