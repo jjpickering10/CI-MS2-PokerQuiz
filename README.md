@@ -166,6 +166,8 @@ Typography:
 >> It was used in the shuffle a pair game that took a full deck of cards, then picked two cards from that shuffled deck and if they matched, You got a pair.
 >>> The second time it was used was in the quiz where the user is asked to make a hand. Here I took a a partial deck of 3 cards (these werent random, I picked the cards), and a partial deck of 12 cards (again I picked these). Here both sets of cards are put onto the screen and the user is asked to make a hand with 2 cards from the 12 card selection and the 3 cards on the board. All cards are displayed differently on screen for each game.
 
+[Email.js](https://www.emailjs.com/)
+> for working contact form
 
 [CSS Tricks](https://css-tricks.com/)
 > for general help, primarily with flexbox
@@ -266,6 +268,15 @@ JavaScript
 
 - When testing the saveScores function I realised you could save your score without inputting your name.
 > To improve this I disabled the button and added a keyup event listener in each js file to enable the button when a user types.
+>> After second testing I had to change the code from saveScoreButton.disabled = false; to saveScoreButton.disabled = !userName.value;
+>>> This was an error in inital code that prevented the submit button returning to disabled if text input was deleted.
+
+- Whilst passing all the js files through JSHINT, there were several warnings about missing semicolons and undeclared variables.
+> These were cleaned up.
+
+- In spade. js the following warning occured "Function statements should not be placed in blocks. Use a function expression or move the statement to the top of the outer function."
+> After researching on [JSlint Errors](https://github.com/jamesallardice/jslint-error-explanations/blob/master/message-articles/function-in-block.md), the following statement states "This error is raised to highlight code that may not work as you expect it to."
+>>> After vigourous testing on multiple browsers, the code works as expected. Although on Safari, occasionally the message pop up stating whether you got the question correct or incorrect didnt show. This is a minor problem as the end modal showing final result works.
 
 Contrast colours
 > Used a11y contrast checker. No issues found throughout site.
@@ -314,10 +325,17 @@ CSS autoprefixer
 ### Feature To Improve
 
 - I initially wanted to have a timer on the quizzes, but I had a bit of an issue getting it to function properly. I would add this next time.
+- I would like to add a feature that shows how many more questions you have left.
+- I would like to edit the score page into a high score page rather than just a page showing results.
 - I would like more games. And more complex games but because poker is so complex I felt it was too much for my first JavaScript project to have too much complexity.
 - Some of the animations are a little jerky. This could definitely be improved.
 
 ### Code Validity
+
+HTML W3C Validator
+CSS W3C Validator
+JSHINT - for errors and warnings in JavaScript code.
+
 
 ---
 
@@ -350,11 +368,25 @@ Forking
 
 ## Credits
 
-### Code Snippets
+### Code Snippets and help
+
+Help for object destructuring - [stackoverflow](https://stackoverflow.com/questions/12162786/adding-new-objects-to-localstorage)
+
+Help for shuffling an array - [stackoverflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+
+Help for array of functions - [stackoverflow](https://stackoverflow.com/questions/4908378/javascript-array-of-functions#4908388)
+
+Help for adding new objects to localStorage for score page - [stackoverflow](https://stackoverflow.com/questions/12162786/adding-new-objects-to-localstorage)
+
+Help with dark theme saving to localStorage - [codepen](https://codepen.io/kevinpowell/pen/EMdjOV) 
 
 ### Images and videos
 
+- ShutterStock images and DeckofCards API
+
 ### Written Content
+
+- All my own words.
 
 ### Acknowledgments
 
