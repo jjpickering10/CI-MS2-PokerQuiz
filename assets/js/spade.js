@@ -173,7 +173,7 @@ function openModal() {
 const saveScoreButton = document.getElementById("save-score");
 const userName = document.getElementById("username");
 userName.addEventListener('keyup', () => {
-    saveScoreButton.disabled = false
+    saveScoreButton.disabled = !userName.value
 })
 
 //  https://stackoverflow.com/questions/12162786/adding-new-objects-to-localstorage
