@@ -60,15 +60,15 @@ function startGame() {
     console.log(handData);
     displayHands(handData);
     } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
   };
   handRequest.send();
 }
 
 function displayHands(data) {
-  cardOne = data.cards[0].value;
-  cardTwo = data.cards[1].value;
+  const cardOne = data.cards[0].value;
+  const cardTwo = data.cards[1].value;
 
   handOne.innerHTML = `<img class="img-one" src="${data.cards[0].image}" alt="${cardOne}, ${data.cards[0].suit} playing card">`;
   handTwo.innerHTML = `<img class="img-two" src="${data.cards[1].image}" alt="${cardTwo}, ${data.cards[1].suit} playing card">`;
@@ -133,8 +133,8 @@ function openModal() {
 const saveScoreButton = document.getElementById("save-score");
 const userName = document.getElementById("username");
 userName.addEventListener('keyup', () => {
-    saveScoreButton.disabled = !userName.value
-})
+    saveScoreButton.disabled = !userName.value;
+});
 
 
 //  https://stackoverflow.com/questions/12162786/adding-new-objects-to-localstorage

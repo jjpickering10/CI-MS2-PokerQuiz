@@ -89,14 +89,14 @@ function displayQuestion(question) {
 }
 
 function answerInfo(answer) {
-    questionCounter++
+    questionCounter++;
   const buttonSelect = answer.target;
   const correct = buttonSelect.dataset.correctAnswer;
   if ((buttonSelect.dataset = correct)) {
     rightAnswers++;
   }
   localStorage.setItem("latest-diamond-score", rightAnswers);
-  document.getElementById("diamond-right-answers").innerText = `${rightAnswers} out of ${questionCounter}`
+  document.getElementById("diamond-right-answers").innerText = `${rightAnswers} out of ${questionCounter}`;
   if (shuffledQuestions.length > questionIndex + 16) {
     questionIndex++;
     setTimeout(() => {
@@ -117,8 +117,8 @@ function openModal() {
 const saveScoreButton = document.getElementById("save-score");
 const userName = document.getElementById("username");
 userName.addEventListener('keyup', () => {
-    saveScoreButton.disabled = !userName.value
-})
+    saveScoreButton.disabled = !userName.value;
+});
 
 
 //  https://stackoverflow.com/questions/12162786/adding-new-objects-to-localstorage

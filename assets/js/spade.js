@@ -3,8 +3,8 @@ const cardBoard = document.getElementById("card-board");
 const cardChoice = document.getElementById("card-choice");
 const results = document.getElementById("results");
 const startButton = document.getElementById("start");
-const gameStart = document.getElementById("game-start");
-const img = document.getElementsByTagName("img");
+// const gameStart = document.getElementById("game-start");
+// const img = document.getElementsByTagName("img");
 const question = document.getElementById("question");
 const score = document.getElementById("score");
 
@@ -127,7 +127,7 @@ function selectCard(e) {
   selectedCard.classList.remove("card-options");
   selectedCard.classList.add("card-picked");
 
-  correctAnswer = selectedCard.dataset.correct;
+  const correctAnswer = selectedCard.dataset.correct;
   if (correctAnswer === "true") {
     correctChoices++;
   }
@@ -173,8 +173,8 @@ function openModal() {
 const saveScoreButton = document.getElementById("save-score");
 const userName = document.getElementById("username");
 userName.addEventListener('keyup', () => {
-    saveScoreButton.disabled = !userName.value
-})
+    saveScoreButton.disabled = !userName.value;
+});
 
 //  https://stackoverflow.com/questions/12162786/adding-new-objects-to-localstorage
 
@@ -210,7 +210,7 @@ let questions = [
                 getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
                 drawBoard();
           } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         
       };
@@ -224,7 +224,7 @@ let questions = [
         );
         ourRequest.onload = function () {
             if (ourRequest.status >= 200 && ourRequest.status < 400) {
-          gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+          const gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
             board.setAttribute("src", e.image);
@@ -234,7 +234,7 @@ let questions = [
 
           getOptions();
            } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -254,7 +254,7 @@ let questions = [
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
            } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -268,10 +268,10 @@ let questions = [
           ourRequest.onload = function () {
                           if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-            gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+            const gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
-            for (index in newObject) {
+            for (const index in newObject) {
               if (newObject[index].code === "5C") {
                 anotherObject = { ...newObject[index], ...{ correct: "true" } };
                 finalArray.push(anotherObject);
@@ -293,7 +293,7 @@ let questions = [
 
             displayHands(finalArray);
              } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
           };
           ourRequest.send();
@@ -317,7 +317,7 @@ let questions = [
         getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
         drawBoard();
         } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
       };
       ourRequest.send();
@@ -331,7 +331,7 @@ let questions = [
         ourRequest.onload = function () {
                         if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-          gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+          const gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
             board.setAttribute("src", e.image);
@@ -341,7 +341,7 @@ let questions = [
 
           getOptions();
           } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -361,7 +361,7 @@ let questions = [
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
           } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -375,10 +375,10 @@ let questions = [
           ourRequest.onload = function () {
                           if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-            gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+            const gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
-            for (index in newObject) {
+            for (const index in newObject) {
               if (newObject[index].code === "7H") {
                 anotherObject = { ...newObject[index], ...{ correct: "true" } };
                 finalArray.push(anotherObject);
@@ -399,7 +399,7 @@ let questions = [
             }, 500);
             displayHands(finalArray);
             } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
           };
           ourRequest.send();
@@ -423,7 +423,7 @@ let questions = [
         getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
         drawBoard();
         } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
       };
       ourRequest.send();
@@ -437,7 +437,7 @@ let questions = [
         ourRequest.onload = function () {
                         if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-          gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+          const gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
             board.setAttribute("src", e.image);
@@ -447,7 +447,7 @@ let questions = [
 
           getOptions();
           } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -467,7 +467,7 @@ let questions = [
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
           } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -481,10 +481,10 @@ let questions = [
           ourRequest.onload = function () {
                           if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-            gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+            const gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
-            for (index in newObject) {
+            for (const index in newObject) {
               if (newObject[index].code === "JS") {
                 anotherObject = { ...newObject[index], ...{ correct: "true" } };
                 finalArray.push(anotherObject);
@@ -505,7 +505,7 @@ let questions = [
             }, 500);
             displayHands(finalArray);
             } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
           };
           ourRequest.send();
@@ -529,7 +529,7 @@ let questions = [
         getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
         drawBoard();
         } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
       };
       ourRequest.send();
@@ -543,7 +543,7 @@ let questions = [
         ourRequest.onload = function () {
                         if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-          gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+          const gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
             board.setAttribute("src", e.image);
@@ -553,7 +553,7 @@ let questions = [
 
           getOptions();
           } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -573,7 +573,7 @@ let questions = [
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
           } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -587,10 +587,10 @@ let questions = [
           ourRequest.onload = function () {
                           if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-            gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+            const gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
-            for (index in newObject) {
+            for (const index in newObject) {
               if (newObject[index].code === "5S") {
                 anotherObject = { ...newObject[index], ...{ correct: "true" } };
                 finalArray.push(anotherObject);
@@ -611,7 +611,7 @@ let questions = [
             }, 500);
             displayHands(finalArray);
             } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
           };
           ourRequest.send();
@@ -635,7 +635,7 @@ let questions = [
         getBoard = partialBoard.deck_id; // --- Returns deck ID, but not cards
         drawBoard();
         } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
       };
       ourRequest.send();
@@ -649,7 +649,7 @@ let questions = [
         ourRequest.onload = function () {
                         if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-          gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+          const gameBoard = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
           gameBoard.cards.forEach((e) => {
             const board = document.createElement("img");
             board.setAttribute("src", e.image);
@@ -659,7 +659,7 @@ let questions = [
 
           getOptions();
           } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -679,7 +679,7 @@ let questions = [
           getDeck = partialDeck.deck_id; // --- Returns deck ID, but not cards
           drawDeck();
           } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
         };
         ourRequest.send();
@@ -693,10 +693,10 @@ let questions = [
           ourRequest.onload = function () {
                           if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-            gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
+            const gameDeck = JSON.parse(ourRequest.responseText); // --- Returns cards from deck ID above
             newObject = { ...gameDeck.cards };
 
-            for (index in newObject) {
+            for (const index in newObject) {
               if (newObject[index].code === "KH") {
                 anotherObject = { ...newObject[index], ...{ correct: "true" } };
                 finalArray.push(anotherObject);
@@ -717,7 +717,7 @@ let questions = [
             }, 500);
             displayHands(finalArray);
             } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.")
+              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
           }
           };
           ourRequest.send();
