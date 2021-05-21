@@ -306,6 +306,7 @@ Code cleaned up
 > Used prettier extension to clean up the code in all html, css and js files.
 
 Spelling
+> Spell check throughout project.
 
 Image sizes
 > images were compressed using [CompressJPEG](https://compressjpeg.com/).
