@@ -201,7 +201,6 @@ body.dark {
   border-radius: 10px;
   border: none;
   outline: none;
-  /* font-size: 1.5rem; */
   width: 40%;
   margin: 10px;
   color: currentColor;
@@ -287,7 +286,6 @@ body.dark {
   top: 15vh;
   left: 15vw;
   right: 15vw;
-  /* bottom: 15vw; */
   border-radius: 10px;
   z-index: 10000;
 }
@@ -370,7 +368,6 @@ body.dark {
   left: 0;
   background-color: rgba(0, 0, 0, 0.95);
   background: url(../images/fouracesbackground.jpg) center center fixed;
-  /* background-size: cover; */
   pointer-events: none;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);

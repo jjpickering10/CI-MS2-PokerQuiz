@@ -278,7 +278,6 @@ body.dark {
   top: 15vh;
   left: 15vw;
   right: 15vw;
-  /* bottom: 15vw; */
   border-radius: 10px;
   z-index: 10000;
 }

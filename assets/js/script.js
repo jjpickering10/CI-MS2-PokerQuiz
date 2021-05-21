@@ -8,7 +8,6 @@ const pageContainer = document.getElementById("page-container");
 openModals.forEach((e) => {
   e.addEventListener("click", () => {
     const modal = document.querySelector(e.dataset.modalTarget);
-    console.log(modal);
     openModal(modal);
   });
 });
@@ -16,7 +15,6 @@ openModals.forEach((e) => {
 closeModals.forEach((e) => {
   e.addEventListener("click", () => {
     const modal = e.closest(".modal");
-    console.log(modal);
     closeModal(modal);
   });
 });

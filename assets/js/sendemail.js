@@ -13,7 +13,6 @@ function sendEmail(contact){
                 
                 sent.innerText = "Thanks for your message!";
                 sendEmailForm.appendChild(sent);
-                console.log('hello', response);
             }),
             function (error) {
                 alert("Oh No! There's been an error. Please refresh the page and fill out the form again", error);

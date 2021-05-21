@@ -9,9 +9,6 @@ const question = document.getElementById("question");
 const modal = document.getElementById("modal");
 const overlay = document.getElementById("modal-overlay");
 
-// const clubButton = document.getElementById("club");
-// const diamondButton = document.getElementById("diamond");
-// const spadeButton = document.getElementById("spade");
 const homeButton = document.getElementById("home-button");
 const playAgainButton = document.getElementById("play-again-button");
 const scoresButton = document.getElementById("scores-button");
@@ -23,15 +20,6 @@ let questionCounter = 0;
 
 startButton.addEventListener("click", startGame);
 
-// clubButton.addEventListener("click", () => {
-//   window.location.assign("club.html");
-// });
-// diamondButton.addEventListener("click", () => {
-//   window.location.assign("diamond.html");
-// });
-// spadeButton.addEventListener("click", () => {
-//   window.location.assign("spade.html");
-// });
 homeButton.addEventListener("click", () => {
   window.location.assign("index.html");
 });
@@ -54,14 +42,14 @@ function startGame() {
     "https://deckofcardsapi.com/api/deck/new/draw/?count=2"
   );
   handRequest.onload = function () {
-                                if (handRequest.status >= 200 && handRequest.status < 400) {
-
-    const handData = JSON.parse(handRequest.responseText);
-    console.log(handData);
-    displayHands(handData);
+    if (handRequest.status >= 200 && handRequest.status < 400) {
+      const handData = JSON.parse(handRequest.responseText);
+      displayHands(handData);
     } else {
-              alert("We've encountered an error. Let's blame the dealer. Please refresh page and play again.");
-          }
+      alert(
+        "We've encountered an error. Let's blame the dealer. Please refresh page and play again."
+      );
+    }
   };
   handRequest.send();
 }
@@ -132,10 +120,9 @@ function openModal() {
 
 const saveScoreButton = document.getElementById("save-score");
 const userName = document.getElementById("username");
-userName.addEventListener('keyup', () => {
-    saveScoreButton.disabled = !userName.value;
+userName.addEventListener("keyup", () => {
+  saveScoreButton.disabled = !userName.value;
 });
-
 
 //  https://stackoverflow.com/questions/12162786/adding-new-objects-to-localstorage
 
