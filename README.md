@@ -218,40 +218,49 @@ Chrome Dev Tools
 
 ## Testing
 
-First Time Visitor Goals
+**First Time Visitor Goals**
 
-1. I want to - easily navigate the quiz games and understand the rules of each.
+*I want to - easily navigate the quiz games and understand the rules of each.*
+- As you enter the home page, you are shown 4 cards with a CTA to click the cards. Each card has a distinct hover that opens a modal. Each modal explains what each quiz/game is about, with a play button that starts the game. You can click outside the modal to exit and you are again shown each option.
 > When testing I decided to remove the end of game buttons taking you to other games. But instead left the button taking you back home.
 >> I expected an easy navigation to understand the rules of each, but the next game buttons bypassed the rules that are in the homepage modals.
 >>> By referring the user back to the home page for the start of each game, they are able to see the game description every time.
 >>>> My mother helped identify this issue as a first time user when she tested the site.
 
-2. I want to - test my knowledge on the game of poker.
+*I want to - test my knowledge on the game of poker.*
+- As you go through each quiz, you are given multiple different questions. Some with text, some with visual cards. And questions testing what you know.
 > Even though the quizzes are quite basic. You do get tested with various questions as expected.
 
-3. I want to - find out my score.
-> Tested this by completing each quiz. Viewing score expectation is achieved with end of game modals that give a clear visual of your end score as well as in game interaction that lets you know if each answer is correct or incorrect.
+*I want to - find out my score.*
+- As you go through each quiz, you are given constant updates on results of each question. After completion of each quiz, a modal pops up displaying your final score.
+> Viewing score expectation is achieved with end of game modals that give a clear visual of your end score as well as in game interaction that lets you know if each answer is correct or incorrect.
 
-Returning Visitor Goals
+**Returning Visitor Goals**
 
-1. I want to - test my score against my previous attempts.
+*I want to - test my score against my previous attempts.*
+- As you enter each page, you see navigation to the score page. On the score page, previous results are listed along with names that were inputted.
 > After completing each quiz and submitting the score, I repeated this process. The previous scores were listed in the score page with my name.
 
-2. I want to - have different questions to my previous attempts.
+*I want to - have different questions to my previous attempts.*
+- As you go through each quiz, all questions are randomised.
 > Repeated each quiz multiple times. Got a wide variety in the diamond quiz and the pair game is totally random. Whilst The club and spade quizzes do offer different questions. The variety is limited and could be improved with many more questions.
 
-3. I want to - use the same dark/light theme.
+*I want to - use the same dark/light theme.*
+- As you enter each page, there is a toggle button in the footer. Each page has both dark and light theme.
 > Navigated through the site using both themes, toggling between them. The site stays on either theme until toggled back to the other. Also stays on that theme when the page is refreshed.
 
 Frequent User Goals
 
-1. I want to - be able to contact the site.
+*I want to - be able to contact the site.*
+- As you enter the home page, there is a clear contact navigation option in the header. When you click on this, a contact form inside a modal pops up.
 > Sent a message in the contact form and got an auto reply letting me know my message had been recieved by the site.
 
-2. I want to - test myself over and over again.
+*I want to - test myself over and over again.*
+- As you complete the quiz, a modal pops up giving you the option to play again, or go home. As you go home, you are given each quiz game option again.
 > Whilst you are able to repeat the quizzes over and over, eventually you see the same questions. This could be improved with more questions.
 
-3. I want to - check all previous scores.
+*I want to - check all previous scores.*
+- As you enter the home page there is clear navigation to the score page in the header. In the score page all previous saved scores are listed.
 > The score page showed all my previous scores with my name attached to each score.
 
 Responsiveness
@@ -362,11 +371,37 @@ Other Testing
 
 ### Code Validity
 
-[HTML W3C Validator](https://validator.w3.org/)
+[**HTML W3C Validator**](https://validator.w3.org/)
 
-[CSS W3C Validator](https://jigsaw.w3.org/css-validator/)
+[*Home Page validated*](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2F)
 
-[JSHint](https://jshint.com/) - for errors and warnings in JavaScript code.
+[*Diamond Page validated*](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fdiamond.html)
+
+[*Club Page validated*](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fclub.html)
+
+[*Heart Page validated*](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fheart.html)
+
+[*Spade Page validated*](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fspade.html)
+
+[*Score Page validated*](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fscore.html)
+
+
+
+[**CSS W3C Validator**](https://jigsaw.w3.org/css-validator/)
+
+[*Home Page validated*](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+[*Diamond Page validated*](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fdiamond.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+[*Club Page validated*](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fclub.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+[*Heart Page validated*](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fheart.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+[*Spade Page validated*](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fspade.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+[*Score Page validated*](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjjpickering10.github.io%2FCI-MS2-PokerQuiz%2Fscore.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+[**JSHint**](https://jshint.com/) - for errors and warnings in JavaScript code.
 
 
 ---
